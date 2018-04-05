@@ -11,10 +11,10 @@ var cssDestFolder = '../built/css',
     gulp.slurped  = false;
 
 
-/* ----------------------------- Complied CSS -----------------------------*/
+/* ----------------------------- Compiled CSS -----------------------------*/
 
 // Style CSS
-gulp.task('complie-style-css', function() {
+gulp.task('compile-style-css', function() {
     return gulp.src([
             '../src/scss/style.scss'
         ])
@@ -24,8 +24,31 @@ gulp.task('complie-style-css', function() {
         .pipe(gulp.dest(cssDestFolder));
 });
 
+gulp.task('compile-demo-css', function() {
+    return gulp.src([
+            '../src/demo/demo.scss'
+        ])
+        .pipe(sass().on('error', sass.logError))
+        .pipe(rename('demo.min.css'))
+        .pipe(uglifycss())
+        .pipe(gulp.dest(cssDestFolder));
+});
+
+gulp.task('watch-style-css', function () {
+    gulp.watch(['../src/scss/**/*'], ['compile-style-css']);
+});
+
+gulp.task('watch-demo-css', function () {
+    gulp.watch(['../src/demo/**/*'], ['compile-demo-css']);
+});
+
+gulp.task('watch-dev-css', function () {
+    gulp.watch(['../src/demo/**/*'], ['watch-style-css', 'watch-demo-css']);
+});
+
+
 // Core CSS
-gulp.task('complie-core-css', function() {
+gulp.task('compile-core-css', function() {
     return gulp.src([
             '../node_modules/bootstrap/dist/css/bootstrap.min.css'
         ])
@@ -41,13 +64,13 @@ gulp.task('complie-core-css', function() {
 
 
 
-/* ----------------------------- Complied JS ------------------------------*/
+/* ----------------------------- Compiled JS ------------------------------*/
 
 // Core CSS
-gulp.task('complie-core-js', function() {
+gulp.task('compile-core-js', function() {
     return gulp.src([
-            '../node_modules/bootstrap/dist/js/bootstrap.min.js',
-            '../node_modules/jquery/dist/js/jquery.min.js'
+            '../node_modules/jquery/dist/jquery.min.js',
+            '../node_modules/bootstrap/dist/js/bootstrap.min.js'
         ])
         .pipe(concat('core.js'))
         .pipe(gulp.dest(jsDestFolder))

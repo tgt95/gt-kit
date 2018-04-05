@@ -1,0 +1,14 @@
+$ratio-size : (1,1), (2,1), (4,3), (16,9);
+@each $w,$h in $ratio-size {
+	.card-ratio-#{$w}-#{$h}{
+		@include aspect-ratio($w, $h);
+		@include transition03s;
+		margin: 0 0 25px;
+		>img{
+			-o-object-fit: cover;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

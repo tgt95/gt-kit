@@ -1,7 +1,12 @@
 /*!
  * GT Kit
  */
+@import 'icons/material-design-iconic-font.min.scss';
 
-body{
-	background: grey;
-}
+@import 'variables';
+@import 'common';
+@import 'bootstrap-reset';
+@import 'main';
+@import 'form';
+@import 'button';
+@import 'card';

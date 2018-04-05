@@ -5,9 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Welcome to GT Kit\"",
-    "build-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js complie-css",
-    "build-core-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js complie-core-css",
-    "build-core-js": "./node_modules/.bin/gulp --gulpfile config/build-scss.js complie-core-js"
+    "build-dev-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-dev-css",
+    "build-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-style-css",
+    "build-core-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js compile-core-css",
+    "build-core-js": "./node_modules/.bin/gulp --gulpfile config/build-scss.js compile-core-js"
   },
   "author": "TGT95",
   "license": "ISC",
@@ -22,6 +23,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1"
+    "jquery": "3.2.1"
   }
 }

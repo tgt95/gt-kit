@@ -1,0 +1,59 @@
+/* Background colors */
+$base-color : ($custom, 'custom'), ($primary, 'primary'), ($secondary, 'secondary'), ($blue, 'blue'), ($indigo, 'indigo'), ($purple, 'purple'), ($pink, 'pink'), ($red, 'red'), ($orange, 'orange'), ($yellow, 'yellow'), ($green, 'green'), ($teal, 'teal'), ($cyan, 'cyan'), ($white, 'white'), ($black, 'black'), ($gray, 'gray'), ($gray-dark, 'gray-dark'), ($success, 'success'), ($info, 'info'), ($warning, 'warning'), ($danger, 'danger'), ($light, 'light'), ($dark, 'dark');
+@each $hex,$name in $base-color {
+	.bg-#{$name} {
+		background-color: $hex !important;
+	}
+}
+
+
+/* Text colors */
+@each $hex,$name in $base-color {
+	.text-#{$name} {
+		color: $hex !important;
+	}
+}
+
+/* Border colors */
+@each $hex,$name in $base-color {
+	.border-#{$name} {
+		border-color: $hex !important;
+	}
+}
+
+/* Border colors */
+@each $hex,$name in $base-color {
+	.badge-#{$name} {
+		background-color: $hex;
+	}
+}
+
+/* Background size */
+$bg-style : (cover), (contain);
+@each $name in $bg-style {
+	.bg-size-#{$name}{
+		background-size: $name !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* Background layer */
+[layer-bg] {
+	position: relative;
+	&:after {
+		@include pos-full;
+		content: '';
+		opacity: .3;
+	}
+}
+
+@each $hex,$name in $base-color {
+	[layer-bg="#{$name}"] {
+		&:after {
+			background: $hex;
+		}
+	}
+}
