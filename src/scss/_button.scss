@@ -1,7 +1,64 @@
-.btn{
-	padding: 10px 16px;
+.btn {
+	padding: 5px 16px;
 	border-radius: 2px;
 	box-shadow: $shadow;
 	text-transform: uppercase;
-	font-size: $font-medium;
+	font-weight: $font-normal;
+	outline: none;
+	-webkit-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+	-moz-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+	-o-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+	transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+	&:hover,&:focus,&:active {
+		box-shadow: $shadow-active!important;
+		outline: none;
+	}
+	&.btn-round {
+		border-radius: 30px;
+	}
+}
+
+@each $hex,$name in $base-color {
+	.btn-#{$name}:not(.btn-link) {
+		@if $name == 'warning' {
+			color: $text-primary;
+		}
+		@else {
+			color: $white;
+		}
+		background-color: $hex;
+		border-color: $hex;
+	}
+}
+
+.btn-link{
+	@each $hex,$name in $base-color {
+		&.btn-#{$name} {
+			color: $hex;
+			border-color: transparent;
+			box-shadow: none;
+			&:hover,&:focus,&:active {
+				@if $name == 'warning' {
+					color: $text-primary!important;
+				}
+				@else {
+					color: $hex!important;
+				}
+				text-decoration: none;
+				box-shadow: none!important;
+				background-color: rgba(0,0,0,0.1)!important;
+				border-color: transparent!important;
+			}
+		}
+	}
+	&.btn-default{
+		box-shadow: none;
+		color: $text-primary;
+		border-color: transparent;
+		&:hover,&:focus,&:active {
+			text-decoration: none;
+			box-shadow: none!important;
+			background-color: rgba(0,0,0,0.1);
+		}
+	}
 }

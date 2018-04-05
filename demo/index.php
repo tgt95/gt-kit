@@ -31,21 +31,22 @@
             </div>
             <div class="section">
                 <div class="container">
-                    <h2 class="title">Basic Elements</h3>
-                    <div id="buttons">
-                        <h4>Buttons</h4>
+                    <h2 class="title">Basic Elements</h2>
+                    <!-- Buttons -->
+                    <div id="buttons" class="section-m-b-100">
+                        <h4 class="group-title">Buttons</h4>
                         <p class="category">Pick your style</p>
                         <div class="row">
                             <div class="col-md-10">
                                 <button class="btn btn-primary" type="button">Default</button>
                                 <button class="btn btn-primary btn-round" type="button">Round</button>
                                 <button class="btn btn-primary btn-round" type="button">
-                                    <i class="now-ui-icons ui-2_favourite-28"></i> With Icon
+                                    <i class="zmdi zmdi-android"></i> With Icon
                                 </button>
                                 <button class="btn btn-primary btn-icon btn-round" type="button">
-                                    <i class="now-ui-icons ui-2_favourite-28"></i>
+                                    <i class="zmdi zmdi-android"></i>
                                 </button>
-                                <button class="btn btn-primary btn-simple btn-round" type="button">Simple</button>
+                                <button class="btn btn-outline-primary btn-round" type="button">Outline</button>
                             </div>
                         </div>
                         <p class="category">Pick your size</p>
@@ -65,13 +66,12 @@
                                 <button class="btn btn-success">Success</button>
                                 <button class="btn btn-warning">Warning</button>
                                 <button class="btn btn-danger">Danger</button>
-                                <button class="btn btn-neutral">Neutral</button>
                             </div>
                         </div>
-                        <h4>Links</h4>
+                        <h4 class="group-title">Links</h4>
                         <div class="row">
                             <div class="col-md-8">
-                                <button class="btn btn-link">Default</button>
+                                <button class="btn btn-link btn-default">Default</button>
                                 <button class="btn btn-link btn-primary ">Primary</button>
                                 <button class="btn btn-link btn-info">Info</button>
                                 <button class="btn btn-link btn-success">Success</button>
@@ -80,7 +80,21 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end row -->
+
+                    <!-- Backgrounds -->
+                    <div id="backgrounds">
+                        <h4 class="group-title">Background</h4>
+                        <p class="category">Pick your style</p>
+                        <div class="row">
+                        <?php
+                        $baseColor = array('custom', 'primary', 'secondary', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan', 'white', 'black', 'gray', 'gray-dark', 'success', 'info', 'warning', 'danger', 'light', 'dark');
+
+                        foreach ($baseColor as $value) {
+                            echo "<div class='col-12 py-2 bg-". $value . "'><code class='bg-white p-1'>bg-". $value ."</code></div>";
+                        } 
+                        ?>
+                        </div>
+                    </div>
                 </div>
                 <!-- container -->
             </div>
@@ -104,6 +118,10 @@ $(document).ready(function() {
     var windowHeight = window.innerHeight;
 
     $('.page-header').height(windowHeight);
+
+    Waves.attach('.btn:not(.btn-link)', ['waves-float', 'waves-light']);
+    Waves.attach('.btn.btn-link', ['waves-float', 'waves-effect']);
+    Waves.init();
 
     $(window).resize(function(event) {
         // $('.page-header').height(windowHeight);

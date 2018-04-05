@@ -50,13 +50,14 @@ gulp.task('watch-dev-css', function () {
 // Core CSS
 gulp.task('compile-core-css', function() {
     return gulp.src([
-            '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+            '../node_modules/bootstrap/dist/css/bootstrap.min.css',
+            '../node_modules/node-waves/dist/waves.min.css'
         ])
         .pipe(concat('core.css'))
         .pipe(gulp.dest(cssDestFolder))
         // min files
         .pipe(rename('core.min.css'))
-        .pipe(uglify().on('error', function(err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); }))
+        // .pipe(uglify().on('error', function(err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); }))
         .pipe(gulp.dest(cssDestFolder));
 });
 
@@ -70,12 +71,13 @@ gulp.task('compile-core-css', function() {
 gulp.task('compile-core-js', function() {
     return gulp.src([
             '../node_modules/jquery/dist/jquery.min.js',
-            '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+            '../node_modules/bootstrap/dist/js/bootstrap.min.js',
+            '../node_modules/node-waves/dist/waves.min.js'
         ])
         .pipe(concat('core.js'))
         .pipe(gulp.dest(jsDestFolder))
         // min files
         .pipe(rename('core.min.js'))
-        .pipe(uglify().on('error', function(err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); }))
+        // .pipe(uglify().on('error', function(err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); }))
         .pipe(gulp.dest(jsDestFolder));
 });

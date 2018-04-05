@@ -55,13 +55,29 @@
 			margin-top: 15px;
 		}
 	}
-}
-.title{
-	font-weight: 700;
-	margin: 0 0 30px;
+	.group-title{
+		font-weight: 100;
+		font-size: 1.714em;
+		line-height: 1.45em;
+		margin-top: 30px;
+		margin-bottom: 15px;
+	}
+	.title{
+		font-weight: 700;
+		font-size: 2em;
+		margin-bottom: 30px;
+		line-height: 1.4em;
+	}
+	.section-m-b-100{
+		margin-bottom: 100px;
+	}
 }
 .category {
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #9A9A9A;
+}
+
+#buttons .btn, #javascriptComponents .btn {
+    margin: 0 0px 10px;
 }
