@@ -1,0 +1,27 @@
+{
+  "name": "gt-kit",
+  "version": "1.0.0",
+  "description": "Bootstrap 4 UI kit",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Welcome to GT Kit\"",
+    "build-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js complie-css",
+    "build-core-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js complie-core-css",
+    "build-core-js": "./node_modules/.bin/gulp --gulpfile config/build-scss.js complie-core-js"
+  },
+  "author": "TGT95",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.9",
+    "node-sass": "^4.8.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1"
+  }
+}
