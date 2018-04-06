@@ -37,7 +37,7 @@
                         <h4 class="group-title">Buttons</h4>
                         <p class="category">Pick your style</p>
                         <div class="row">
-                            <div class="col-md-10">
+                            <div class="col-md-12">
                                 <button class="btn btn-primary" type="button">Default</button>
                                 <button class="btn btn-primary btn-round" type="button">Round</button>
                                 <button class="btn btn-primary btn-round" type="button">
@@ -51,7 +51,7 @@
                         </div>
                         <p class="category">Pick your size</p>
                         <div class="row">
-                            <div class="col-md-10">
+                            <div class="col-md-12">
                                 <button class="btn btn-primary btn-sm">Small</button>
                                 <button class="btn btn-primary">Regular</button>
                                 <button class="btn btn-primary btn-lg">Large</button>
@@ -59,13 +59,25 @@
                         </div>
                         <p class="category">Pick your color</p>
                         <div class="row">
-                            <div class="col-md-10">
-                                <button class="btn btn-default">Default</button>
-                                <button class="btn btn-primary">Primary</button>
-                                <button class="btn btn-info">Info</button>
-                                <button class="btn btn-success">Success</button>
-                                <button class="btn btn-warning">Warning</button>
-                                <button class="btn btn-danger">Danger</button>
+                            <div class="col-md-12">
+                                <?php
+                                    $baseColor = array('custom', 'primary', 'secondary', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan', 'white', 'black', 'gray', 'gray-dark', 'success', 'info', 'warning', 'danger', 'light', 'dark');
+
+                                    foreach ($baseColor as $key => $value) {
+                                        echo "<button class='btn btn-". $value . "'>". $value ."</button> ";
+                                    } 
+                                ?>
+                            </div>
+                        </div>
+                        <p class="category">Pick your color (Outline)</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <?php
+                                    foreach ($baseColor as $key => $value) {
+                                        if($value !== "white" && $value !== "light")
+                                            echo "<button class='btn btn-outline-". $value . "'>". $value ."</button> ";
+                                    } 
+                                ?>
                             </div>
                         </div>
                         <h4 class="group-title">Links</h4>
@@ -80,6 +92,45 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Inputs -->
+                    <div id="inputs" class="section-m-b-100">
+                        <h4>Inputs</h4>
+                        <p class="category">Form Controls</p>
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <input type="text" value="" placeholder="Regular" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group has-success">
+                                    <input type="text" value="Success" class="form-control is-valid">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group has-danger">
+                                    <input type="email" value="Error Input" class="form-control is-invalid">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Left Icon Normal Input">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Right Icon Normal Input">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Backgrounds -->
                     <div id="backgrounds">
@@ -87,9 +138,7 @@
                         <p class="category">Pick your style</p>
                         <div class="row">
                         <?php
-                        $baseColor = array('custom', 'primary', 'secondary', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan', 'white', 'black', 'gray', 'gray-dark', 'success', 'info', 'warning', 'danger', 'light', 'dark');
-
-                        foreach ($baseColor as $value) {
+                        foreach ($baseColor as $key => $value) {
                             echo "<div class='col-12 py-2 bg-". $value . "'><code class='bg-white p-1'>bg-". $value ."</code></div>";
                         } 
                         ?>

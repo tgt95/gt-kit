@@ -77,6 +77,10 @@ $font-primary: 'Roboto', sans-serif;
 $font-size-base: 14px;
 
 
+@mixin round {
+    border-radius: 30px;
+}
+
 @mixin transition03s {
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
