@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" href="demo/assets/img/favicon.ico">
     <!-- App css -->
-    <link href="../built/css/core.css" rel="stylesheet" type="text/css" />
-    <link href="../built/css/gt-kit.min.css" rel="stylesheet" type="text/css" />
-    <link href="../built/css/demo.min.css" rel="stylesheet" type="text/css" />
+    <link href="./built/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="./built/css/gt-kit.min.css" rel="stylesheet" type="text/css" />
+    <link href="./built/css/demo.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -19,9 +19,9 @@
     <div id="wrapper">
         <div class="content-page">
             <div class="page-header">
-                <div class="page-header-image bg-size-cover" layer-bg="black" style="background: url(assets/img/bg/rodion-kutsaev-951-unsplash.jpg);">
+                <div class="page-header-image bg-size-cover" layer-bg="black" style="background: url(demo/assets/img/bg/rodion-kutsaev-951-unsplash.jpg);">
                     <div class="content-center">
-                        <img class="logo" src="assets/img/logo.svg" height="150">
+                        <img class="logo" src="demo/assets/img/logo.svg" height="150">
                         <h1 class="title">GT UI KIT</h1>
                         <h3 class="descripton">A beautiful Bootstrap 4 UI kit.</h3>
                         <h6 class="sub-descripton">Base on Material Design</h6>
@@ -89,7 +89,7 @@
                         <?php
                         $baseColor = array('custom', 'primary', 'secondary', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan', 'white', 'black', 'gray', 'gray-dark', 'success', 'info', 'warning', 'danger', 'light', 'dark');
 
-                        foreach ($baseColor as $value) {
+                        foreach ($baseColor as $key => $value) {
                             echo "<div class='col-12 py-2 bg-". $value . "'><code class='bg-white p-1'>bg-". $value ."</code></div>";
                         } 
                         ?>
@@ -112,7 +112,7 @@
     <!-- END wrapper -->
 
 </body>
-<script src="../built/js/core.min.js"></script>
+<script src="./built/js/core.min.js"></script>
 <script>
 $(document).ready(function() {
     var windowHeight = window.innerHeight;
