@@ -52,6 +52,18 @@
 		border-color: $hex;
 	}
 
+	.btn-outline-#{$name}:not(:disabled):not(.disabled).active, 
+	.btn-outline-#{$name}:not(:disabled):not(.disabled):active, 
+	.show>.btn-outline-#{$name}.dropdown-toggle{
+		color: $white;
+	}
+
+	.btn-outline-#{$name}:not(:disabled):not(.disabled).active:focus, 
+	.btn-outline-#{$name}:not(:disabled):not(.disabled):active:focus, 
+	.show>.btn-outline-#{$name}.dropdown-toggle:focus{
+		box-shadow: $shadow-active;
+	}
+
 	.btn-outline-#{$name} {
 		color: $hex;
 		border-color: $hex;
@@ -83,8 +95,8 @@
 			}
 		}
 		&.btn-#{$name}:not(:disabled):not(.disabled).active, 
-		&.btn-#{$name}:not(:disabled):not(.disabled):active, 
-		&.show>.btn-#{$name}.dropdown-toggle{
+		.btn-#{$name}:not(:disabled):not(.disabled):active, 
+		.show>.btn-#{$name}.dropdown-toggle{
 			@if $name == 'warning' {
 				color: $text-primary;
 			}
