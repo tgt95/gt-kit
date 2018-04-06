@@ -82,13 +82,13 @@
                         </div>
                         <h4 class="group-title">Links</h4>
                         <div class="row">
-                            <div class="col-md-8">
-                                <button class="btn btn-link btn-default">Default</button>
-                                <button class="btn btn-link btn-primary ">Primary</button>
-                                <button class="btn btn-link btn-info">Info</button>
-                                <button class="btn btn-link btn-success">Success</button>
-                                <button class="btn btn-link btn-warning">Warning</button>
-                                <button class="btn btn-link btn-danger">Danger</button>
+                            <div class="col-md-12">
+                                <?php
+                                    foreach ($baseColor as $key => $value) {
+                                        if($value !== "white" && $value !== "light")
+                                            echo "<button class='btn btn-link btn-". $value . "'>". $value ."</button> ";
+                                    } 
+                                ?>
                             </div>
                         </div>
                     </div>

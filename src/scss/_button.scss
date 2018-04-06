@@ -21,8 +21,8 @@
 
 
 @each $hex,$name in $base-color {
-	.btn-#{$name}:not(:disabled):not(.disabled).active, 
-	.btn-#{$name}:not(:disabled):not(.disabled):active, 
+	.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link).active, 
+	.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link):active, 
 	.show>.btn-#{$name}.dropdown-toggle{
 		@if $name == 'white' or $name == 'light' {
 			color: $text-primary;
@@ -64,23 +64,37 @@
 }
 
 .btn-link{
+	box-shadow: none;
 	@each $hex,$name in $base-color {
 		&.btn-#{$name} {
 			color: $hex;
 			border-color: transparent;
-			box-shadow: none;
 			&:hover,&:focus,&:active {
-				@if $name == 'warning' {
-					color: $text-primary!important;
-				}
-				@else {
-					color: $hex!important;
-				}
+				// @if $name == 'warning' {
+				// 	color: $text-primary;
+				// }
+				// @else {
+				// 	color: $hex;
+				// }
+				color: $hex;
 				text-decoration: none;
-				box-shadow: none!important;
-				background-color: rgba(0,0,0,0.1)!important;
-				border-color: transparent!important;
+				background-color: rgba(0,0,0,0.1);
+				box-shadow: none;
 			}
+		}
+		&.btn-#{$name}:not(:disabled):not(.disabled).active, 
+		&.btn-#{$name}:not(:disabled):not(.disabled):active, 
+		&.show>.btn-#{$name}.dropdown-toggle{
+			@if $name == 'warning' {
+				color: $text-primary;
+			}
+			@else {
+				color: $hex;
+			}
+			color: $hex;
+			background-color: rgba(0,0,0,0.1);
+			border-color: transparent;
+			box-shadow: none;
 		}
 	}
 	&.btn-default{
