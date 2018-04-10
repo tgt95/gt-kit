@@ -714,7 +714,7 @@
 <?php 
 $modalId = array("small-modal", "normal-modal", "large-modal");
 $modalSize = array("modal-sm", "", "modal-lg");
-for ($i=1; $i <=6 ; $i++) { 
+for ($i=1; $i <=3 ; $i++) { 
 ?>
 <div class="modal fade" id="<?php echo $modalId[$i-1] ?>" tabindex="-1" role="dialog">
     <div class="modal-dialog <?php echo $modalSize[$i-1] ?>" role="document">

@@ -57,6 +57,19 @@
                                 <button class="btn btn-primary btn-lg">Large</button>
                             </div>
                         </div>
+                        <p class="category">Action Button</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-just-icon btn-custom btn-round btn-white"><i class="zmdi zmdi-plus"></i></button>
+                                <button class='btn btn-just-icon btn-custom btn-round'><i class='zmdi zmdi-plus'></i></button>
+                                <button class='btn btn-just-icon btn-primary btn-round'><i class='zmdi zmdi-plus'></i></button>
+                                <button class='btn btn-just-icon btn-secondary btn-round'><i class='zmdi zmdi-plus'></i></button>
+                                <button class='btn btn-just-icon btn-blue btn-round'><i class='zmdi zmdi-plus'></i></button>
+                                <button class='btn btn-just-icon btn-indigo btn-round'><i class='zmdi zmdi-plus'></i></button>
+                                <button class='btn btn-just-icon btn-purple btn-round'><i class='zmdi zmdi-plus'></i></button>
+                                <button class='btn btn-just-icon btn-pink btn-round'><i class='zmdi zmdi-plus'></i></button>
+                            </div>
+                        </div>
                         <p class="category">Pick your color</p>
                         <div class="row">
                             <div class="col-md-12">
@@ -111,7 +124,7 @@
                                 <button class='btn btn-outline-dark'>dark</button>
                             </div>
                         </div>
-                        <h4 class="group-title">Links</h4>
+                        <p class="category">Links</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <button class='btn btn-link btn-custom'>custom</button>
@@ -137,47 +150,1223 @@
                                 <button class='btn btn-link btn-dark'>dark</button>
                             </div>
                         </div>
+                        <p class="category">Button Group</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-info">Left</button>
+                                    <button type="button" class="btn btn-info">Middle</button>
+                                    <button type="button" class="btn btn-info">Right</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-info btn-round">Left</button>
+                                    <button type="button" class="btn btn-info btn-round">Middle</button>
+                                    <button type="button" class="btn btn-info btn-round">Right</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- Inputs -->
                     <div id="inputs" class="section-m-b-100">
                         <h4>Inputs</h4>
-                        <p class="category">Form Controls</p>
+                        <p class="category">Form Controls Normal</p>
                         <div class="row">
                             <div class="col-sm-6 col-lg-3">
                                 <div class="form-group">
-                                    <input type="text" value="" placeholder="Regular" class="form-control">
+                                    <label>Regular</label>
+                                    <input type="text" placeholder="Regular" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Disabled</label>
+                                    <input type="text" placeholder="Disabled" class="form-control" disabled>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3">
                                 <div class="form-group has-success">
-                                    <input type="text" value="Success" class="form-control is-valid">
+                                    <label>Success</label>
+                                    <input type="text" placeholder="Is Success" value="Success" class="form-control is-valid">
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3">
-                                <div class="form-group has-danger">
-                                    <input type="email" value="Error Input" class="form-control is-invalid">
+                                <div class="form-group has-error">
+                                    <label>Error</label>
+                                    <input type="email" placeholder="Is Error" value="Error" class="form-control is-invalid">
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                <div class="form-group">
+                                    <label>Left Icon Normal Input</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Left Icon Normal Input">
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Left Icon Normal Input">
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Right Icon Normal Input">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                <div class="form-group">
+                                    <label>Right Icon Normal Input</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Right Icon Normal Input">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Left Icon Custom Input</label>
+                                    <div class="input-group custom">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Left Icon Custom Input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Right Icon Custom Input</label>
+                                    <div class="input-group custom">
+                                        <input type="text" class="form-control" placeholder="Right Icon Custom Input">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Input Rounded Small</label>
+                                    <div class="input-group custom">
+                                        <input type="text" class="form-control form-rounded form-control-sm" placeholder="Input Rounded">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Input Rounded</label>
+                                    <div class="input-group custom">
+                                        <input type="text" class="form-control form-rounded" placeholder="Input Rounded">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Input Rounded Large</label>
+                                    <div class="input-group custom">
+                                        <input type="text" class="form-control form-rounded form-control-lg" placeholder="Input Rounded">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="clearfix w-100"></div> -->
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Input Rounded Large</label>
+                                    <textarea name="" id="" cols="30" rows="2" placeholder="Textarea" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="category">Form Controls ( Float Label)</p>
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl">
+                                    <input type="text" class="form-control-fl">
+                                    <label>Regular</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl">
+                                    <input type="text" class="form-control-fl" disabled>
+                                    <label>Disabled</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl has-success">
+                                    <input type="text" class="form-control-fl is-valid">
+                                    <label>Success</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl has-error">
+                                    <input type="text" value="Error" class="form-control-fl is-invalid">
+                                    <label>Error</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl">
+                                    <textarea class="form-control-fl"></textarea>
+                                    <label>Textarea</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="select">
+                        <h4 class="group-title">Dropdown</h4>
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl">
+                                    <div class="form-select-fl">
+                                        <select class="form-control-fl">
+                                            <option value="" selected>Choose Option</option>
+                                            <option value="Mustard">Mustard</option>
+                                            <option value="Ketchup">Ketchup</option>
+                                            <option value="Relish">Relish</option>
+                                        </select>
+                                    </div>
+                                    <label>Select (Float Label)</label>
+                                </div>
+                            </div>
+                            <div class="clearfix w-100"></div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Select</label>
+                                    <div class="form-select">
+                                        <select class="form-control">
+                                            <option>Mustard</option>
+                                            <option>Ketchup</option>
+                                            <option>Relish</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group">
+                                    <label>Select Rounded</label>
+                                    <div class="form-select">
+                                        <select class="form-control form-rounded">
+                                            <option>Mustard</option>
+                                            <option>Ketchup</option>
+                                            <option>Relish</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Dropdown -->
+                    <div id="dropdown" class="section-m-b-100">
+                        <h4 class="group-title">Select</h4>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                    </button>
+                                    <div class="dropdown-menu mb-2">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <div class="btn-group dropleft">
+                                    <button type="button" class="btn btn-custom dropdown-toggle-split dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropleft</span>
+                                    </button>
+                                    <div class="dropdown-menu" x-placement="left-start">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                    <button type="button" class="btn btn-custom waves-effect waves-light">
+                                        Split Dropleft
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Checkbox -->
+                    <div id="checkbox" class="section-m-b-100">
+                        <h4 class="group-title">Checkbox</h4>
+                        <p class="category">Basic</p>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox">
+                                    <input id="checkbox-0" type="checkbox" checked>
+                                    <label for="checkbox-0">
+                                        Default
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-custom">
+                                    <input id="checkbox0" type="checkbox" checked>
+                                    <label for="checkbox0">
+                                        Custom </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="checkbox1" type="checkbox" checked>
+                                    <label for="checkbox1">
+                                        Primary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-secondary">
+                                    <input id="checkbox2" type="checkbox" checked>
+                                    <label for="checkbox2">
+                                        Secondary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-blue">
+                                    <input id="checkbox3" type="checkbox" checked>
+                                    <label for="checkbox3">
+                                        Blue </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-indigo">
+                                    <input id="checkbox4" type="checkbox" checked>
+                                    <label for="checkbox4">
+                                        Indigo </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-purple">
+                                    <input id="checkbox5" type="checkbox" checked>
+                                    <label for="checkbox5">
+                                        Purple </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-pink">
+                                    <input id="checkbox6" type="checkbox" checked>
+                                    <label for="checkbox6">
+                                        Pink </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-red">
+                                    <input id="checkbox7" type="checkbox" checked>
+                                    <label for="checkbox7">
+                                        Red </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-orange">
+                                    <input id="checkbox8" type="checkbox" checked>
+                                    <label for="checkbox8">
+                                        Orange </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-yellow">
+                                    <input id="checkbox9" type="checkbox" checked>
+                                    <label for="checkbox9">
+                                        Yellow </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-green">
+                                    <input id="checkbox10" type="checkbox" checked>
+                                    <label for="checkbox10">
+                                        Green </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-teal">
+                                    <input id="checkbox11" type="checkbox" checked>
+                                    <label for="checkbox11">
+                                        Teal </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-cyan">
+                                    <input id="checkbox12" type="checkbox" checked>
+                                    <label for="checkbox12">
+                                        Cyan </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-black">
+                                    <input id="checkbox14" type="checkbox" checked>
+                                    <label for="checkbox14">
+                                        Black </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-gray">
+                                    <input id="checkbox15" type="checkbox" checked>
+                                    <label for="checkbox15">
+                                        Gray </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-gray-dark">
+                                    <input id="checkbox16" type="checkbox" checked>
+                                    <label for="checkbox16">
+                                        Gray-dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-success">
+                                    <input id="checkbox17" type="checkbox" checked>
+                                    <label for="checkbox17">
+                                        Success </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-info">
+                                    <input id="checkbox18" type="checkbox" checked>
+                                    <label for="checkbox18">
+                                        Info </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-warning">
+                                    <input id="checkbox19" type="checkbox" checked>
+                                    <label for="checkbox19">
+                                        Warning </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-danger">
+                                    <input id="checkbox20" type="checkbox" checked>
+                                    <label for="checkbox20">
+                                        Danger </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-dark">
+                                    <input id="checkbox22" type="checkbox" checked>
+                                    <label for="checkbox22">
+                                        Dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox">
+                                    <input id="checkbox-0" type="checkbox" disabled checked>
+                                    <label for="checkbox-0">
+                                        Disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="category">Circled</p>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-circle">
+                                    <input id="checkbox-0" type="checkbox" checked>
+                                    <label for="checkbox-0">
+                                        Default
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-custom checkbox-circle">
+                                    <input id="checkbox0" type="checkbox" checked>
+                                    <label for="checkbox0">
+                                        Custom </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-primary checkbox-circle">
+                                    <input id="checkbox1" type="checkbox" checked>
+                                    <label for="checkbox1">
+                                        Primary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-secondary checkbox-circle">
+                                    <input id="checkbox2" type="checkbox" checked>
+                                    <label for="checkbox2">
+                                        Secondary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-blue checkbox-circle">
+                                    <input id="checkbox3" type="checkbox" checked>
+                                    <label for="checkbox3">
+                                        Blue </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-indigo checkbox-circle">
+                                    <input id="checkbox4" type="checkbox" checked>
+                                    <label for="checkbox4">
+                                        Indigo </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-purple checkbox-circle">
+                                    <input id="checkbox5" type="checkbox" checked>
+                                    <label for="checkbox5">
+                                        Purple </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-pink checkbox-circle">
+                                    <input id="checkbox6" type="checkbox" checked>
+                                    <label for="checkbox6">
+                                        Pink </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-red checkbox-circle">
+                                    <input id="checkbox7" type="checkbox" checked>
+                                    <label for="checkbox7">
+                                        Red </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-orange checkbox-circle">
+                                    <input id="checkbox8" type="checkbox" checked>
+                                    <label for="checkbox8">
+                                        Orange </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-yellow checkbox-circle">
+                                    <input id="checkbox9" type="checkbox" checked>
+                                    <label for="checkbox9">
+                                        Yellow </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-green checkbox-circle">
+                                    <input id="checkbox10" type="checkbox" checked>
+                                    <label for="checkbox10">
+                                        Green </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-teal checkbox-circle">
+                                    <input id="checkbox11" type="checkbox" checked>
+                                    <label for="checkbox11">
+                                        Teal </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-cyan checkbox-circle">
+                                    <input id="checkbox12" type="checkbox" checked>
+                                    <label for="checkbox12">
+                                        Cyan </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-black checkbox-circle">
+                                    <input id="checkbox14" type="checkbox" checked>
+                                    <label for="checkbox14">
+                                        Black </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-gray checkbox-circle">
+                                    <input id="checkbox15" type="checkbox" checked>
+                                    <label for="checkbox15">
+                                        Gray </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-gray-dark checkbox-circle">
+                                    <input id="checkbox16" type="checkbox" checked>
+                                    <label for="checkbox16">
+                                        Gray-dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-success checkbox-circle">
+                                    <input id="checkbox17" type="checkbox" checked>
+                                    <label for="checkbox17">
+                                        Success </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-info checkbox-circle">
+                                    <input id="checkbox18" type="checkbox" checked>
+                                    <label for="checkbox18">
+                                        Info </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-warning checkbox-circle">
+                                    <input id="checkbox19" type="checkbox" checked>
+                                    <label for="checkbox19">
+                                        Warning </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-danger checkbox-circle">
+                                    <input id="checkbox20" type="checkbox" checked>
+                                    <label for="checkbox20">
+                                        Danger </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-dark checkbox-circle">
+                                    <input id="checkbox22" type="checkbox" checked>
+                                    <label for="checkbox22">
+                                        Dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="checkbox checkbox-circle">
+                                    <input id="checkbox-0" type="checkbox" disabled checked>
+                                    <label for="checkbox-0">
+                                        Disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Radio -->
+                    <div id="radio" class="section-m-b-100">
+                        <h4 class="group-title">Radio</h4>
+                        <!-- <p class="category">Basic</p> -->
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio">
+                                    <input id="radio-0" type="radio" checked>
+                                    <label for="radio-0">
+                                        Default
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-custom">
+                                    <input id="radio0" type="radio" checked>
+                                    <label for="radio0">
+                                        Custom </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-primary">
+                                    <input id="radio1" type="radio" checked>
+                                    <label for="radio1">
+                                        Primary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-secondary">
+                                    <input id="radio2" type="radio" checked>
+                                    <label for="radio2">
+                                        Secondary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-blue">
+                                    <input id="radio3" type="radio" checked>
+                                    <label for="radio3">
+                                        Blue </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-indigo">
+                                    <input id="radio4" type="radio" checked>
+                                    <label for="radio4">
+                                        Indigo </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-purple">
+                                    <input id="radio5" type="radio" checked>
+                                    <label for="radio5">
+                                        Purple </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-pink">
+                                    <input id="radio6" type="radio" checked>
+                                    <label for="radio6">
+                                        Pink </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-red">
+                                    <input id="radio7" type="radio" checked>
+                                    <label for="radio7">
+                                        Red </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-orange">
+                                    <input id="radio8" type="radio" checked>
+                                    <label for="radio8">
+                                        Orange </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-yellow">
+                                    <input id="radio9" type="radio" checked>
+                                    <label for="radio9">
+                                        Yellow </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-green">
+                                    <input id="radio10" type="radio" checked>
+                                    <label for="radio10">
+                                        Green </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-teal">
+                                    <input id="radio11" type="radio" checked>
+                                    <label for="radio11">
+                                        Teal </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-cyan">
+                                    <input id="radio12" type="radio" checked>
+                                    <label for="radio12">
+                                        Cyan </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-black">
+                                    <input id="radio14" type="radio" checked>
+                                    <label for="radio14">
+                                        Black </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-gray">
+                                    <input id="radio15" type="radio" checked>
+                                    <label for="radio15">
+                                        Gray </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-gray-dark">
+                                    <input id="radio16" type="radio" checked>
+                                    <label for="radio16">
+                                        Gray-dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-success">
+                                    <input id="radio17" type="radio" checked>
+                                    <label for="radio17">
+                                        Success </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-info">
+                                    <input id="radio18" type="radio" checked>
+                                    <label for="radio18">
+                                        Info </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-warning">
+                                    <input id="radio19" type="radio" checked>
+                                    <label for="radio19">
+                                        Warning </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-danger">
+                                    <input id="radio20" type="radio" checked>
+                                    <label for="radio20">
+                                        Danger </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio radio-dark">
+                                    <input id="radio22" type="radio" checked>
+                                    <label for="radio22">
+                                        Dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="radio">
+                                    <input id="radio-0" type="radio" disabled checked>
+                                    <label for="radio-0">
+                                        Disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Toggle -->
+                    <div id="toggle" class="section-m-b-100">
+                        <h4 class="group-title">Toggle</h4>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle"></span> Default
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-custom"></span> Custom </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-primary"></span> Primary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-secondary"></span> Secondary </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-blue"></span> Blue </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-indigo"></span> Indigo </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-purple"></span> Purple </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-pink"></span> Pink </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-red"></span> Red </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-orange"></span> Orange </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-yellow"></span> Yellow </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-green"></span> Green </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-teal"></span> Teal </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-cyan"></span> Cyan </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-black"></span> Black </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-gray"></span> Gray </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-gray-dark"></span> Gray-dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-success"></span> Success </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-info"></span> Info </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-warning"></span> Warning </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-danger"></span> Danger </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" checked><span class="toggle toggle-dark"></span> Dark </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="toggle-btn">
+                                    <label>
+                                        <input type="checkbox" disabled checked><span class="toggle"></span> Disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabs -->
+                    <div id="backgrounds" class="section-m-b-100">
+                        <h4 class="group-title">Tabs</h4>
+                        <p class="category">Pick your style</p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-4">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link  active" id="home-tab" data-toggle="tab" href="#home-0" role="tab" aria-controls="home" aria-selected="true"><i class="zmdi zmdi-android"></i>Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile-0" role="tab" aria-controls="profile" aria-selected="false"><i class="zmdi zmdi-android"></i>Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact-0" role="tab" aria-controls="contact" aria-selected="false"><i class="zmdi zmdi-android"></i>Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home-0" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="p-2">
+                                            Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-0" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="p-2">
+                                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact-0" role="tabpanel" aria-labelledby="contact-tab">
+                                        <div class="p-2">
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <ul class="nav nav-pills nav-custom" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded active" id="home-tab" data-toggle="tab" href="#home-1" role="tab" aria-controls="home" aria-selected="true"><i class="zmdi zmdi-android"></i>Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded" id="profile-tab" data-toggle="tab" href="#profile-1" role="tab" aria-controls="profile" aria-selected="false"><i class="zmdi zmdi-android"></i>Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link rounded" id="contact-tab" data-toggle="tab" href="#contact-1" role="tab" aria-controls="contact" aria-selected="false"><i class="zmdi zmdi-android"></i>Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home-1" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="p-2">
+                                            Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-1" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="p-2">
+                                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact-1" role="tabpanel" aria-labelledby="contact-tab">
+                                        <div class="p-2">
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <ul class="nav nav-purple" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link  active" id="home-tab" data-toggle="tab" href="#home-2" role="tab" aria-controls="home" aria-selected="true"><i class="zmdi zmdi-android"></i>Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile-2" role="tab" aria-controls="profile" aria-selected="false"><i class="zmdi zmdi-android"></i>Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact-2" role="tab" aria-controls="contact" aria-selected="false"><i class="zmdi zmdi-android"></i>Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home-2" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="p-2">
+                                            Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-2" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="p-2">
+                                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact-2" role="tabpanel" aria-labelledby="contact-tab">
+                                        <div class="p-2">
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <ul class="nav nav-pills nav-fill with-icon" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link  active" id="home-tab" data-toggle="tab" href="#home-3" role="tab" aria-controls="home" aria-selected="true"><i class="zmdi zmdi-android"></i>Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile-3" role="tab" aria-controls="profile" aria-selected="false"><i class="zmdi zmdi-android"></i>Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact-3" role="tab" aria-controls="contact" aria-selected="false"><i class="zmdi zmdi-android"></i>Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home-3" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="p-2">
+                                            Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-3" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="p-2">
+                                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact-3" role="tabpanel" aria-labelledby="contact-tab">
+                                        <div class="p-2">
+                                            Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div id="pagination" class="section-m-b-100">
+                        <h4 class="group-title">Pagination</h4>
+                        <p class="category">Pick your style</p>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <nav aria-label="...">
+                                    <ul class="pagination pagination-custom">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <nav aria-label="...">
+                                    <ul class="pagination pagination-primary no-border">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <nav aria-label="...">
+                                    <ul class="pagination pagination-primary no-border rounded">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Badge -->
+                    <div id="badge" class="section-m-b-100">
+                        <h4 class="group-title">Badge</h4>
+                        <p class="category">Basic</p>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <span class="badge badge-custom">Custom</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-primary">Primary</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-secondary">Secondary</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-blue">Blue</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-indigo">Indigo</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-purple">Purple</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pink">Pink</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-red">Red</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-orange">Orange</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-yellow">Yellow</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-green">Green</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-teal">Teal</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-cyan">Cyan</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-black">Black</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-gray">Gray</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-gray-dark">Gray-dark</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-success">Success</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-info">Info</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-warning">Warning</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-danger">Danger</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-dark">Dark</span>
+                            </div>
+                        </div>
+                        <p class="category">Pill</p>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-custom">Custom</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-primary">Primary</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-secondary">Secondary</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-blue">Blue</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-indigo">Indigo</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-purple">Purple</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-pink">Pink</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-red">Red</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-orange">Orange</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-yellow">Yellow</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-green">Green</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-teal">Teal</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-cyan">Cyan</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-black">Black</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-gray">Gray</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-gray-dark">Gray-dark</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-success">Success</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-info">Info</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-warning">Warning</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-danger">Danger</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="badge badge-pill badge-dark">Dark</span>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Backgrounds -->
-                    <div id="backgrounds">
+                    <div id="backgrounds" class="section-m-b-100">
                         <h4 class="group-title">Background</h4>
                         <p class="category">Pick your style</p>
                         <div class="row">
@@ -206,6 +1395,99 @@
                             <div class='col-12 py-2 bg-dark'><code class='bg-white p-1'>bg-dark</code></div>
                         </div>
                     </div>
+                    <!-- Typography -->
+                    <div id="typography" class="section-m-b-100">
+                        <h4 class="group-title">Typography</h4>
+                        <p class="category">Text Color</p>
+                        <div class="row">
+                            <div class='col-sm-2 py-2 text-custom'> Text Custom!</div>
+                            <div class='col-sm-2 py-2 text-primary'> Text Primary!</div>
+                            <div class='col-sm-2 py-2 text-secondary'> Text Secondary!</div>
+                            <div class='col-sm-2 py-2 text-blue'> Text Blue!</div>
+                            <div class='col-sm-2 py-2 text-indigo'> Text Indigo!</div>
+                            <div class='col-sm-2 py-2 text-purple'> Text Purple!</div>
+                            <div class='col-sm-2 py-2 text-pink'> Text Pink!</div>
+                            <div class='col-sm-2 py-2 text-red'> Text Red!</div>
+                            <div class='col-sm-2 py-2 text-orange'> Text Orange!</div>
+                            <div class='col-sm-2 py-2 text-yellow'> Text Yellow!</div>
+                            <div class='col-sm-2 py-2 text-green'> Text Green!</div>
+                            <div class='col-sm-2 py-2 text-teal'> Text Teal!</div>
+                            <div class='col-sm-2 py-2 text-cyan'> Text Cyan!</div>
+                            <div class='col-sm-2 py-2 text-white'> Text White!</div>
+                            <div class='col-sm-2 py-2 text-black'> Text Black!</div>
+                            <div class='col-sm-2 py-2 text-gray'> Text Gray!</div>
+                            <div class='col-sm-2 py-2 text-gray-dark'> Text Gray-dark!</div>
+                            <div class='col-sm-2 py-2 text-success'> Text Success!</div>
+                            <div class='col-sm-2 py-2 text-info'> Text Info!</div>
+                            <div class='col-sm-2 py-2 text-warning'> Text Warning!</div>
+                            <div class='col-sm-2 py-2 text-danger'> Text Danger!</div>
+                            <div class='col-sm-2 py-2 text-light'> Text Light!</div>
+                            <div class='col-sm-2 py-2 text-dark'> Text Dark!</div>
+                        </div>
+                        <p class="category">Heading</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="typography-line">
+                                    <h1><span>Header 1</span>Beautiful UI Kit </h1>
+                                </div>
+                                <div class="typography-line">
+                                    <h2><span>Header 2</span>Beautiful UI Kit </h2>
+                                </div>
+                                <div class="typography-line">
+                                    <h3><span>Header 3</span>Beautiful UI Kit </h3>
+                                </div>
+                                <div class="typography-line">
+                                    <h4><span>Header 4</span>Beautiful UI Kit </h4>
+                                </div>
+                                <div class="typography-line">
+                                    <h5><span>Header 5</span>Beautiful UI Kit </h5>
+                                </div>
+                                <div class="typography-line">
+                                    <h6><span>Header 6</span>Beautiful UI Kit </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div id="modal">
+                        <h4 class="group-title">Modal</h4>
+                        <p class="category">Pick your size</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-custom btn-sm" data-toggle="modal" data-target="#small-modal">Small</button>
+                                <button class="btn btn-blue" data-toggle="modal" data-target="#normal-modal">Regular</button>
+                                <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#large-modal">Large</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tooltips & Popover -->
+                    <div id="tooltips-popover">
+                        <h4 class="group-title">Tooltips & Popover</h4>
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-custom" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                    Tooltip on top </button>
+                                <button type="button" class="btn btn-custom" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                                    Tooltip on right </button>
+                                <button type="button" class="btn btn-custom" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                                    Tooltip on bottom </button>
+                                <button type="button" class="btn btn-custom" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                                    Tooltip on left </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-blue" data-container="body" data-original-title="Popover on top" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-color="custom">
+                                    Popover on top </button>
+                                <button type="button" class="btn btn-blue" data-container="body" data-original-title="Popover on right" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-color="primary">
+                                    Popover on right </button>
+                                <button type="button" class="btn btn-blue" data-container="body" data-original-title="Popover on bottom" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-color="secondary">
+                                    Popover on bottom </button>
+                                <button type="button" class="btn btn-blue" data-container="body" data-original-title="Popover on left" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-color="blue">
+                                    Popover on left </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- container -->
             </div>
@@ -221,6 +1503,65 @@
         <!-- ============================================================== -->
     </div>
     <!-- END wrapper -->
+    <!-- Modal -->
+    <div class="modal fade" id="small-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Permissions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="zmdi zmdi-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisinuli.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link btn-custom">Save changes</button>
+                    <button type="button" class="btn btn-link btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="normal-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Permissions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="zmdi zmdi-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisinuli.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link btn-custom">Save changes</button>
+                    <button type="button" class="btn btn-link btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="large-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Permissions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="zmdi zmdi-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisinuli.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link btn-custom">Save changes</button>
+                    <button type="button" class="btn btn-link btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Modal -->
 </body>
 <script src="built/js/core.min.js"></script>
 <script>
@@ -228,10 +1569,6 @@ $(document).ready(function() {
     var windowHeight = window.innerHeight;
 
     $('.page-header').height(windowHeight);
-
-    Waves.attach('.btn:not(.btn-link)', ['waves-float', 'waves-light']);
-    Waves.attach('.btn.btn-link', ['waves-float', 'waves-effect']);
-    Waves.init();
 
     $(window).resize(function(event) {
         // $('.page-header').height(windowHeight);
