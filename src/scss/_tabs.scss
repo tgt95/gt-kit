@@ -24,6 +24,8 @@
 		&.rounded{
 			border-radius: $rounded!important;
 		}
+	}
+	.nav-link:not(.active){
 		&:hover{
 			background-color: rgba($text-disabled, .05);
 		}
