@@ -65,7 +65,7 @@
                                 $baseColor = array('custom', 'primary', 'secondary', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan', 'white', 'black', 'gray', 'gray-dark', 'success', 'info', 'warning', 'danger', 'light', 'dark');
                                 foreach ($baseColor as $key => $value) {
                                     if($key <= 6){
-                                        echo "<button class='btn btn-just-icon btn-". $value . " btn-round'><i class='zmdi zmdi-plus'></i></button> ";
+                                        echo "<button class='btn btn-just-icon btn-". ucfirst($value) . " btn-round'><i class='zmdi zmdi-plus'></i></button> ";
                                     } 
                                 } 
                                 ?>
@@ -76,7 +76,7 @@
                             <div class="col-md-12">
                                 <?php
                                 foreach ($baseColor as $key => $value) {
-                                    echo "<button class='btn btn-". $value . "'>". $value ."</button> ";
+                                    echo "<button class='btn btn-". $value . "'>". ucfirst($value) ."</button> ";
                                 } 
                                 ?>
                             </div>
@@ -87,7 +87,7 @@
                                 <?php
                                 foreach ($baseColor as $key => $value) {
                                     if($value !== "white" && $value !== "light")
-                                        echo "<button class='btn btn-outline-". $value . "'>". $value ."</button> ";
+                                        echo "<button class='btn btn-outline-". $value . "'>". ucfirst($value) ."</button> ";
                                 } 
                                 ?>
                             </div>
@@ -98,7 +98,7 @@
                                 <?php
                                 foreach ($baseColor as $key => $value) {
                                     if($value !== "white" && $value !== "light")
-                                        echo "<button class='btn btn-link btn-". $value . "'>". $value ."</button> ";
+                                        echo "<button class='btn btn-link btn-". $value . "'>". ucfirst($value) ."</button> ";
                                 } 
                                 ?>
                             </div>
@@ -399,8 +399,8 @@
                             ?>
                                 <div class="col-md-3 col-sm-6">
                                     <div class="checkbox checkbox-<?php echo $value ?> checkbox-circle">
-                                        <input id="checkbox<?php echo $key ?>" type="checkbox" checked>
-                                        <label for="checkbox<?php echo $key ?>">
+                                        <input id="checkbox<?php echo $key.'circled' ?>" type="checkbox" checked>
+                                        <label for="checkbox<?php echo $key.'circled' ?>">
                                             <?php echo ucfirst($value) ?>
                                         </label>
                                     </div>
