@@ -65,7 +65,7 @@
                                 $baseColor = array('custom', 'primary', 'secondary', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan', 'white', 'black', 'gray', 'gray-dark', 'success', 'info', 'warning', 'danger', 'light', 'dark');
                                 foreach ($baseColor as $key => $value) {
                                     if($key <= 6){
-                                        echo "<button class='btn btn-just-icon btn-". ucfirst($value) . " btn-round'><i class='zmdi zmdi-plus'></i></button> ";
+                                        echo "<button class='btn btn-just-icon btn-". $value . " btn-round'><i class='zmdi zmdi-plus'></i></button> ";
                                     } 
                                 } 
                                 ?>
