@@ -1,14 +1,242 @@
-.form-control{
-    &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder, &::placeholder {
-        // color: $text-disabled;
-        color: $red;
+/* =============
+   Form
+============= */
+
+
+
+.form-group{
+    label{
+        font-weight: 600;
+    }
+    &.has-success{
+        label{
+            color: $success;
+        }
+    }
+    &.has-error{
+        label{
+            color: $danger;
+        }
     }
 }
 
+.form-control{
+    position: relative;
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder, &::placeholder {
+        color: $text-disabled;
+    }
+    &:focus{
+        box-shadow: 0 0 8px rgba($blue, .12), 0 6px 8px rgba($blue, .24);
+    }
+    &:disabled{
+        cursor: not-allowed;
+    }
+    &.form-rounded{
+        border-radius: $rounded!important;
+    }
+}
+
+.form-select{
+    position: relative;
+    select.form-control{
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+    }
+    &:after{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 0;
+        height: 0;
+        margin-top: -3px;
+        border-left: .35em solid transparent;
+        border-right: .35em solid transparent;
+        border-top: .4em solid;
+        content: '';
+        z-index: 0;
+    }
+}
+
+
+
+/* Success */
 .custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid{
     border-color: $success;
 }
 
+.custom-select.is-valid:focus, .form-control.is-valid:focus, .was-validated .custom-select:valid:focus, .was-validated .form-control:valid:focus{
+    border-color: $success;
+    box-shadow: 0 0 8px rgba($success, .12), 0 6px 8px rgba($success, .24);
+}
+
+/* Danger */
 .custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid{
     border-color: $danger;
+}
+
+.custom-select.is-invalid:focus, .form-control.is-invalid:focus, .was-validated .custom-select:invalid:focus, .was-validated .form-control:invalid:focus{
+    border-color: $danger;
+    box-shadow: 0 0 8px rgba($danger, .12), 0 6px 8px rgba($danger, .24);
+}
+
+
+.input-group{
+    &.custom{
+        .input-group-prepend, .input-group-append{
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            width: 38px;
+            z-index: 4;
+            .input-group-text{
+                border: none;
+                background-color: transparent;
+            }
+        }
+        .input-group-prepend{
+            +.form-control, .form-control-sm, .form-control-lg{
+                padding-left: 40px;
+            }
+        }
+        .input-group-append{
+            right: 0;
+            +.form-control{
+                padding-right: 40px;
+            }
+        }
+        >.form-control{
+            border-radius: .25rem;
+        }
+    }
+}
+
+
+/* Float Label */
+.form-group-fl{
+    position: relative;
+    margin-bottom: 1rem;
+    &.has-success{
+        label, label.active{
+            color: $success;
+        }
+    }
+    &.has-error{
+        label, label.active{
+            color: $danger;
+        }
+    }
+    label{
+        color: #9e9e9e;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+        cursor: text;
+        -webkit-transition: color .2s ease-out, -webkit-transform .2s ease-out;
+        transition: color .2s ease-out, -webkit-transform .2s ease-out;
+        transition: transform .2s ease-out, color .2s ease-out;
+        transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        text-align: initial;
+        -webkit-transform: translateY(12px);
+        transform: translateY(12px);
+        &:not(.label-icon).active {
+            -webkit-transform: translateY(-14px) scale(0.8);
+            transform: translateY(-14px) scale(0.8);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0
+        }
+        &.active {
+            // color: $blue;
+        }
+    }
+    .form-control-fl{
+        position: relative;
+        z-index: 1;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #9e9e9e;
+        border-radius: 0;
+        outline: none;
+        height: 3rem;
+        width: 100%;
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        padding: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-transition: border .3s, -webkit-box-shadow .3s;
+        transition: border .3s, -webkit-box-shadow .3s;
+        transition: box-shadow .3s, border .3s;
+        transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+        &:disabled{
+            cursor: not-allowed;
+            opacity: .5;
+        }
+        &:focus{
+            border-bottom: 2px solid $blue;
+            +label{
+                &.active {
+                    color: $blue;
+                }
+            }
+        }
+        &.is-valid{
+            border-bottom: 2px solid $success;
+            +label{
+                &.active {
+                    color: $success;
+                }
+            }
+        }
+        &.is-invalid{
+            border-bottom: 2px solid $danger;
+            +label{
+                &.active {
+                    color: $danger;
+                }
+            }
+        }
+    }
+    textarea {
+        &.form-control-fl{
+            line-height: normal;
+            overflow-y: hidden;
+            padding: .8rem 0 .8rem 0;
+            resize: none;
+            min-height: 3rem;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.form-select-fl{
+    position: relative;
+    select.form-control-fl{
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        // color: transparent;
+    }
+    &:after{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 0;
+        height: 0;
+        margin-top: -3px;
+        border-left: .35em solid transparent;
+        border-right: .35em solid transparent;
+        border-top: .4em solid;
+        content: '';
+        z-index: 0;
+    }
 }

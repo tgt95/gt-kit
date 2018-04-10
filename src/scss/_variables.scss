@@ -1,3 +1,7 @@
+/* =============
+   Variables
+============= */
+
 
 // @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
@@ -77,9 +81,7 @@ $font-primary: 'Roboto', sans-serif;
 $font-size-base: 14px;
 
 
-@mixin round {
-    border-radius: 30px;
-}
+$rounded: 30px;
 
 @mixin transition03s {
     -webkit-transition: all .3s linear;

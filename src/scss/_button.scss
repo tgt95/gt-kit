@@ -1,3 +1,8 @@
+/* =============
+   Button
+============= */
+
+
 .btn {
 	padding: 5px 16px;
 	border-radius: 2px;
@@ -14,7 +19,20 @@
 		outline: none;
 	}
 	&.btn-round {
-		@include round;
+		border-radius: $rounded;
+	}
+	&.btn-just-icon{
+		font-size: 20px;
+		padding: 11px 11px;
+		line-height: 1em;
+		>i{
+			width: 20px;
+
+			vertical-align: middle;
+			font-size: 17px;
+			top: -1px;
+			position: relative;
+		}
 	}
 }
 
@@ -67,6 +85,7 @@
 	.btn-outline-#{$name} {
 		color: $hex;
 		border-color: $hex;
+		background-color: $white;
 		&:hover{
 			color: $white;
 			background-color: $hex;
@@ -120,8 +139,18 @@
 		border-color: transparent;
 		&:hover,&:focus,&:active {
 			text-decoration: none;
-			box-shadow: none!important;
+			box-shadow: none;
 			background-color: rgba(0,0,0,0.1);
 		}
+	}
+	&.btn-default:not(:disabled):not(.disabled).active, 
+	&.btn-default:not(:disabled):not(.disabled):active, 
+	&.show>.btn-default.dropdown-toggle{
+
+	}
+	&.btn-default:not(:disabled):not(.disabled).active:focus, 
+	&.btn-default:not(:disabled):not(.disabled):active:focus, 
+	&.show>.btn-default.dropdown-toggle:focus{
+		
 	}
 }

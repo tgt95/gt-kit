@@ -8,7 +8,7 @@
     "build-dev-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-dev-css",
     "build-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-style-css",
     "build-core-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js compile-core-css",
-    "build-core-js": "./node_modules/.bin/gulp --gulpfile config/build-scss.js compile-core-js"
+    "build-core-js": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-core-js"
   },
   "author": "TGT95",
   "license": "ISC",
@@ -19,7 +19,8 @@
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.9",
-    "node-sass": "^4.8.3"
+    "node-sass": "^4.8.3",
+    "popper.js": "^1.14.3"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",

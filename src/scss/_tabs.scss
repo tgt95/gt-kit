@@ -1,0 +1,96 @@
+/* =============
+   Button
+============= */
+
+
+.nav-tabs{
+	.nav-link{
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $text-secondary;
+		@include transition03s;
+	}
+	.nav-item.show .nav-link, .nav-link.active{
+		color: $text-primary;
+	}
+}
+
+.nav-pills{
+	.nav-link{
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $text-secondary;
+		@include transition03s;
+		&.rounded{
+			border-radius: $rounded!important;
+		}
+		&:hover{
+			background-color: rgba($text-disabled, .05);
+		}
+	}
+	.nav-item.show .nav-link, .nav-link.active{
+		color: $white;
+		box-shadow: $shadow-active;
+	}
+	&.with-icon{
+		.nav-item{
+			.nav-link{
+				>i{
+					display: block;
+					text-align: center;
+					font-size: 20px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+}
+
+@each $hex,$name in $base-color {
+	.nav-pills.nav-#{$name}{
+		.nav-item.show .nav-link, .nav-link.active{
+			background-color: $hex;
+		}
+	}
+}
+
+@each $hex,$name in $base-color {
+	.nav-#{$name}:not(.nav-pills){
+		.nav-link{
+			position: relative;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: $text-secondary;
+			@include transition03s;
+			&:before{
+				content: "";
+				height: 2px;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				background-color: $hex;
+				transform: scale(0);
+				transition: all .3s;
+			}
+			&.active{
+				&:before{
+					transform: scale(1);
+				}
+			}
+		}
+		.nav-item.show .nav-link, .nav-link.active{
+			color: $hex;
+		}
+	}
+}
+
+.nav:not(.with-icon){
+	.nav-item{
+		.nav-link{
+			>i{
+				margin-right: 5px;
+			}
+		}
+	}
+}

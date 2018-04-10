@@ -1,4 +1,9 @@
+/* =============
+   Bootstrap Reset
+============= */
+
 /* Background colors */
+$base-size-name : ('sm','md', 'lg', 'xl');
 $base-color : ($custom, 'custom'), ($primary, 'primary'), ($secondary, 'secondary'), ($blue, 'blue'), ($indigo, 'indigo'), ($purple, 'purple'), ($pink, 'pink'), ($red, 'red'), ($orange, 'orange'), ($yellow, 'yellow'), ($green, 'green'), ($teal, 'teal'), ($cyan, 'cyan'), ($white, 'white'), ($black, 'black'), ($gray, 'gray'), ($gray-dark, 'gray-dark'), ($success, 'success'), ($info, 'info'), ($warning, 'warning'), ($danger, 'danger'), ($light, 'light'), ($dark, 'dark');
 @each $hex,$name in $base-color {
 	.bg-#{$name} {
@@ -22,8 +27,12 @@ $base-color : ($custom, 'custom'), ($primary, 'primary'), ($secondary, 'secondar
 }
 
 /* Border colors */
+.badge:not(.badge-pill){
+	border-radius: 2px;
+}
 @each $hex,$name in $base-color {
 	.badge-#{$name} {
+		color: $white;
 		background-color: $hex;
 	}
 }
@@ -56,4 +65,177 @@ $bg-style : (cover), (contain);
 			background: $hex;
 		}
 	}
+}
+
+/* Clearfix */
+.clearfix{
+	&:before{
+		display: table;
+		content: " ";
+	}
+}
+
+/* Dropdown */
+.dropdown-menu {
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	margin-top: 20px!important;
+	@include transition03s;
+}
+
+.show>.dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+	margin-top: 0 !important;
+}
+
+/* Pagination */
+.pagination{
+	@each $hex,$name in $base-color {
+		&.pagination-#{$name} {
+			.page-item{
+				.page-link{
+					text-transform: uppercase;
+					font-weight: 400;
+					border-radius: 2px;
+				}
+				&.active{
+					.page-link{
+						background-color: $hex;
+						border-color: $hex;
+					}
+				}
+				&.disabled{
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+	&.no-border{
+		.page-item{
+			margin: 0 5px;
+			.page-link{
+				border: none;
+			}
+		}
+	}
+	&.rounded{
+		.page-item{
+			margin: 0 5px;
+			.page-link{
+				border-radius: $rounded;
+			}
+		}
+	}
+}
+.page-link{
+	color: inherit;
+	box-shadow: none;
+	-webkit-transition: box-shadow .2s;
+	-moz-transition: box-shadow .2s;
+	-o-transition: box-shadow .2s;
+	transition: box-shadow .2s;
+	&:hover{
+		box-shadow: $shadow;
+	}
+	&:focus{
+		box-shadow: $shadow-active;
+	}
+}
+
+/* Modal */
+.modal-header{
+	border-bottom: none;
+}
+.modal-footer{
+	border-top: none;
+}
+.modal-content{
+	background-color: #fafafa;
+	border-radius: 2px;
+	box-shadow: 0 15px 12px rgba(0, 0, 0, 0.12), 0 19px 38px rgba(0, 0, 0, 0.38);
+}
+
+/* Popover */
+.popover {
+	font-size: 14px;
+	box-shadow: $shadow-active;
+	border: none;
+	line-height: 1.7;
+	max-width: 240px;
+	&.bs-popover-top .arrow, &.bs-popover-left .arrow, &.bs-popover-right .arrow, &.bs-popover-bottom .arrow {
+		&:before{
+			border-top-color: transparent;
+			border-left-color: transparent;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+		}
+	}
+	.popover-header {
+		color: $text-primary;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin: 0;
+		margin-top: 5px;
+		border: none;
+		background-color: transparent;
+	}
+	&:before {
+		display: none;
+	}
+	&.bs-tether-element-attached-top:after {
+		border-bottom-color: $white;
+		top: -9px;
+	}
+	@each $hex,$name in $base-color {
+		&.popover-#{$name} {
+			background-color: $hex;
+			.popover-body {
+				color: $white;
+			}
+			&.bs-popover-right .arrow:after {
+				border-right-color: $hex;
+			}
+			&.bs-popover-top .arrow:after {
+				border-top-color: $hex;
+			}
+			&.bs-popover-bottom .arrow:after {
+				border-bottom-color: $hex;
+			}
+			&.bs-popover-left .arrow:after {
+				border-left-color: $hex;
+			}
+			.popover-header {
+				color: $white;
+				opacity: .6;
+			}
+		}
+	}
+}
+
+/* Tooltip */
+.tooltip {
+	&.bs-tooltip-right .arrow:before {
+		border-right-color: $white;
+	}
+	&.bs-tooltip-top .arrow:before {
+		border-top-color: $white;
+	}
+	&.bs-tooltip-bottom .arrow:before {
+		border-bottom-color: $white;
+	}
+	&.bs-tooltip-left .arrow:before {
+		border-left-color: $white;
+	}
+}
+
+.tooltip-inner {
+	padding: 0.5rem 0.7rem;
+	min-width: 130px;
+	background-color: $white;
+	font-size: 14px;
+	color: inherit;
+	box-shadow: $shadow-active;
 }
