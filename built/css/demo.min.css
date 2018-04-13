@@ -63,7 +63,7 @@
   font-weight: 700;
   color: #9A9A9A; }
 
-#buttons .btn, #javascriptComponents .btn, #modals .btn {
+#buttons .btn, #javascriptComponents .btn, #modals .btn, #tooltips-popover .btn {
   margin: 0 0px 10px; }
 
 .typography-line {
@@ -83,5 +83,45 @@
     position: absolute;
     width: 260px;
     text-transform: none; }
+
+.dropdown-menu.color-style-switcher {
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+  transition: box-shadow .3s;
+  visibility: visible;
+  opacity: 1;
+  top: 20px;
+  padding: 0; }
+  .dropdown-menu.color-style-switcher:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24); }
+  .dropdown-menu.color-style-switcher ul {
+    list-style: none outside none;
+    max-width: 250px;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0; }
+    .dropdown-menu.color-style-switcher ul li {
+      display: inline-flex;
+      margin: 2px; }
+      .dropdown-menu.color-style-switcher ul li a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+        transition: box-shadow .3s; }
+        .dropdown-menu.color-style-switcher ul li a:hover {
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24); }
+        .dropdown-menu.color-style-switcher ul li a.active {
+          position: relative; }
+          .dropdown-menu.color-style-switcher ul li a.active:after {
+            color: #000;
+            content: "\f26b";
+            font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+            font-size: 20px;
+            right: 8px;
+            position: absolute;
+            top: 6px; }
 
 /*# sourceMappingURL=demo.min.css.map */

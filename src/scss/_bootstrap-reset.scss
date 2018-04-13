@@ -36,6 +36,16 @@ $base-color : ($custom, 'custom'), ($primary, 'primary'), ($secondary, 'secondar
 		background-color: $hex;
 	}
 }
+i.notif{
+	position: relative;
+	+.badge{
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		top: 0;
+		right: 0;
+	}
+}
 
 /* Background size */
 $bg-style : (cover), (contain);
@@ -160,8 +170,13 @@ $bg-style : (cover), (contain);
 	@each $hex,$name in $base-color {
 		@if $name != 'white' and $name != 'light'{
 			&.modal-#{$name} {
+				@if $name == 'warning' and $name != 'yellow'{
+					color: $text-primary;
+				}
+				@else{
+					color: $white;
+				}
 				background-color: $hex;
-				color: $white;
 			}
 		}
 	}
@@ -248,4 +263,12 @@ $bg-style : (cover), (contain);
 	font-size: 14px;
 	color: inherit;
 	box-shadow: $shadow-active;
+}
+
+/* Img */
+.img-cover{
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }

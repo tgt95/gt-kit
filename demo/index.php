@@ -697,14 +697,14 @@
                     <!-- Card -->
                     <div id="cards">
                         <h4 class="group-title">Card</h4>
+                        <p>In <code>&lt;h5 class="card-title overlay-text"&gt;</code> you can add class <code>overlay-bg-white</code> or <code>overlay-bg-dark</code> to have Overlay Layer (Dark or White)</p>
                         <div class="row mb-2">
-                            <?php for ($i=0; $i < 6; $i++) { ?>
-                            <div class="col-lg-4 col-sm-6">
+                            <div class="col-lg-4 col-md-6">
                                 <div class="card card-blog">
                                     <div class="card-image card-ratio-16-9">
-                                        <!-- <img class="content" src="assets/img/bg/sg-nl.png"> -->
-                                        <div class="content bg-custom"></div>
-                                        <h5 class="card-title overlay">
+                                        <img class="content" src="assets/img/bg/rodion-kutsaev-951-unsplash.jpg">
+                                        <!-- <div class="content bg-custom"></div> -->
+                                        <h5 class="card-title overlay-text">
                                             <a href="#">Kangaroo Valley Safari</a>
                                         </h5>
                                     </div>
@@ -719,7 +719,96 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php } ?>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-blog">
+                                    <div class="card-image card-ratio-16-9">
+                                        <img class="content" src="assets/img/bg/sg-nl.png">
+                                        <h5 class="card-title overlay-text">
+                                            <a href="#">Pre-fab Homes</a>
+                                        </h5>
+                                    </div>
+                                    <div class="stats stats-right">
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite notif"></i><span class="badge badge-pink">3</span></button>
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="card card-blog">
+                                    <div class="card-image card-ratio-4-3">
+                                        <div class="content bg-custom"></div>
+                                        <h5 class="card-title overlay-text">
+                                            <a href="#">Favorite Road Trips</a>
+                                        </h5>
+                                    </div>
+                                    <div class="stats stats-center">
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="card card-blog">
+                                    <div class="card-image card-ratio-4-3">
+                                        <div class="content bg-danger"></div>
+                                        <h5 class="card-title overlay-text">
+                                            <a href="#">Best Airline</a>
+                                        </h5>
+                                    </div>
+                                    <div class="stats stats-center">
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="card card-side">
+                                    <div class="row">
+                                        <div class="col-xl-3">
+                                             <img class="img-cover" src="assets/img/users/user-1.jpg">
+                                        </div>
+                                        <div class="col-xl-9">
+                                            <div class="card-body">
+                                                <h5 class="card-title m-0">
+                                                    <a href="#">Pirates of the Caribbean</a>
+                                                </h5>
+                                                <div class="text-muted">
+                                                    By Johnny Depp
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <button class="btn btn-custom btn-link">Share</button>
+                                                <button class="btn btn-custom btn-link">Learn More</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card card-blog">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#" class="text-custom">Welcome Back!</a>
+                                        </h5>
+                                        <div class="card-text">
+                                            It’s been a while, have you read any new books lately?
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-custom btn-link">No</button>
+                                        <button class="btn btn-custom btn-link">Yes</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -747,7 +836,7 @@ for ($i=1; $i <=3 ; $i++) {
 ?>
 <div class="modal fade" id="<?php echo $modalId[$i-1] ?>" tabindex="-1" role="dialog">
     <div class="modal-dialog <?php echo $modalSize[$i-1] ?>" role="document">
-        <div class="modal-content">
+        <div class="modal-content" style="transition: background-color .3s;">
             <div class="modal-header">
                 <h5 class="modal-title">Permissions</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -755,6 +844,16 @@ for ($i=1; $i <=3 ; $i++) {
                 </button>
             </div>
             <div class="modal-body">
+                <div class="btn-group mb-2">
+                    <button type="button" class="btn btn-danger dropdown-toggle toggle-color-switcher">Choose Color Style</button>
+                    <div class="dropdown-menu color-style-switcher" style="display: none;">
+                        <ul class="colors">
+                            <?php foreach ($baseColor as $key => $value) { ?>
+                            <li><a href="#" class="bg-<?php echo $value ?>" data-color="<?php echo $value ?>"></a></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisinuli.</p>
             </div>
             <div class="modal-footer">
@@ -774,6 +873,17 @@ for ($i=1; $i <=3 ; $i++) {
         var windowHeight = window.innerHeight;
 
         $('.page-header').height(windowHeight);
+
+        $('.toggle-color-switcher').on('click', function(event) {
+            event.preventDefault();
+            $(this).siblings().slideToggle();
+        });
+
+        $('.color-style-switcher a').on('click', function(event) {
+            event.preventDefault();
+            var name = $(this).data('color');
+            $(this).closest('.modal-content').removeClass().addClass('modal-content modal-' + name);
+        });
 
         $(window).resize(function(event) {
             // $('.page-header').height(windowHeight);

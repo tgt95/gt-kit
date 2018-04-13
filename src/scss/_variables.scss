@@ -79,6 +79,16 @@ $font-primary: 'Roboto', sans-serif;
 //Font Base
 $font-size-base: 14px;
 
+// Breakpoint
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+
 
 $rounded: 30px;
 

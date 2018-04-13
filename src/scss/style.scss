@@ -1,11 +1,13 @@
 /*!
- * GT Kit
+ * GT UI Kit (https://tgt95.github.io/gt-kit/)
+ * Copyright 2018 The GT UI Kit Authors
  */
 
  // sass --watch style.scss:../../built/css/gt-kit.min.css --style compressed
 @import 'icons/material-design-iconic-font.min.scss';
 
 @import 'variables';
+@import 'breakpoints';
 @import 'common';
 @import 'bootstrap-reset';
 @import 'main';

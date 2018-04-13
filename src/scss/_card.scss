@@ -3,7 +3,7 @@
 ============= */
 
 
-$ratio-size : (1,1), (2,1), (4,3), (16,9);
+$ratio-size : (1,1), (2,1), (4,3), (16,9), (1,2),;
 @each $w,$h in $ratio-size {
 	.card-ratio-#{$w}-#{$h}{
 		@include aspect-ratio($w, $h);
@@ -59,18 +59,38 @@ $ratio-size : (1,1), (2,1), (4,3), (16,9);
 		font-weight: 700;
 		color: $text-secondary;
 	}
+	.stats{
+		padding: 12px 0;
+		&.stats-right {
+			float: right;
+		}
+		&.stats-center{
+			text-align: center;
+		}
+	}
 	.card-title{
+		color: $text-primary;
 		margin-top: 15px;
 		line-height: 1.25em;
-		&.overlay{
+		&.overlay-text{
 			position: absolute;
 			bottom: 0;
-			padding: 0 16px 16px 16px;
+			right: 0;
+			left: 0;
+			padding: 6px 16px 16px 16px;
+			margin: 0;
 			color: $white;
-			>a{
-				color: inherit;
-				text-decoration: none;
+			@each $hex,$name in $base-color {
+				@if $name == 'white' or $name == 'dark' {
+					&.overlay-bg-#{$name} {
+						background-color: rgba($hex,.4);
+					}
+				}
 			}
+		}
+		>a{
+			color: inherit;
+			text-decoration: none;
 		}
 	}
 	.card-body{
@@ -81,6 +101,25 @@ $ratio-size : (1,1), (2,1), (4,3), (16,9);
 		&:before{
 			content: '';
 			border-top: 1px solid rgba(#000, .12);
+		}
+	}
+}
+
+.card-side{
+	[class*="col-"]{
+		&:first-child{
+			padding-right: 0;
+		}
+		&:last-child{
+			padding-left: 0;
+		}
+		@include media-breakpoint-down(lg) {
+			&:first-child{
+				padding-right: 15px;
+			}
+			&:last-child{
+				padding-left: 15px;
+			}
 		}
 	}
 }
