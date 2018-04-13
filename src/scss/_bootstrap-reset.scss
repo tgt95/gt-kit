@@ -124,6 +124,8 @@ $bg-style : (cover), (contain);
 		.page-item{
 			margin: 0 5px;
 			.page-link{
+				min-width: 33px;
+				text-align: center;
 				border-radius: $rounded;
 			}
 		}
@@ -137,7 +139,7 @@ $bg-style : (cover), (contain);
 	-o-transition: box-shadow .2s;
 	transition: box-shadow .2s;
 	&:hover{
-		box-shadow: $shadow;
+		box-shadow: $shadow-active;
 	}
 	&:focus{
 		box-shadow: $shadow-active;
@@ -155,6 +157,14 @@ $bg-style : (cover), (contain);
 	background-color: #fafafa;
 	border-radius: 2px;
 	box-shadow: 0 15px 12px rgba(0, 0, 0, 0.12), 0 19px 38px rgba(0, 0, 0, 0.38);
+	@each $hex,$name in $base-color {
+		@if $name != 'white' and $name != 'light'{
+			&.modal-#{$name} {
+				background-color: $hex;
+				color: $white;
+			}
+		}
+	}
 }
 
 /* Popover */

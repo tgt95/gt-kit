@@ -114,14 +114,16 @@
 }
 
 @each $hex,$name in $base-color {
-	.checkbox-#{$name} {
-		input[type="checkbox"]:checked+label {
-			&::before {
-				background-color: $hex;
-				border-color: $hex;
-			}
-			&::after {
-				border-color: $white;
+	@if $name != 'white' and $name != 'light'{
+		.checkbox-#{$name} {
+			input[type="checkbox"]:checked+label {
+				&::before {
+					background-color: $hex;
+					border-color: $hex;
+				}
+				&::after {
+					border-color: $white;
+				}
 			}
 		}
 	}
@@ -282,17 +284,19 @@ $r--size: 18px;
 
 @each $hex,$name in $base-color {
 	.radio-#{$name} {
-		input[type="radio"]+label {
-			&::after {
-				background-color: $hex;
+		@if $name != 'white' and $name != 'light'{
+			input[type="radio"]+label {
+				&::after {
+					background-color: $hex;
+				}
 			}
-		}
-		input[type="radio"]:checked+label {
-			&::before {
-				border-color: $hex;
-			}
-			&::after {
-				background-color: $hex;
+			input[type="radio"]:checked+label {
+				&::before {
+					border-color: $hex;
+				}
+				&::after {
+					background-color: $hex;
+				}
 			}
 		}
 	}

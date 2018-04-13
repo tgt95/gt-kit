@@ -250,7 +250,7 @@
                             </div>
                             <div class="col-sm-6 col-lg-3">
                                 <div class="form-group-fl has-success">
-                                    <input type="text" class="form-control-fl is-valid">
+                                    <input type="text" value="Success" class="form-control-fl is-valid">
                                     <label>Success</label>
                                 </div>
                             </div>
@@ -653,7 +653,7 @@
 
 
                     <!-- Modal -->
-                    <div id="modal">
+                    <div id="modals">
                         <h4 class="group-title">Modal</h4>
                         <p class="category">Pick your size</p>
                         <div class="row">
@@ -691,6 +691,35 @@
                                 </button>
                                 <?php } ?>
                             </div>
+                        </div>
+                    </div>
+                                
+                    <!-- Card -->
+                    <div id="cards">
+                        <h4 class="group-title">Card</h4>
+                        <div class="row mb-2">
+                            <?php for ($i=0; $i < 6; $i++) { ?>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card card-blog">
+                                    <div class="card-image card-ratio-16-9">
+                                        <!-- <img class="content" src="assets/img/bg/sg-nl.png"> -->
+                                        <div class="content bg-custom"></div>
+                                        <h5 class="card-title overlay">
+                                            <a href="#">Kangaroo Valley Safari</a>
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            Located two hours south of Sydney in the Southern Highlands of New South Wales, ...
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-custom btn-link">Share</button>
+                                        <button class="btn btn-custom btn-link">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
                         </div>
                     </div>
 

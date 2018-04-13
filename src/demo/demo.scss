@@ -80,8 +80,10 @@
 	color: #9A9A9A;
 }
 
-#buttons .btn, #javascriptComponents .btn {
-	margin: 0 0px 10px;
+#buttons, #javascriptComponents, #modals {
+	.btn{
+		margin: 0 0px 10px;
+	}
 }
 
 .typography-line {

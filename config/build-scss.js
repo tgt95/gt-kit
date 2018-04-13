@@ -58,7 +58,7 @@ gulp.task('compile-core-css', function() {
         .pipe(gulp.dest(cssDestFolder))
         // min files
         .pipe(rename('core.min.css'))
-        .pipe(uglify().on('error', function(err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); }))
+        .pipe(uglifycss())
         .pipe(gulp.dest(cssDestFolder));
 });
 

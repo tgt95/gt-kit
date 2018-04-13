@@ -3,7 +3,6 @@
 ============= */
 
 
-// @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 
@@ -84,6 +83,14 @@ $font-size-base: 14px;
 $rounded: 30px;
 
 @mixin transition03s {
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+@mixin transition-box-shadow-03s {
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -o-transition: all .3s linear;
