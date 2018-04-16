@@ -60,17 +60,23 @@ $ratio-size : (1,1), (2,1), (4,3), (16,9), (1,2),;
 		color: $text-secondary;
 	}
 	.stats{
-		padding: 12px 0;
-		&.stats-right {
-			float: right;
-		}
-		&.stats-center{
-			text-align: center;
+		display: flex;
+		ul.icon-list{
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			display: flex;
+			>li{
+				padding: 6px 10px;
+				>a{
+					display: block;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 	.card-title{
 		color: $text-primary;
-		margin-top: 15px;
 		line-height: 1.25em;
 		&.overlay-text{
 			position: absolute;
@@ -97,11 +103,23 @@ $ratio-size : (1,1), (2,1), (4,3), (16,9), (1,2),;
 		padding: 16px;
 	}
 	.card-footer{
+		border-top: 1px solid rgba(#000, .12);
+	}
+	.card-footer.no-border{
+		border-top: none;
+	}
+	.card-footer, .card-footer.no-border{
 		background: transparent;
-		&:before{
-			content: '';
-			border-top: 1px solid rgba(#000, .12);
-		}
+	}
+}
+
+.card-profile, .card-testimonial {
+	text-align: center;
+	.card-avatar{
+		max-width: 130px;
+		max-height: 130px;
+		margin: 0 auto;
+		transform: translate3d(0px,-20px,0);
 	}
 }
 
@@ -122,4 +140,9 @@ $ratio-size : (1,1), (2,1), (4,3), (16,9), (1,2),;
 			}
 		}
 	}
+}
+
+.card-plain {
+    background: transparent;
+    box-shadow: none;
 }

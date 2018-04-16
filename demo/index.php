@@ -19,7 +19,7 @@
     <div id="wrapper">
         <div class="content-page">
             <div class="page-header">
-                <div class="page-header-image bg-size-cover" layer-bg="black" style="background: url(assets/img/bg/rodion-kutsaev-951-unsplash.jpg);">
+                <div class="page-header-image bg-size-cover" layer-bg="black" style="background: url(assets/img/bg/bg-1.jpg);">
                     <div class="content-center">
                         <img class="logo" src="assets/img/logo.svg" height="150">
                         <h1 class="title">GT UI KIT</h1>
@@ -43,9 +43,6 @@
                                 <button class="btn btn-primary btn-round" type="button">
                                     <i class="zmdi zmdi-android"></i> With Icon
                                 </button>
-                                <button class="btn btn-primary btn-icon btn-round" type="button">
-                                    <i class="zmdi zmdi-android"></i>
-                                </button>
                                 <button class="btn btn-outline-primary btn-round" type="button">Outline</button>
                             </div>
                         </div>
@@ -56,19 +53,52 @@
                                 <button class="btn btn-primary">Regular</button>
                                 <button class="btn btn-primary btn-lg">Large</button>
                             </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-just-icon btn-white btn-round btn-sm"><i class='zmdi zmdi-plus'></i></button>
+                                <button class="btn btn-just-icon btn-cyan btn-round"><i class='zmdi zmdi-plus'></i></button>
+                                <button class="btn btn-just-icon btn-danger btn-round btn-lg"><i class='zmdi zmdi-plus'></i></button>
+                            </div>
                         </div>
-                        <p class="category">Action Button</p>
+                        <p class="category">Button Just Icon</p>
                         <div class="row">
                             <div class="col-md-12">
-                                <button class="btn btn-just-icon btn-custom btn-round btn-white"><i class="zmdi zmdi-plus"></i></button>
+                                <!-- <button class="btn btn-just-icon btn-round btn-white"><i class="zmdi zmdi-plus"></i></button> -->
                                 <?php
                                 $baseColor = array('custom', 'primary', 'secondary', 'blue', 'indigo', 'purple', 'pink', 'red', 'orange', 'yellow', 'green', 'teal', 'cyan', 'white', 'black', 'gray', 'gray-dark', 'success', 'info', 'warning', 'danger', 'light', 'dark');
+                                $socialColor = array('twitter', 'facebook', 'google', 'youtube', 'linkedin', 'pinterest', 'dribbble', 'behance', 'tumblr', 'github-alt', 'reddit');
+
                                 foreach ($baseColor as $key => $value) {
-                                    if($key <= 6){
                                         echo "<button class='btn btn-just-icon btn-". $value . " btn-round'><i class='zmdi zmdi-plus'></i></button> ";
-                                    } 
                                 } 
                                 ?>
+                            </div>
+                        </div>
+                        <p class="category">Social Buttons</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <?php foreach ($socialColor as $key => $value) {
+                                        echo "<button class='btn btn-just-icon btn-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i></button> ";
+                                } ?>
+                            </div>
+                            <div class="col-md-12">
+                                <?php foreach ($socialColor as $key => $value) {
+                                        echo "<button class='btn btn-just-icon btn-outline-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i></button> ";
+                                } ?>
+                            </div>
+                            <div class="col-md-12">
+                                <?php foreach ($socialColor as $key => $value) {
+                                        echo "<button class='btn btn-just-icon btn-link btn-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i></button> ";
+                                } ?>
+                            </div>
+                            <div class="col-md-12">
+                                <?php foreach ($socialColor as $key => $value) {
+                                        echo "<button class='btn btn-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i>". ucfirst($value) ."</button> ";
+                                } ?>
+                            </div>
+                            <div class="col-md-12">
+                                <?php foreach ($socialColor as $key => $value) {
+                                        echo "<button class='btn btn-outline-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i>". ucfirst($value) ."</button> ";
+                                } ?>
                             </div>
                         </div>
                         <p class="category">Pick your color</p>
@@ -698,11 +728,13 @@
                     <div id="cards">
                         <h4 class="group-title">Card</h4>
                         <p>In <code>&lt;h5 class="card-title overlay-text"&gt;</code> you can add class <code>overlay-bg-white</code> or <code>overlay-bg-dark</code> to have Overlay Layer (Dark or White)</p>
+                        <!-- Row -->
+                        <p class="category">Cards</p>
                         <div class="row mb-2">
                             <div class="col-lg-4 col-md-6">
                                 <div class="card card-blog">
                                     <div class="card-image card-ratio-16-9">
-                                        <img class="content" src="assets/img/bg/rodion-kutsaev-951-unsplash.jpg">
+                                        <img class="content" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t31.0-8/28235742_1878697625528508_4067968823494551273_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeG7nAyJnQs_d76BKISnzSlk2jO0Sv7sTcoOfWUyja7HNxJjOJpN5KK-7CgMftVNo8Y5-SbvMG0qhl7b0ddbFfXWO9V0cTE9TwJWFrnIfdoHJA&oh=0051fce7dd159a813e2686da1e950412&oe=5B5E8B2F">
                                         <!-- <div class="content bg-custom"></div> -->
                                         <h5 class="card-title overlay-text">
                                             <a href="#">Kangaroo Valley Safari</a>
@@ -723,15 +755,46 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="card card-blog">
                                     <div class="card-image card-ratio-16-9">
+                                        <img class="content" src="assets/img/bg/bg-2.jpg">
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="category text-danger"><i class="zmdi zmdi-camera"></i> Photo</h6>
+                                        <h5 class="card-title">
+                                            <a href="#">Yellow grass under the mountain photo</a>
+                                        </h5>
+                                        <div class="card-text">
+                                            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="author float-left">
+                                            <img src="assets/img/users/user-2.jpg" class="avatar img-raised img-cover">
+                                            <span>Jason Ortego</span>
+                                        </div>
+                                        <div class="stats justify-content-end">
+                                            <ul class="icon-list text-muted">
+                                                <li><i class="zmdi zmdi-favorite"></i> 6.9k</li>
+                                                <li><i class="zmdi zmdi-bookmark"></i> 472</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card card-blog">
+                                    <div class="card-image card-ratio-16-9">
                                         <img class="content" src="assets/img/bg/sg-nl.png">
                                         <h5 class="card-title overlay-text">
                                             <a href="#">Pre-fab Homes</a>
                                         </h5>
                                     </div>
-                                    <div class="stats stats-right">
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite notif"></i><span class="badge badge-pink">3</span></button>
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                    <div class="card-footer px-0">
+                                        <div class="stats justify-content-end">
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite notif"></i><span class="badge badge-pink">3</span></button>
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -744,10 +807,12 @@
                                             <a href="#">Favorite Road Trips</a>
                                         </h5>
                                     </div>
-                                    <div class="stats stats-center">
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                    <div class="card-footer px-0">
+                                        <div class="stats justify-content-center">
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -760,10 +825,29 @@
                                             <a href="#">Best Airline</a>
                                         </h5>
                                     </div>
-                                    <div class="stats stats-center">
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
-                                        <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                    <div class="card-footer px-0">
+                                        <div class="stats justify-content-center">
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card card-blog">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#" class="text-custom">Welcome Back!</a>
+                                        </h5>
+                                        <div class="card-text">
+                                            It’s been a while, have you read any new books lately?
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-custom btn-link">No</button>
+                                        <button class="btn btn-custom btn-link">Yes</button>
                                     </div>
                                 </div>
                             </div>
@@ -793,23 +877,144 @@
                             </div>
 
                             <div class="col-lg-4 col-sm-6">
-                                <div class="card card-blog">
+                                <div class="card card-blog btn-light">
                                     <div class="card-body">
                                         <h5 class="card-title">
-                                            <a href="#" class="text-custom">Welcome Back!</a>
+                                            <a href="#">Custom Color</a>
                                         </h5>
                                         <div class="card-text">
-                                            It’s been a while, have you read any new books lately?
+                                            <p>You can custom your background color</p>
                                         </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <button class="btn btn-custom btn-link">No</button>
-                                        <button class="btn btn-custom btn-link">Yes</button>
+                                        <div class="btn-group mb-2">
+                                            <button type="button" class="btn btn-danger dropdown-toggle toggle-color-switcher">Choose Color Style</button>
+                                            <div class="dropdown-menu color-style-switcher" style="display: none;">
+                                                <ul class="colors">
+                                                    <?php foreach ($baseColor as $key => $value) { ?>
+                                                    <li><a href="#" class="bg-<?php echo $value ?>" data-color="<?php echo $value ?>"></a></li>
+                                                    <?php } ?>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
+                        <!-- END Row -->
+
+                        <!-- Row -->
+                        <p class="category">Profile Cards</p>
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="card card-profile">
+                                    <div class="card-image card-ratio-1-1">
+                                        <img class="content" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.0-9/28059352_1880287742036163_7743352634612247341_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeGErszTwRgFF7S7IjT3QD0s-5DlR6DEYjp3kurpdSOAuRVl0rXlcMz6hujKAs_ZatibVR96Y9zRYz7uc1joBwb5-loMKcv-yX71HWSsJZ-G3w&oh=34f385ff0c3ce871effb30491ecebae1&oe=5B5BF1A3">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="#">Gia Tuan</a>
+                                        </h5>
+                                        <h6 class="card-category text-info">
+                                            UX/UI Designer
+                                        </h6>
+                                    </div>
+                                    <div class="card-footer no-border">
+                                        <div class="stats stats-social justify-content-center">
+                                            <ul class="icon-list">
+                                                <li><a href="#" class="btn btn-just-icon btn-link btn-round btn-lg btn-facebook"><i class="zmdi zmdi-facebook"></i> </a></li>
+                                                <li><a href="#" class="btn btn-just-icon btn-link btn-round btn-lg btn-behance"><i class="zmdi zmdi-behance"></i> </a></li>
+                                                <li><a href="#" class="btn btn-just-icon btn-link btn-round btn-lg btn-dribbble"><i class="zmdi zmdi-dribbble"></i> </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="card card-profile" style="transform: translate3d(0px, 40px, 0);">
+                                    <div class="card-avatar card-ratio-1-1">
+                                        <img class="img img-raised rounded-circle content" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t31.0-8/28061116_1878702382194699_3169016774951859990_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeGjz8f7wUoatpfhewZuDW6-odDQq2OpAlYf82iTQ0cza5p87MIo9h8t2xJsE3MtgfWQXKL_a2Iq8KZ4ws0T2Z6hoxkyz0UlpQmvuPTyxQWjDw&oh=4a5f22a0fc0e6bffe03d796bb72a39a7&oe=5B756A83">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-0">
+                                            <a href="#">Gia Tuan</a>
+                                        </h5>
+                                        <div class="category text-gray mb-2">
+                                            Designer
+                                        </div>
+                                        <p class="card-category">
+                                            One of the co-founders. Alec drives the technical strategy of the platform, customer support and brand.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats stats-social justify-content-center">
+                                            <ul class="icon-list">
+                                                <li><a href="#" class="btn btn-just-icon btn-round btn-facebook"><i class="zmdi zmdi-facebook"></i> </a></li>
+                                                <li><a href="#" class="btn btn-just-icon btn-round btn-behance"><i class="zmdi zmdi-behance"></i> </a></li>
+                                                <li><a href="#" class="btn btn-just-icon btn-round btn-dribbble"><i class="zmdi zmdi-dribbble"></i> </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="card card-profile card-plain" style="transform: translate3d(0px, 40px, 0);">
+                                    <div class="card-avatar card-ratio-1-1">
+                                        <img class="img img-raised rounded-circle content" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t31.0-8/28061164_1878706722194265_4477040893303453270_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeEaY_GRuzviO-VjnLmzcnIF17u88wukFr-SfZdTbWu7IoMkyEBkH0g6YYsBWRgqyjGiCp7emYukxjD-tS6irIwfpEIvfS5_f6QBokCW3TsJLw&oh=775c3f44d119786790e1101e50c9a17b&oe=5B6F55B8">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="category text-gray mb-0">
+                                            CEO / CO-FOUNDER
+                                        </div>
+                                        <h5 class="card-title mb-2">
+                                            <a href="#">Gia Tuan</a>
+                                        </h5>
+                                        <p class="card-category">
+                                            Don't be scared of the truth because we need to restart the human foundation in truth.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats stats-social justify-content-center">
+                                            <ul class="icon-list">
+                                                <li><a href="#" class="btn btn-round btn-purple"><i class="zmdi zmdi-plus-circle-o-duplicate"></i> Follow</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="card card-profile" style="transform: translate3d(0px, 40px, 0);">
+                                    <div class="card-avatar card-ratio-1-1">
+                                        <img class="img img-raised rounded-circle content" src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t1.0-9/12744440_1123670687697876_1642520570442760595_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeHDLwBx0QEszPgja7s7fZQr1eI-gNgT8kEP55OzGxO_hLZKTJUZ4lDD8Dry5B2r5qVfa5D5HUDMcZ4pJiojFxtjTeWREDwhgzfLjTMPP4LDqw&oh=6466d7404d872d3c5e74a1f51fd0b78f&oe=5B60039D">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-0">
+                                            <a href="#">Gia Tuan</a>
+                                        </h5>
+                                        <div class="category text-gray mb-2">
+                                            Designer
+                                        </div>
+                                        <p class="card-category">
+                                            "Work hard play harder."
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="stats stats-social justify-content-center">
+                                            <ul class="icon-list">
+                                                <li><a href="#" class="btn btn-just-icon btn-round btn-outline-facebook"><i class="zmdi zmdi-facebook"></i> </a></li>
+                                                <li><a href="#" class="btn btn-just-icon btn-round btn-outline-behance"><i class="zmdi zmdi-behance"></i> </a></li>
+                                                <li><a href="#" class="btn btn-just-icon btn-round btn-outline-dribbble"><i class="zmdi zmdi-dribbble"></i> </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- END Row -->
+                            
+                        
                     </div>
 
                 </div>
@@ -879,10 +1084,28 @@ for ($i=1; $i <=3 ; $i++) {
             $(this).siblings().slideToggle();
         });
 
-        $('.color-style-switcher a').on('click', function(event) {
+        $('.modal .color-style-switcher a').on('click', function(event) {
             event.preventDefault();
             var name = $(this).data('color');
-            $(this).closest('.modal-content').removeClass().addClass('modal-content modal-' + name);
+            $(this).closest('.modal-content').removeClass().addClass('modal-content bg-' + name);
+        });
+
+        $('#cards .color-style-switcher a').on('click', function(event) {
+            event.preventDefault();
+            var name = $(this).data('color'),
+                card = $(this).closest('.card'),
+                classNameList = $(this).closest('.card')[0].classList.toString(),
+                temp;
+
+            if (classNameList.includes('bg-')){
+                temp = classNameList.split(' ').slice(0, classNameList.split(' ').length - 1).join(' ');
+                card.removeClass().addClass(temp + ' bg-' + name);
+            }
+            else{
+                temp = classNameList.split(' ').join(' ');
+                card.removeClass().addClass(temp + ' bg-' + name);
+            }
+
         });
 
         $(window).resize(function(event) {

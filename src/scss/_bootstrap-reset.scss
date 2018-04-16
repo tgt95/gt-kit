@@ -3,8 +3,6 @@
 ============= */
 
 /* Background colors */
-$base-size-name : ('sm','md', 'lg', 'xl');
-$base-color : ($custom, 'custom'), ($primary, 'primary'), ($secondary, 'secondary'), ($blue, 'blue'), ($indigo, 'indigo'), ($purple, 'purple'), ($pink, 'pink'), ($red, 'red'), ($orange, 'orange'), ($yellow, 'yellow'), ($green, 'green'), ($teal, 'teal'), ($cyan, 'cyan'), ($white, 'white'), ($black, 'black'), ($gray, 'gray'), ($gray-dark, 'gray-dark'), ($success, 'success'), ($info, 'info'), ($warning, 'warning'), ($danger, 'danger'), ($light, 'light'), ($dark, 'dark');
 @each $hex,$name in $base-color {
 	.bg-#{$name} {
 		background-color: $hex !important;
@@ -17,6 +15,9 @@ $base-color : ($custom, 'custom'), ($primary, 'primary'), ($secondary, 'secondar
 	.text-#{$name} {
 		color: $hex !important;
 	}
+}
+.text-muted{
+	color: $text-secondary!important;
 }
 
 /* Border colors */
@@ -57,6 +58,21 @@ $bg-style : (cover), (contain);
 		width: 100%;
 		height: 100%;
 	}
+}
+
+/* Image */
+.img-raised {
+    box-shadow: $shadow;
+    @include transition-box-shadow-03s;
+    &:hover{
+    	box-shadow: $shadow-active;
+    }
+}
+.img-cover{
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 /* Background layer */
@@ -169,14 +185,13 @@ $bg-style : (cover), (contain);
 	box-shadow: 0 15px 12px rgba(0, 0, 0, 0.12), 0 19px 38px rgba(0, 0, 0, 0.38);
 	@each $hex,$name in $base-color {
 		@if $name != 'white' and $name != 'light'{
-			&.modal-#{$name} {
+			&.bg-#{$name} {
 				@if $name == 'warning' and $name != 'yellow'{
 					color: $text-primary;
 				}
 				@else{
 					color: $white;
 				}
-				background-color: $hex;
 			}
 		}
 	}

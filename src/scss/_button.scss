@@ -14,6 +14,9 @@
 	-moz-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
 	-o-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
 	transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+	>i{
+		margin-right: 5px;
+	}
 	&:hover,&:focus,&:active {
 		box-shadow: $shadow-active;
 		outline: none;
@@ -22,136 +25,174 @@
 		border-radius: $rounded;
 	}
 	&.btn-just-icon{
+		&.btn-sm{
+			padding: 7px;
+		}
+		&.btn-lg{
+			padding: 17px;
+		}
 		font-size: 20px;
-		padding: 11px 11px;
+		padding: 11px;
 		line-height: 1em;
+		text-align: center;
 		>i{
 			width: 20px;
-			vertical-align: middle;
 			font-size: 17px;
 			top: -1px;
 			position: relative;
+			margin: 0;
 		}
 	}
 }
 
 
 
-@each $hex,$name in $base-color {
-	.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link).active, 
-	.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link):active, 
-	.show>.btn-#{$name}.dropdown-toggle{
-		@if $name == 'white' or $name == 'light' {
-			color: $text-primary;
+@for $i from 1 through length($base-social-color) {
+	@each $hex,$name in nth($base-social-color, $i){
+		.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link).active, 
+		.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link):active, 
+		.show>.btn-#{$name}.dropdown-toggle{
+			@if $name == 'white' or $name == 'light' {
+				color: $text-primary;
+			}
+			@else {
+				color: $white;
+			}
+			background-color: darken($hex, 5%);
+			border-color: darken($hex, 10%);
 		}
-		@else {
-			color: $white;
+
+		.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link).active:focus, 
+		.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link):active:focus, 
+		.show>.btn-#{$name}.dropdown-toggle:focus{
+			box-shadow: $shadow-active;
 		}
-		background-color: darken($hex, 5%);
-		border-color: darken($hex, 10%);
-	}
 
-	.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link).active:focus, 
-	.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link):active:focus, 
-	.show>.btn-#{$name}.dropdown-toggle:focus{
-		box-shadow: $shadow-active;
-	}
-
-	.btn-#{$name}:not(.btn-link) {
-		@if $name == 'white' or $name == 'light' {
-			color: $text-primary;
-			border: 1px solid rgba($black, .1);
-		}
-		@else {
-			color: $white;
-		}
-		background-color: $hex;
-		border-color: $hex;
-	}
-
-	.btn-outline-#{$name}:not(:disabled):not(.disabled).active, 
-	.btn-outline-#{$name}:not(:disabled):not(.disabled):active, 
-	.show>.btn-outline-#{$name}.dropdown-toggle{
-		color: $white;
-	}
-
-	.btn-outline-#{$name}:not(:disabled):not(.disabled).active:focus, 
-	.btn-outline-#{$name}:not(:disabled):not(.disabled):active:focus, 
-	.show>.btn-outline-#{$name}.dropdown-toggle:focus{
-		box-shadow: $shadow-active;
-	}
-
-	.btn-outline-#{$name} {
-		color: $hex;
-		border-color: $hex;
-		background-color: $white;
-		&:hover{
-			color: $white;
+		.btn-#{$name}:not(.btn-link) {
+			@if $name == 'white' or $name == 'light' {
+				color: $text-primary;
+				border: 1px solid rgba($black, .1);
+			}
+			@else {
+				color: $white;
+			}
 			background-color: $hex;
 			border-color: $hex;
+		}
+
+		.btn-outline-#{$name}:not(:disabled):not(.disabled).active, 
+		.btn-outline-#{$name}:not(:disabled):not(.disabled):active, 
+		.show>.btn-outline-#{$name}.dropdown-toggle{
+			color: $white;
+		}
+
+		.btn-outline-#{$name}:not(:disabled):not(.disabled).active:focus, 
+		.btn-outline-#{$name}:not(:disabled):not(.disabled):active:focus, 
+		.show>.btn-outline-#{$name}.dropdown-toggle:focus{
+			box-shadow: $shadow-active;
+		}
+
+		.btn-outline-#{$name} {
+			color: $hex;
+			border-color: $hex;
+			background-color: $white;
+			&:hover{
+				color: $white;
+				background-color: $hex;
+				border-color: $hex;
+			}
 		}
 	}
 }
 
 .btn-link{
 	box-shadow: none;
-	@each $hex,$name in $base-color {
-		@if $name != 'white' and $name != 'light'{
-			&.btn-#{$name} {
+	@for $i from 1 through length($base-social-color) {
+		@each $hex,$name in nth($base-social-color, $i){
+			@if $name != 'white' and $name != 'light'{
+				&.btn-#{$name} {
+					color: $hex;
+					border-color: transparent;
+					&:hover,&:focus,&:active {
+					// @if $name == 'warning' {
+					// 	color: $text-primary;
+					// }
+					// @else {
+					// 	color: $hex;
+					// }
+					color: $hex;
+					text-decoration: none;
+					background-color: rgba(0,0,0,0.1);
+					box-shadow: none;
+				}
+			}
+			&.btn-#{$name}:not(:disabled):not(.disabled).active, 
+			&.btn-#{$name}:not(:disabled):not(.disabled):active, 
+			&.show>.btn-#{$name}.dropdown-toggle{
+				@if $name == 'warning' {
+					color: $text-primary;
+				}
+				@else {
+					color: $hex;
+				}
 				color: $hex;
-				border-color: transparent;
-				&:hover,&:focus,&:active {
-				// @if $name == 'warning' {
-				// 	color: $text-primary;
-				// }
-				// @else {
-				// 	color: $hex;
-				// }
-				color: $hex;
-				text-decoration: none;
 				background-color: rgba(0,0,0,0.1);
+				border-color: transparent;
+				box-shadow: none;
+			}
+			&.btn-#{$name}:not(:disabled):not(.disabled).active:focus, 
+			&.btn-#{$name}:not(:disabled):not(.disabled):active:focus, 
+			&.show>.btn-#{$name}.dropdown-toggle:focus{
 				box-shadow: none;
 			}
 		}
-		&.btn-#{$name}:not(:disabled):not(.disabled).active, 
-		&.btn-#{$name}:not(:disabled):not(.disabled):active, 
-		&.show>.btn-#{$name}.dropdown-toggle{
-			@if $name == 'warning' {
-				color: $text-primary;
-			}
-			@else {
-				color: $hex;
-			}
-			color: $hex;
-			background-color: rgba(0,0,0,0.1);
+		&.btn-default{
+			box-shadow: none;
+			color: $text-primary;
 			border-color: transparent;
-			box-shadow: none;
+			&:hover,&:focus,&:active {
+				text-decoration: none;
+				box-shadow: none;
+				background-color: rgba(0,0,0,0.1);
+			}
 		}
-		&.btn-#{$name}:not(:disabled):not(.disabled).active:focus, 
-		&.btn-#{$name}:not(:disabled):not(.disabled):active:focus, 
-		&.show>.btn-#{$name}.dropdown-toggle:focus{
-			box-shadow: none;
-		}
-	}
-	&.btn-default{
-		box-shadow: none;
-		color: $text-primary;
-		border-color: transparent;
-		&:hover,&:focus,&:active {
-			text-decoration: none;
-			box-shadow: none;
-			background-color: rgba(0,0,0,0.1);
-		}
-	}
-	&.btn-default:not(:disabled):not(.disabled).active, 
-	&.btn-default:not(:disabled):not(.disabled):active, 
-	&.show>.btn-default.dropdown-toggle{
+		&.btn-default:not(:disabled):not(.disabled).active, 
+		&.btn-default:not(:disabled):not(.disabled):active, 
+		&.show>.btn-default.dropdown-toggle{
 
-	}
-	&.btn-default:not(:disabled):not(.disabled).active:focus, 
-	&.btn-default:not(:disabled):not(.disabled):active:focus, 
-	&.show>.btn-default.dropdown-toggle:focus{
-		
+		}
+		&.btn-default:not(:disabled):not(.disabled).active:focus, 
+		&.btn-default:not(:disabled):not(.disabled):active:focus, 
+		&.show>.btn-default.dropdown-toggle:focus{
+			
+		}
 	}
 }
 }
+
+// .btn-social, a.btn-social{
+// 	height: 3.6rem;
+// 	width: 3.6rem;
+// 	display: flex;
+//     justify-content: center;
+//     align-items: center;
+// 	@include transition03s;
+// 	>i{
+// 		font-size: 1.325rem;
+// 	}
+// 	&.btn-round {
+// 		border-radius: $rounded;
+// 	}
+// 	@each $hex,$name in $social-color {
+// 		&.btn-#{$name},{
+// 			background-color: $hex;
+// 			color: $white;
+// 			&:hover{
+// 				background-color: darken($hex, 10%);
+// 			}
+// 		}
+// 	}
+// }
+// a.btn-social{
+// 	text-decoration: none;
+// }
