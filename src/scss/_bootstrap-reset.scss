@@ -62,11 +62,11 @@ $bg-style : (cover), (contain);
 
 /* Image */
 .img-raised {
-    box-shadow: $shadow;
-    @include transition-box-shadow-03s;
-    &:hover{
-    	box-shadow: $shadow-active;
-    }
+	box-shadow: $shadow;
+	@include transition-box-shadow-03s;
+	&:hover{
+		box-shadow: $shadow-active;
+	}
 }
 .img-cover{
 	-o-object-fit: cover;

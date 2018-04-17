@@ -1,0 +1,432 @@
+/*!
+ * Copyright 2013-2017 ASIAL CORPORATION
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+/*!
+ * Copyright 2012 Adobe Systems Inc.;
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+:root {
+  /* variables for iOS components */
+
+  /* variables for Material Design components */
+
+  /* others */
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+input, textarea, select {
+  -webkit-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  -moz-user-select: text;
+  -webkit-touch-callout: none;
+}
+
+a, button, input, textarea, select {
+  touch-action: manipulation;
+}
+
+input:active, input:focus, textarea:active, textarea:focus, select:active, select:focus {
+  outline: none;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4, h5, h6 {
+  font-size: 18px;
+}
+:root {
+}
+.page {
+  font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  background-color: #efeff4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: visible;
+  overflow-y: hidden;
+  color: #1f1f21;
+  -ms-overflow-style: none;
+  -webkit-font-smoothing: antialiased;
+}
+.page::-webkit-scrollbar {
+  display: none;
+}
+.page__content {
+  background-color: #efeff4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+.page__background {
+  background-color: #efeff4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+.page--material {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  background-color: #eceff1;
+}
+.page--material__content {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-weight: 400;
+}
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5 {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-weight: 500;
+  margin: 0.6em 0;
+  padding: 0;
+}
+.page__content h1 {
+  font-size: 28px;
+}
+.page__content h2 {
+  font-size: 24px;
+}
+.page__content h3 {
+  font-size: 20px;
+}
+.page--material__content h1,
+.page--material__content h2,
+.page--material__content h3,
+.page--material__content h4,
+.page--material__content h5 {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-weight: 500;
+  margin: 0.6em 0;
+  padding: 0;
+}
+.page--material__content h1 {
+  font-size: 28px;
+}
+.page--material__content h2 {
+  font-size: 24px;
+}
+.page--material__content h3 {
+  font-size: 20px;
+}
+.page--material__background {
+  background-color: #eceff1;
+}
+:root { /* background color active */
+}
+/*~
+  name: Switch
+  category: Switch
+  elements: ons-switch
+  markup: |
+    <label class="switch">
+      <input type="checkbox" class="switch__input">
+      <div class="switch__toggle">
+        <div class="switch__handle"></div>
+      </div>
+    </label>
+    <label class="switch">
+      <input type="checkbox" class="switch__input" checked>
+      <div class="switch__toggle">
+        <div class="switch__handle"></div>
+      </div>
+    </label>
+    <label class="switch">
+      <input type="checkbox" class="switch__input" disabled>
+      <div class="switch__toggle">
+        <div class="switch__handle"></div>
+      </div>
+    </label>
+*/
+.switch {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  position: relative;
+  min-width: 51px;
+  font-size: 17px;
+  padding: 0 20px;
+  border: none;
+  overflow: visible;
+  width: 51px;
+  height: 32px;
+  z-index: 0;
+  text-align: left;
+}
+.switch__input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 0;
+}
+/* switch toggle background */
+.switch__toggle {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  transition-property: all;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-out;
+  box-shadow: inset 0 0 0 2px #e5e5e5;
+}
+/* switch toggle circle */
+.switch__handle {
+  box-sizing: border-box;
+  background-clip: padding-box;
+  position: absolute;
+  content: '';
+  border-radius: 28px;
+  height: 28px;
+  width: 28px;
+  background-color: white;
+  left: 1px;
+  top: 2px;
+  transition-property: all;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(.59, .01, .5, .99);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .25), 0 3px 2px rgba(0, 0, 0, .25);
+}
+.switch--active__handle {
+  transition: none;
+}
+:checked + .switch__toggle {
+  box-shadow: inset 0 0 0 2px #44db5e;
+  background-color: #44db5e;
+}
+:checked + .switch__toggle > .switch__handle {
+  left: 21px;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, .25);
+}
+:disabled + .switch__toggle {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.switch__touch {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -10px;
+  right: -10px;
+}
+/*~
+  name: Material Switch
+  category: Switch
+  elements: ons-switch
+  markup: |
+    <label class="switch switch--material">
+      <input type="checkbox" class="switch__input switch--material__input">
+      <div class="switch__toggle switch--material__toggle">
+        <div class="switch__handle switch--material__handle">
+        </div>
+      </div>
+    </label>
+    <label class="switch switch--material">
+      <input type="checkbox" class="switch__input switch--material__input" checked>
+      <div class="switch__toggle switch--material__toggle">
+        <div class="switch__handle switch--material__handle">
+        </div>
+      </div>
+    </label>
+    <label class="switch switch--material">
+      <input type="checkbox" class="switch__input switch--material__input" disabled>
+      <div class="switch__toggle switch--material__toggle">
+        <div class="switch__handle switch--material__handle">
+        </div>
+      </div>
+    </label>
+*/
+.switch--material {
+  width: 36px;
+  height: 24px;
+  padding: 0 10px;
+  min-width: 36px;
+}
+.switch--material__toggle {
+  background-color: #b0afaf;
+  margin-top: 5px;
+  height: 14px;
+  box-shadow: none;
+}
+.switch--material__input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 0;
+}
+.switch--material__handle {
+  background-color: #f1f1f1;
+  left: 0;
+  margin-top: -5px;
+  width: 20px;
+  height: 20px;
+  box-shadow:
+      0 4px 5px 0 rgba(0, 0, 0, .14),
+      0 1px 10px 0 rgba(0, 0, 0, .12),
+      0 2px 4px -1px rgba(0, 0, 0, .4);
+}
+:checked + .switch--material__toggle {
+  background-color: #37474f;
+  background-color: rgba(55, 71, 79, 0.5);
+  box-shadow: none;
+}
+:checked + .switch--material__toggle > .switch--material__handle {
+  left: 16px;
+  background-color: #37474f;
+  box-shadow:
+      0 2px 2px 0 rgba(0, 0, 0, .14),
+      0 1px 5px 0 rgba(0, 0, 0, .12),
+      0 3px 1px -2px rgba(0, 0, 0, .2);
+}
+:disabled + .switch--material__toggle {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.switch--material__handle:before {
+  background: transparent;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, .12);
+  transition: box-shadow 0.1s linear;
+}
+.switch--material__toggle > .switch--active__handle:before {
+  box-shadow: 0 0 0 14px rgba(0, 0, 0, .12);
+}
+:checked + .switch--material__toggle > .switch--active__handle:before {
+  box-shadow: 0 0 0 14px rgba(55, 71, 79, 0.2);
+}
+.switch--material__touch {
+  position: absolute;
+  top: -10px;
+  bottom: -10px;…

@@ -61,6 +61,11 @@
     			outline: none;
     		}
     	}
+    	&:active+label {
+    		&:before{
+    			box-shadow: 0 0 0 11px rgba(#37474f, .15);
+    		}
+    	}
     	&:checked+label {
     		&::after {
     			content: "";
@@ -206,8 +211,8 @@ $r--size: 18px;
     	font-weight: normal;
 
     	&::before {
-    		-o-transition: border 0.5s ease-in-out;
-    		-webkit-transition: border 0.5s ease-in-out;
+    		-o-transition: border 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    		-webkit-transition: border 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
     		background-color: $white;
     		border-radius: 50%;
     		border: 2px solid $text-secondary;
@@ -217,7 +222,7 @@ $r--size: 18px;
     		left: 0;
     		margin-left: -18px;
     		position: absolute;
-    		transition: border 0.5s ease-in-out;
+    		transition: border 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
     		width: 18px;
     		outline: none !important;
     	}
@@ -260,6 +265,11 @@ $r--size: 18px;
     			outline: thin dotted;
     		}
     	}
+    	&:active+label {
+    		&:before{
+    			box-shadow: 0 0 0 11px rgba(#37474f, .15);
+    		}
+    	}
     	&:checked+label {
     		&::after {
     			-ms-transform: scale(1, 1);
@@ -285,17 +295,19 @@ $r--size: 18px;
 @each $hex,$name in $base-color {
 	.radio-#{$name} {
 		@if $name != 'white' and $name != 'light'{
-			input[type="radio"]+label {
-				&::after {
-					background-color: $hex;
+			input[type="radio"]{
+				+label {
+					&::after {
+						background-color: $hex;
+					}
 				}
-			}
-			input[type="radio"]:checked+label {
-				&::before {
-					border-color: $hex;
-				}
-				&::after {
-					background-color: $hex;
+				&:checked+label {
+					&::before {
+						border-color: $hex;
+					}
+					&::after {
+						background-color: $hex;
+					}
 				}
 			}
 		}

@@ -1,0 +1,76 @@
+.range{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-position: left center;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: linear-gradient($light7, $light7);
+    input[type="range"]{
+        box-sizing: border-box;
+        background-clip: padding-box;
+        padding: 0;
+        margin: 0;
+        font: inherit;
+        color: inherit;
+        background: transparent;
+        border: none;
+        vertical-align: top;
+        outline: none;
+        line-height: 1;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-position: left center;
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        height: 30px;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        background-image: linear-gradient($light7, $light7);
+        background-position: center left;
+        background-size: 0% 2px;
+        &:active{
+            &::-webkit-slider-thumb {
+                box-shadow: 0 0 0 11px rgba(#37474f, .15);
+            }
+        }
+        &:disabled{
+            &::-webkit-slider-thumb {
+                height: 6px;
+                width: 6px;
+            }
+        }
+        &::-webkit-slider-thumb {
+            cursor: pointer;
+            -webkit-appearance: none;
+            border: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background-color: $light7;
+            -o-transition: border 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+            -webkit-transition: border 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: border 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+    }
+}
+
+
+@each $hex,$name in $base-color {
+    @if $name != 'white' and $name != 'light'{
+        .range-#{$name}{
+            background-image: linear-gradient(rgba($hex, .5), rgba($hex, .5));
+            input[type="range"]{
+                &::-webkit-slider-thumb {
+                    background-color: $hex;
+                }
+            }
+        }
+    }
+}

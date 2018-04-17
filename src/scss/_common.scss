@@ -7,3 +7,12 @@ body{
 	font-size: $font-size-base;
 	font-weight: normal;
 }
+
+/* Clear Flex*/
+@each $size in $base-size-name {
+	@include media-breakpoint-down($size) {
+		.clearflex-#{$size} {
+			display: block!important;
+		}
+	}
+}
