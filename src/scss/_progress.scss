@@ -58,10 +58,18 @@
 			animation-delay: 1.15s;
 		}
 	}
+	.determinate{
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    background-color: $light7;
+	    transition: width .3s linear;
+	}
 	@each $hex,$name in $base-color {
 		&.progress-#{$name}{
 			background-color: rgba($hex, .5);
-			.indeterminate{
+			.indeterminate, .determinate{
 				background-color: $hex;
 			}
 		}
