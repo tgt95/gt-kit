@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Test</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+</head>
+
+<style>
+body{
+    font-family: 'Helvetica';
+}
+</style>
+
+
+
+
+<body>
+	
+
+</body>
+
+<script>
+	
+	// Create Method
+	var Class = function(){
+		this.Author = 'Trinh Gia Tuan'
+	}
+	// Your Method
+	Class.prototype.methodName = function () {
+		console.log('methodName');
+	}
+
+	// Create Object use this method & build Constructor
+	var obj = new Class();
+    	obj.Constructor = Class;
+    	
+	console.log(obj);
+	console.log(obj.Constructor.prototype);
+	
+	// Do function
+	obj.methodName();
+	
+	
+</script>
+
+</html>
