@@ -27,7 +27,7 @@
     height: 4px;
     display: block;
     width: 100%;
-    background-color: rgba($light7, .5);
+    background-color: rgba($light7, .2);
     border-radius: 2px;
     margin: 0.5rem 0 1rem 0;
     overflow: hidden;
@@ -68,7 +68,7 @@
 	}
 	@each $hex,$name in $base-color {
 		&.progress-#{$name}{
-			background-color: rgba($hex, .5);
+			background-color: rgba($hex, .2);
 			.indeterminate, .determinate{
 				background-color: $hex;
 			}

@@ -1,0 +1,64 @@
+.header{
+	position: fixed;
+	width: 100%;
+	transform: translate3d(0, 0, 0);
+	transition-delay: .1s;
+	transition-duration: .2s;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(.4,0,.2,1);
+	z-index: 999;
+	min-height: 64px;
+	background: $white;
+	@include box-shadow($shadow);
+	.header--navbar{
+		list-style-type: none;
+		margin: 0 20px;
+		padding: 0;
+		display: flex;
+		min-height: 64px;
+		align-items: center;
+		float: left;
+		direction: ltr;
+		&:first-child{
+			margin: 0 20px 0 0 ;
+		}
+		> li {
+			display: block;
+			> a{
+				padding: 10px 12px;
+				color: $text-secondary;
+				box-shadow: none;
+				border-radius: 2px;
+				&.toggle-side{
+					padding: 12px 24px;
+					border-right: 1px solid $hr;
+				}
+				>i{
+					font-size: 20px;
+
+				}
+			}
+		}
+		i.notif+.badge{
+			top: 4px;
+			right: 4px;
+		}
+	}
+}
+
+.filter-sticky{
+	position: sticky;
+	// top: 65px;
+	top: 28px;
+	margin: 0px -25px;
+    width: calc(100% + 50px);
+	z-index: 9;
+}
+
+#filter-panel{
+	transform-style: preserve-3d;
+	transition-delay: .1s;
+	transition-duration: .2s;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(.4,0,.2,1);
+}

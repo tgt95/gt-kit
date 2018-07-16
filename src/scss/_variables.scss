@@ -7,8 +7,9 @@
 
 
 // Color variables
-
 $custom: #00BBD3;
+$color-primary: #02c0ce;
+$color-secondary: #48CFAD;
 
 $blue: #2196F3;
 $indigo: #3f51b5;
@@ -26,8 +27,8 @@ $gray: #868e96;
 $gray-dark: #343a40;
 $primary: #007bff;
 $secondary: #868e96;
-$success: #28a745;
-$info: #17a2b8;
+$success: #6eaf0f;
+$info: #00bbd3;
 $warning: #ffc107;
 $danger: #dc3545;
 $light: #f8f9fa;
@@ -35,10 +36,19 @@ $light3: #f3f3f3;
 $light7: #797979;
 $dark: #313a46;
 
+$default-color:              #B8B8B8 !default;
+$default-states-color:       darken($default-color, 5%) !default;
+$default-color-opacity:      rgba(182, 182, 182, .6) !default;
+
+
 // Text Color
 $text-primary: rgba(#000, .87);
 $text-secondary: rgba(#000, .54);
 $text-disabled: rgba(#000, .38);
+
+$muted: $text-secondary;
+
+$hr : #e0e0e0;
 
 // Social
 $twitter : #55acee;
@@ -62,9 +72,12 @@ $font-bold: 700; //bold
 $bg-body: #f3f6f8;
 
 
-// Shadow
-$shadow: 0 0 2px rgba(#000, .12), 0 2px 2px rgba(#000, .24);
-$shadow-active: 0 0 8px rgba(#000, .12), 0 8px 8px rgba(#000, .24);
+// Border
+$border:                        1px solid   !default;
+$border-radius-extra-small:     0.125rem    !default;
+$border-radius-small:           0.1875rem   !default;
+$border-radius-large:           0.25rem     !default;
+$border-radius-extreme:         0.875rem    !default;
 
 
 //Background left-sidebar
@@ -72,12 +85,12 @@ $bg-leftbar: #ffffff;
 
 
 //Background left-sidebar Dark
-$bg-leftbar-dark: #313541;
+$bg-leftbar-dark: #616161;
 $bg-leftbar-menu-color: #7c8e9a;
 
 
 // Leftbar width
-$leftbar-width: 240px;
+$leftbar-width: 256px;
 
 
 // Small Leftbar width
@@ -86,7 +99,11 @@ $leftbar-width-sm: 170px;
 
 //Font variables
 $font-primary: 'Roboto', sans-serif;
-// $font-secondary: 'Roboto', sans-serif;
+
+$font-weight-light:             300         !default;
+$font-weight-normal:            400         !default;
+$font-weight-semi:              600         !default;
+$font-weight-bold:              700         !default;
 
 
 //Font Base
@@ -99,56 +116,44 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px
-);
+  );
 
 $rounded: 30px;
 
 
 
+$browser-prefix: ('-webkit-', '-moz-', '-o-', '-ms-');
+
 $base-size-name : ('xs', 'sm', 'md', 'lg', 'xl');
+$base-font-size : 14px;
 
 $base-color : ($custom, 'custom'), ($primary, 'primary'), ($secondary, 'secondary'), ($blue, 'blue'), ($indigo, 'indigo'), ($purple, 'purple'), ($pink, 'pink'), ($red, 'red'), ($orange, 'orange'), ($yellow, 'yellow'), ($green, 'green'), ($teal, 'teal'), ($cyan, 'cyan'), ($white, 'white'), ($black, 'black'), ($gray, 'gray'), ($gray-dark, 'gray-dark'), ($success, 'success'), ($info, 'info'), ($warning, 'warning'), ($danger, 'danger'), ($light, 'light'), ($dark, 'dark');
 $social-color : ($twitter, 'twitter'), ($youtube, 'youtube'), ($facebook, 'facebook'), ($google, 'google'), ($linkedin, 'linkedin'), ($pinterest, 'pinterest'), ($dribbble, 'dribbble'), ($behance, 'behance'), ($tumblr, 'tumblr'), ($github-alt, 'github-alt'), ($reddit, 'reddit');
 
 $base-social-color : $social-color, $base-color;
 
-@mixin transition03s {
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    transition: all .3s linear;
-}
+$datepicker-color-days:             rgba(255,255,255, .8)  !default;
+$datepicker-color-old-new-days:     rgba(255,255,255, .4)  !default;
 
-@mixin transition-box-shadow-03s {
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    transition: all .3s linear;
-}
+$opacity-1:                  rgba(255,255,255, .1) !default;
+$opacity-2:                  rgba(255,255,255, .2) !default;
 
-@mixin aspect-ratio($width, $height) {
-    position: relative;
-    &:before {
-        display: block;
-        content: "";
-        width: 100%;
-        padding-top: ($height / $width) * 100%;
+$general-transition-time:  300ms             !default;
+$transition-ease:           ease 0s;
+
+/* Material Style */
+@function md-shadow($hex, $darken) {
+    @if $darken == 'undefined' {
+        @return 0 0 2px rgba($hex, .12), 0 2px 2px rgba($hex, .24);
     }
-    >.content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    @else{
+        @return 0 0 ($darken * 2px) rgba($hex, .12), 0 ($darken * 2px) ($darken * 2px) rgba($hex, .24);
     }
 }
 
-@mixin pos-full{
-	position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
+// Shadow
+$shadow: md-shadow($black, 1);
+$shadow-focus: md-shadow($black, 4);
+
+$shadow-1: $shadow-focus;
+$shadow-1-focus: md-shadow($black, 8);

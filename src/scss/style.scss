@@ -1,13 +1,30 @@
 /*!
  * GT UI Kit (https://tgt95.github.io/gt-kit/)
  * Copyright 2018 The GT UI Kit Authors
+ * Combine: sass --watch style.scss:../../built/css/gt-kit.min.css --style compressed
  */
-
- // sass --watch style.scss:../../built/css/gt-kit.min.css --style compressed
-@import 'icons/material-design-iconic-font.min.scss';
+ 
+@import 'bootstrap';
 
 @import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Plugins
+@import 'plugins/plugin-metismenu';
+@import 'plugins/plugin-waves';
+@import 'plugins/plugin-nouislider';
+@import 'plugins/plugin-slick';
+@import 'plugins/plugin-slick-theme';
+@import 'plugins/plugin-datepicker';
+
+// Icons
+@import 'icons/material-design-iconic-font';
+
+// Layout
 @import 'breakpoints';
+@import 'animate';
 @import 'common';
 @import 'bootstrap-reset';
 @import 'main';
@@ -19,3 +36,10 @@
 @import 'tabs';
 @import 'card';
 @import 'table';
+
+// Section
+@import 'modules/header';
+@import 'modules/sidebar';
+@import 'modules/footer';
+@import 'modules/common';
+@import 'modules/wizard';

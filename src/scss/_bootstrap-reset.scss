@@ -28,6 +28,9 @@
 }
 
 /* Border colors */
+.badge:not([class*="badge-bg-"]){
+	@include box-shadow($shadow);
+}
 .badge:not(.badge-pill){
 	border-radius: 2px;
 }
@@ -36,15 +39,24 @@
 		color: $white;
 		background-color: $hex;
 	}
+
+	.badge-outline-#{$name} {
+		color: $hex;
+		border: 1px solid $hex;
+	}
+
+	.badge-bg-#{$name} {
+		color: $hex;
+		background: rgba($hex, .1);
+	}
 }
 i.notif{
 	position: relative;
 	+.badge{
 		position: absolute;
-		width: 18px;
-		height: 18px;
 		top: 0;
 		right: 0;
+		padding: 2px 4px;
 	}
 }
 
@@ -62,11 +74,8 @@ $bg-style : (cover), (contain);
 
 /* Image */
 .img-raised {
-	box-shadow: $shadow;
-	@include transition-box-shadow-03s;
-	&:hover{
-		box-shadow: $shadow-active;
-	}
+	@include box-shadow-hover;
+	@include transition(#{'box-shadow .3s'});
 }
 .img-cover{
 	-o-object-fit: cover;
@@ -79,9 +88,9 @@ $bg-style : (cover), (contain);
 [layer-bg] {
 	position: relative;
 	&:after {
-		@include pos-full;
+		@include position-full;
 		content: '';
-		opacity: .3;
+		@include opacity(.3);
 	}
 }
 
@@ -102,18 +111,30 @@ $bg-style : (cover), (contain);
 }
 
 /* Dropdown */
-.dropdown-menu {
+.dropdown-menu:not(.datepicker):not(.bootstrap-datetimepicker-widget){
 	display: block;
 	visibility: hidden;
-	opacity: 0;
+	@include opacity(0);
+	padding: 0;
 	margin-top: 20px!important;
-	@include transition03s;
+	border: none;
+	@include box-shadow(0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2));
+	@include transition(visibility .5s#{','} opacity .5s, margin .3s);
 }
 
 .show>.dropdown-menu {
-	visibility: visible;
-	opacity: 1;
+	visibility: visible !important;
+	// @include opacity(1);
+	opacity: 1 !important;
+    filter: alpha(opacity=1);
 	margin-top: 0 !important;
+}
+
+.dropdown-item{
+	font-size: 16px;
+	display: block;
+	line-height: 22px;
+	padding: 14px 16px;
 }
 
 /* Pagination */
@@ -160,15 +181,12 @@ $bg-style : (cover), (contain);
 .page-link{
 	color: inherit;
 	box-shadow: none;
-	-webkit-transition: box-shadow .2s;
-	-moz-transition: box-shadow .2s;
-	-o-transition: box-shadow .2s;
-	transition: box-shadow .2s;
+	@include transition(#{'b .2s'});
 	&:hover{
-		box-shadow: $shadow-active;
+		@include box-shadow($shadow-focus);
 	}
 	&:focus{
-		box-shadow: $shadow-active;
+		@include box-shadow($shadow-focus);
 	}
 }
 
@@ -182,7 +200,7 @@ $bg-style : (cover), (contain);
 .modal-content{
 	background-color: #fafafa;
 	border-radius: 2px;
-	box-shadow: 0 15px 12px rgba(0, 0, 0, 0.12), 0 19px 38px rgba(0, 0, 0, 0.38);
+	@include box-shadow(0 15px 12px rgba(0, 0, 0, 0.12), 0 19px 38px rgba(0, 0, 0, 0.38));
 	@each $hex,$name in $base-color {
 		@if $name != 'white' and $name != 'light'{
 			&.bg-#{$name} {
@@ -200,10 +218,10 @@ $bg-style : (cover), (contain);
 /* Popover */
 .popover {
 	font-size: 14px;
-	box-shadow: $shadow-active;
 	border: none;
 	line-height: 1.7;
 	max-width: 240px;
+	@include box-shadow($shadow-focus);
 	&.bs-popover-top .arrow, &.bs-popover-left .arrow, &.bs-popover-right .arrow, &.bs-popover-bottom .arrow {
 		&:before{
 			border-top-color: transparent;
@@ -249,7 +267,7 @@ $bg-style : (cover), (contain);
 			}
 			.popover-header {
 				color: $white;
-				opacity: .6;
+				@include opacity(.6);
 			}
 		}
 	}
@@ -277,7 +295,7 @@ $bg-style : (cover), (contain);
 	background-color: $white;
 	font-size: 14px;
 	color: inherit;
-	box-shadow: $shadow-active;
+	@include box-shadow($shadow-focus);
 }
 
 /* Img */
@@ -286,4 +304,37 @@ $bg-style : (cover), (contain);
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
+}
+
+/* Breadcrumb */
+.page-title-box{
+	margin: 0 0 30px;
+}
+.breadcrumb{
+	padding: 0;
+	margin-bottom: 0;
+	background-color: transparent;
+}
+.breadcrumb-item{
+	a{
+		color: $text-secondary;
+	}
+	&.active{
+		color: $text-primary;
+	}
+}
+
+/* Breadcrumb */
+.rounded{
+	border-radius: 30px !important;
+}
+
+.rounded-l{
+	border-top-left-radius: 30px !important;
+	border-bottom-left-radius: 30px !important;
+}
+
+.rounded-r{
+	border-top-right-radius: 30px !important;
+	border-bottom-right-radius: 30px !important;
 }

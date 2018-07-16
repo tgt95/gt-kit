@@ -26,7 +26,7 @@
         color: $text-disabled;
     }
     &:focus{
-        box-shadow: 0 0 8px rgba($blue, .12), 0 6px 8px rgba($blue, .24);
+        @include box-shadow(#{'0 0 8px ' rgba($blue, .12)', 0 6px 8px' rgba($blue, .24)});
     }
     &:disabled{
         cursor: not-allowed;
@@ -36,26 +36,38 @@
     }
 }
 
-.form-select{
-    position: relative;
-    select.form-control{
+// .form-select{
+//     position: relative;
+//     select.form-control{
+//         -webkit-appearance: none;
+//         -ms-appearance: none;
+//         -moz-appearance: none;
+//     }
+//     &:after{
+//         display: block;
+//         position: absolute;
+//         top: 50%;
+//         right: 15px;
+//         width: 0;
+//         height: 0;
+//         margin-top: -3px;
+//         border-left: .35em solid transparent;
+//         border-right: .35em solid transparent;
+//         border-top: .4em solid;
+//         content: '';
+//         z-index: 0;
+//     }
+// }
+select{
+    &.form-control, &.form-control-fl{
         -webkit-appearance: none;
         -ms-appearance: none;
         -moz-appearance: none;
-    }
-    &:after{
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 15px;
-        width: 0;
-        height: 0;
-        margin-top: -3px;
-        border-left: .35em solid transparent;
-        border-right: .35em solid transparent;
-        border-top: .4em solid;
-        content: '';
-        z-index: 0;
+        background-position: right 50%;
+        background-repeat: no-repeat;
+        background-size: 30px 25px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3e%3ctitle%3eic_arrow_drop_down_48px%3c/title%3e%3cg class='nc-icon-wrapper' fill='%23111111'%3e%3cpath d='M14 20l10 10 10-10z'/%3e%3c/g%3e%3c/svg%3e");
+        padding-right: 1.5em;
     }
 }
 
@@ -68,7 +80,7 @@
 
 .custom-select.is-valid:focus, .form-control.is-valid:focus, .was-validated .custom-select:valid:focus, .was-validated .form-control:valid:focus{
     border-color: $success;
-    box-shadow: 0 0 8px rgba($success, .12), 0 6px 8px rgba($success, .24);
+    @include box-shadow(#{'0 0 8px ' rgba($success, .12)', 0 6px 8px' rgba($success, .24)});
 }
 
 /* Danger */
@@ -78,7 +90,15 @@
 
 .custom-select.is-invalid:focus, .form-control.is-invalid:focus, .was-validated .custom-select:invalid:focus, .was-validated .form-control:invalid:focus{
     border-color: $danger;
-    box-shadow: 0 0 8px rgba($danger, .12), 0 6px 8px rgba($danger, .24);
+    @include box-shadow(#{'0 0 8px ' rgba($danger, .12)', 0 6px 8px' rgba($danger, .24)});
+}
+
+.form-group-range{
+    margin-bottom: 1rem;
+    label{
+        // font-weight: 600;
+        margin-top: 18px;
+    }
 }
 
 
@@ -114,6 +134,18 @@
 
 
 /* Float Label */
+.form-select-fl{
+    &.has-success{
+        +label, label.active{
+            color: $success;
+        }
+    }
+    &.has-error{
+        +label, label.active{
+            color: $danger;
+        }
+    }
+}
 .form-group-fl{
     position: relative;
     margin-bottom: 1rem;
@@ -135,18 +167,13 @@
         left: 0;
         font-size: 1rem;
         cursor: text;
-        -webkit-transition: color .2s ease-out, -webkit-transform .2s ease-out;
-        transition: color .2s ease-out, -webkit-transform .2s ease-out;
-        transition: transform .2s ease-out, color .2s ease-out;
-        transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+        @include transition(#{'transform .2s ease-out, color .2s ease-out'});
         -webkit-transform-origin: 0% 100%;
         transform-origin: 0% 100%;
         text-align: initial;
-        -webkit-transform: translateY(12px);
-        transform: translateY(12px);
+        @include transform(translateY(12px));
         &:not(.label-icon).active {
-            -webkit-transform: translateY(-14px) scale(0.8);
-            transform: translateY(-14px) scale(0.8);
+            @include transform(#{'translateY(-14px) scale(0.8)'});
             -webkit-transform-origin: 0 0;
             transform-origin: 0 0
         }
@@ -171,36 +198,42 @@
         box-shadow: none;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
-        -webkit-transition: border .3s, -webkit-box-shadow .3s;
-        transition: border .3s, -webkit-box-shadow .3s;
-        transition: box-shadow .3s, border .3s;
-        transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+        @include transition(#{'border .3s, -webkit-box-shadow .3s'});
         &:disabled{
             cursor: not-allowed;
             opacity: .5;
         }
         &:focus{
-            border-bottom: 2px solid $blue;
+            border-bottom: 1px solid $blue;
             +label{
                 &.active {
                     color: $blue;
                 }
+                // +.input-group-append{
+                //     border-bottom: 1px solid $blue;
+                // }
             }
         }
         &.is-valid{
-            border-bottom: 2px solid $success;
+            border-bottom: 1px solid $success;
             +label{
                 &.active {
                     color: $success;
                 }
+                // +.input-group-append{
+                //     border-bottom: 1px solid $success;
+                // }
             }
         }
         &.is-invalid{
-            border-bottom: 2px solid $danger;
+            border-bottom: 1px solid $danger;
             +label{
                 &.active {
                     color: $danger;
                 }
+                // +.input-group-append{
+                //     border-bottom: 1px solid $danger;
+                // }
             }
         }
     }
@@ -215,16 +248,40 @@
             box-sizing: border-box;
         }
     }
+    .input-group{
+        &.custom{
+            .form-control-fl{
+                position: relative;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                width: 1%;
+                margin-bottom: 0;
+            }
+            .input-group-append, .input-group-prepend{
+                position: relative;
+                width: auto;
+                margin: 0;
+                >button, >i{
+                    background: 0;
+                    box-shadow: none;
+                }
+                >i{
+                    font-size: 20px;
+                    padding: 11px;
+                    @include flex-center;
+                }
+            }
+            .input-group-prepend{
+                +input +label{
+                    left: 50px;
+                }
+            }
+        }
+    }
 }
 
 .form-select-fl{
     position: relative;
-    select.form-control-fl{
-        -webkit-appearance: none;
-        -ms-appearance: none;
-        -moz-appearance: none;
-        // color: transparent;
-    }
     &:after{
         display: block;
         position: absolute;
@@ -239,4 +296,9 @@
         content: '';
         z-index: 0;
     }
+}
+
+.form-group-title{
+    font-size: 13px;
+    color: $text-secondary;
 }

@@ -1,0 +1,28 @@
+/* Flexbbox */ 
+@mixin d-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-center {
+  @include d-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-x {
+  @include d-flex;
+  justify-content: center;
+}
+
+@mixin flex-center-y {
+  @include d-flex;
+  align-items: center;
+}
+
+@mixin flex-between {
+  @include d-flex;
+  justify-content: space-between;
+}

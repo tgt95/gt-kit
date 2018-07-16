@@ -1,0 +1,173 @@
+/* =============
+   Common Mixins
+============= */
+
+@import 'utilities/box-shadow';
+@import 'utilities/transition';
+@import 'utilities/transform';
+@import 'utilities/flex';
+
+@import 'plugins/datepicker';
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+@mixin bar-animation($type){
+ -webkit-animation: $type 500ms linear 0s;
+ -moz-animation: $type 500ms linear 0s;
+ animation: $type 500ms 0s;
+ -webkit-animation-fill-mode: forwards;
+ -moz-animation-fill-mode: forwards;
+ animation-fill-mode: forwards;
+}
+
+@mixin topbar-x-rotation(){
+  @keyframes topbar-x {
+    0% {top: 0px; transform: rotate(0deg); }
+    45% {top: 6px; transform: rotate(145deg); }
+    75% {transform: rotate(130deg); }
+    100% {transform: rotate(135deg); }
+  }
+  @-webkit-keyframes topbar-x {
+    0% {top: 0px; -webkit-transform: rotate(0deg); }
+    45% {top: 6px; -webkit-transform: rotate(145deg); }
+    75% {-webkit-transform: rotate(130deg); }
+    100% { -webkit-transform: rotate(135deg); }
+  }
+  @-moz-keyframes topbar-x {
+    0% {top: 0px; -moz-transform: rotate(0deg); }
+    45% {top: 6px; -moz-transform: rotate(145deg); }
+    75% {-moz-transform: rotate(130deg); }
+    100% { -moz-transform: rotate(135deg); }
+  }
+}
+
+@mixin topbar-back-rotation(){
+  @keyframes topbar-back {
+    0% { top: 6px; transform: rotate(135deg); }
+    45% { transform: rotate(-10deg); }
+    75% { transform: rotate(5deg); }
+    100% { top: 0px; transform: rotate(0); }
+  }
+
+  @-webkit-keyframes topbar-back {
+    0% { top: 6px; -webkit-transform: rotate(135deg); }
+    45% { -webkit-transform: rotate(-10deg); }
+    75% { -webkit-transform: rotate(5deg); }
+    100% { top: 0px; -webkit-transform: rotate(0); }
+  }
+
+  @-moz-keyframes topbar-back {
+    0% { top: 6px; -moz-transform: rotate(135deg); }
+    45% { -moz-transform: rotate(-10deg); }
+    75% { -moz-transform: rotate(5deg); }
+    100% { top: 0px; -moz-transform: rotate(0); }
+  }
+}
+
+@mixin bottombar-x-rotation(){
+  @keyframes bottombar-x {
+    0% {bottom: 0px; transform: rotate(0deg);}
+    45% {bottom: 6px; transform: rotate(-145deg);}
+    75% {transform: rotate(-130deg);}
+    100% {transform: rotate(-135deg);}
+  }
+  @-webkit-keyframes bottombar-x {
+    0% {bottom: 0px; -webkit-transform: rotate(0deg);}
+    45% {bottom: 6px; -webkit-transform: rotate(-145deg);}
+    75% {-webkit-transform: rotate(-130deg);}
+    100% {-webkit-transform: rotate(-135deg);}
+  }
+  @-moz-keyframes bottombar-x {
+    0% {bottom: 0px; -moz-transform: rotate(0deg);}
+    45% {bottom: 6px; -moz-transform: rotate(-145deg);}
+    75% {-moz-transform: rotate(-130deg);}
+    100% {-moz-transform: rotate(-135deg);}
+  }
+}
+
+@mixin bottombar-back-rotation{
+  @keyframes bottombar-back {
+    0% { bottom: 6px;transform: rotate(-135deg);}
+    45% { transform: rotate(10deg);}
+    75% { transform: rotate(-5deg);}
+    100% { bottom: 0px;transform: rotate(0);}
+  }
+  @-webkit-keyframes bottombar-back {
+    0% {bottom: 6px;-webkit-transform: rotate(-135deg);}
+    45% {-webkit-transform: rotate(10deg);}
+    75% {-webkit-transform: rotate(-5deg);}
+    100% {bottom: 0px;-webkit-transform: rotate(0);}
+  }
+  @-moz-keyframes bottombar-back {
+    0% {bottom: 6px;-moz-transform: rotate(-135deg);}
+    45% {-moz-transform: rotate(10deg);}
+    75% {-moz-transform: rotate(-5deg);}
+    100% {bottom: 0px;-moz-transform: rotate(0);}
+  }
+
+}
+
+@mixin nc-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  @each $name in $browser-prefix {
+    #{$name}transform: rotate($degrees);
+  }
+  transform: rotate($degrees);
+}
+
+@mixin nc-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  @each $name in $browser-prefix {
+    #{$name}transform: scale($horiz, $vert);
+  }
+  transform: scale($horiz, $vert);
+}
+
+
+/* Ratio */ 
+@mixin position-full{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    >.content {
+        @include position-full;
+    }
+}
+
+/* Clearfix */ 
+@mixin clearfix{
+    &:before {
+        display: table;
+        content: " ";
+    }
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+/* Image */ 
+@mixin img-cover{
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

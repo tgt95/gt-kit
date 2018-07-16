@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 
 <head>
@@ -9,7 +9,7 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <!-- App css -->
-    <link href="../built/css/core.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="../built/css/core.css" rel="stylesheet" type="text/css" /> -->
     <link href="../built/css/gt-kit.min.css" rel="stylesheet" type="text/css" />
     <link href="../built/css/demo.min.css" rel="stylesheet" type="text/css" />
 </head>
@@ -96,12 +96,12 @@
                             </div>
                             <div class="col-md-12">
                                 <?php foreach ($socialColor as $key => $value) {
-                                        echo "<button class='btn btn-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i>". ucfirst($value) ."</button> ";
+                                        echo "<button class='btn btn-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i> ". ucfirst($value) ."</button> ";
                                 } ?>
                             </div>
                             <div class="col-md-12">
                                 <?php foreach ($socialColor as $key => $value) {
-                                        echo "<button class='btn btn-outline-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i>". ucfirst($value) ."</button> ";
+                                        echo "<button class='btn btn-outline-". $value . " btn-round'><i class='zmdi zmdi-". $value . "'></i> ". ucfirst($value) ."</button> ";
                                 } ?>
                             </div>
                         </div>
@@ -302,6 +302,44 @@
                                     <label>Textarea</label>
                                 </div>
                             </div>
+                            <div class="clearfix w-100"></div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl">
+                                    <div class="input-group custom">
+                                        <div class="input-group-prepend">
+                                            <button type="submit" class="btn btn-just-icon btn-round"><i class="zmdi zmdi-copy"></i></button>
+                                        </div>
+                                        <input type="text" class="form-control-fl">
+                                        <label class="active">With icon</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl">
+                                    <div class="input-group custom">
+                                        <input type="text" class="form-control-fl">
+                                        <label class="active">With icon</label>
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-just-icon btn-round"><i class="zmdi zmdi-copy"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix w-100"></div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl has-error">
+                                    <input type="text" class="form-control-fl is-invalid" required>
+                                    <label>Validate Input</label>
+                                    <div class="invalid-feedback mb-5">Field is required!</div>
+                                </div>
+                            </div>
+                            <div class="clearfix w-100"></div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl datepicker-container">
+                                    <input type="text" class="form-control-fl datetimepicker date-picker" value="31/05/2018">
+                                    <label>Datepicker</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -314,28 +352,59 @@
                         <div class="row">
                             <div class="col-sm-6 col-lg-3">
                                 <div class="form-group-fl">
-                                    <div class="form-select-fl">
-                                        <select class="form-control-fl">
-                                            <option value="" selected>Choose Option</option>
-                                            <option value="Mustard">Mustard</option>
-                                            <option value="Ketchup">Ketchup</option>
-                                            <option value="Relish">Relish</option>
-                                        </select>
-                                    </div>
+                                    <select class="form-control-fl">
+                                        <option placeholder="Choose Option" selected></option>
+                                        <option value="Mustard">Mustard</option>
+                                        <option value="Ketchup">Ketchup</option>
+                                        <option value="Relish">Relish</option>
+                                    </select>
                                     <label>Select (Float Label)</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl has-success">
+                                    <select class="form-control-fl is-valid">
+                                        <option placeholder="Choose Option"></option>
+                                        <option value="Mustard">Mustard</option>
+                                        <option value="Ketchup" selected>Ketchup</option>
+                                        <option value="Relish">Relish</option>
+                                    </select>
+                                    <label>Success</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl has-error">
+                                    <select class="form-control-fl is-invalid">
+                                        <option placeholder="Choose Option"></option>
+                                        <option value="Mustard" selected>Mustard</option>
+                                        <option value="Ketchup">Ketchup</option>
+                                        <option value="Relish">Relish</option>
+                                    </select>
+                                    <label>Error</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group-fl">
+                                    <select class="form-control-fl" disabled>
+                                        <option placeholder="Choose Option"></option>
+                                        <option value="Mustard" selected>Mustard</option>
+                                        <option value="Ketchup">Ketchup</option>
+                                        <option value="Relish">Relish</option>
+                                    </select>
+                                    <label>Disabled</label>
                                 </div>
                             </div>
                             <div class="clearfix w-100"></div>
                             <div class="col-sm-6 col-lg-3">
                                 <div class="form-group">
                                     <label>Select</label>
-                                    <div class="form-select">
+                                    <!-- <div class="form-select"> -->
                                         <select class="form-control">
                                             <option>Mustard</option>
                                             <option>Ketchup</option>
                                             <option>Relish</option>
                                         </select>
-                                    </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3">
@@ -1009,9 +1078,9 @@
                                     </div>
                                     <div class="card-footer px-0">
                                         <div class="stats justify-content-end">
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite notif"></i><span class="badge badge-pink">3</span></button>
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-favorite notif"></i><span class="badge badge-pink">3</span></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -1027,9 +1096,9 @@
                                     </div>
                                     <div class="card-footer px-0">
                                         <div class="stats justify-content-center">
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -1045,9 +1114,9 @@
                                     </div>
                                     <div class="card-footer px-0">
                                         <div class="stats justify-content-center">
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
-                                            <button class="btn btn-dark btn-icon btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-bookmark"></i></button>
+                                            <button class="btn btn-dark btn-link" type="button"><i class="zmdi zmdi-share"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -1454,7 +1523,8 @@ for ($i=1; $i <=3 ; $i++) {
 <!-- END Modal -->
 
 </body>
-<script src="../built/js/core.min.js"></script>
+<script src="../built/js/gt-kit.min.js"></script>
+<script src="../src/js/main.js"></script>
 <script>
     var dataTb = [
         name = [

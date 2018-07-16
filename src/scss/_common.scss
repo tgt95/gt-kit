@@ -8,11 +8,23 @@ body{
 	font-weight: normal;
 }
 
+a{
+	color: $blue;
+	transition: color .3s;
+	&:hover{
+		
+	}
+}
+
 /* Clear Flex*/
 @each $size in $base-size-name {
 	@include media-breakpoint-down($size) {
 		.clearflex-#{$size} {
 			display: block!important;
+		}
+		
+		.float-#{$size}-right-i {
+			float: right!important;
 		}
 	}
 }
@@ -56,4 +68,12 @@ img{
 	100% {
 		transform: translateX(100%);
 	}
+}
+
+/* Flip */
+.flip-v{
+	-moz-transform: scale(-1, -1);
+	-o-transform: scale(-1, -1);
+	-webkit-transform: scale(-1, -1);
+	transform: scale(-1, -1);
 }

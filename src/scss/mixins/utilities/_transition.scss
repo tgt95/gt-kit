@@ -1,0 +1,22 @@
+// Transition
+@mixin transition($value...) {
+  @each $name in $browser-prefix {
+    #{$name}transition: $value;
+  }
+  transition: $value;
+}
+
+@mixin general-transition{
+	@include transition(all .3s ease);
+}
+
+@mixin general-box-shadow-transition{
+	@include transition(box-shadow .3s ease);
+}
+
+@mixin transition-input-focus-color() {
+  @each $name in $browser-prefix {
+    #{$name}transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}

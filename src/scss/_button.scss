@@ -6,19 +6,16 @@
 .btn {
 	padding: 5px 16px;
 	border-radius: 2px;
-	box-shadow: $shadow;
 	text-transform: uppercase;
 	font-weight: $font-normal;
 	outline: none;
-	-webkit-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
-	-moz-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
-	-o-transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
-	transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+	@include box-shadow($shadow);
+	@include transition(#{'box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1)'});
 	>i{
-		margin-right: 5px;
+		// margin-right: 5px;
 	}
 	&:hover,&:focus,&:active {
-		box-shadow: $shadow-active;
+		@include box-shadow($shadow-focus);
 		outline: none;
 	}
 	&.btn-round {
@@ -37,8 +34,7 @@
 		text-align: center;
 		>i{
 			width: 20px;
-			font-size: 17px;
-			top: -1px;
+			height: 20px;
 			position: relative;
 			margin: 0;
 		}
@@ -65,7 +61,7 @@
 		.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link).active:focus, 
 		.btn-#{$name}:not(:disabled):not(.disabled):not(.btn-link):active:focus, 
 		.show>.btn-#{$name}.dropdown-toggle:focus{
-			box-shadow: $shadow-active;
+			@include box-shadow($shadow-focus);
 		}
 
 		.btn-#{$name}:not(.btn-link) {
@@ -89,7 +85,7 @@
 		.btn-outline-#{$name}:not(:disabled):not(.disabled).active:focus, 
 		.btn-outline-#{$name}:not(:disabled):not(.disabled):active:focus, 
 		.show>.btn-outline-#{$name}.dropdown-toggle:focus{
-			box-shadow: $shadow-active;
+			@include box-shadow($shadow-focus);
 		}
 
 		.btn-outline-#{$name} {

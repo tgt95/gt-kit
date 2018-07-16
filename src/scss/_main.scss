@@ -1,3 +1,102 @@
 /* =============
    Main
 ============= */
+.section{
+	margin: 0 0 60px;
+}
+.section-title{
+	margin: 0 0 20px;
+	@include flex-between;
+	align-items: center;
+	// color: $text-secondary;
+}
+
+.section-control{
+	.form-search{
+		position: relative;
+		@include media-breakpoint-up(md) {
+			width: 250px;
+		}
+		// button{
+		// 	position: absolute;
+		// 	top: 6px;
+		// 	right: -4px;
+		// 	z-index: 2;
+		// 	background: none;
+		// 	box-shadow: none;
+		// }
+	}
+	form{
+		margin-bottom: 0;
+	}
+	ul{
+		line-height: 32px;
+		margin: 0;
+		padding: 0;
+		li{
+			float: left;
+			margin-right: 5px;
+			cursor: pointer;
+			position: relative;
+			display: block;
+			a{
+				padding: 0 15px 0 8px;
+				display: block;
+				position: relative;
+				width: 100%;
+				color: $text-secondary;
+			}
+		}
+	}
+}
+
+/* Filter */ 
+.list-filter{
+	.popup{
+		padding: 15px;
+		max-height: 350px;
+		overflow: auto;
+	}
+	.popup-title{
+		padding: 5px 15px 8px;
+		font-weight: 600;
+		background: $white;
+		white-space: nowrap;
+		width: 100%;
+	}
+}
+
+.popup{
+	display: block;
+	z-index: 1;
+	@include box-shadow($shadow);
+	position: absolute;
+	padding: 15px;
+	background: $white;
+	color: $text-secondary;
+	min-width: 162px;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(#{'opacity .25s linear , visibility .25s linear'});
+	@include box-shadow-1-hover;
+	&.right{
+		right: 0;
+	}
+	&.popup-md{
+		width: 320px;
+	}
+	&.popup-sm{
+		width: 220px;
+	}
+}
+
+.popup:not(.right){
+	left: 0;
+}
+
+.popup-visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+
