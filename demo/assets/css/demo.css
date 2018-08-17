@@ -1,0 +1,196 @@
+.page-header {
+  position: relative; }
+  .page-header .page-header-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%; }
+  .page-header .content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px 15px;
+    width: 100%;
+    max-width: 880px; }
+    .page-header .content-center .logo {
+      margin-bottom: 40px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24); }
+    .page-header .content-center .title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 78px;
+      letter-spacing: -2.4px;
+      line-height: 88px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.24); }
+    .page-header .content-center .descripton, .page-header .content-center .sub-descripton {
+      color: rgba(255, 255, 255, 0.95);
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.24); }
+    .page-header .content-center .sub-descripton {
+      font-weight: 100; }
+
+/* Common */
+.section {
+  padding: 70px 0;
+  position: relative; }
+  .section .row + .category-title {
+    margin-top: 15px; }
+  .section .group-title {
+    font-weight: 400;
+    font-size: 1.714em;
+    line-height: 1.45em;
+    margin: 30px 0;
+    color: #17a2b8; }
+  .section .title {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 30px;
+    line-height: 1.4em; }
+  .section .section-m-b-100 {
+    margin-bottom: 100px; }
+
+.category-title, .sub-category {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 25px; }
+
+.category-title {
+  display: flex;
+  justify-content: space-between;
+  color: #777; }
+
+.category-control {
+  color: #777;
+  transition: color .3s ease; }
+  .category-control:hover {
+    color: #212529; }
+
+.sub-category {
+  font-size: 80%; }
+
+.category-content {
+  margin-bottom: 30px; }
+
+#buttons .btn, #javascriptComponents .btn, #modals .btn, #tooltips-popover .btn {
+  margin: 0 0px 10px; }
+
+.typography-line {
+  padding-left: 25%;
+  margin-bottom: 35px;
+  position: relative;
+  display: block;
+  width: 100%; }
+  .typography-line span {
+    bottom: 10px;
+    color: #c0c1c2;
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    left: 0;
+    position: absolute;
+    width: 260px;
+    text-transform: none; }
+
+.dropdown-menu.color-style-switcher {
+  border: none !important;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24) !important;
+  transition: box-shadow 0.3s !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  top: 20px;
+  padding: 0 !important; }
+  .dropdown-menu.color-style-switcher:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24); }
+  .dropdown-menu.color-style-switcher ul {
+    list-style: none outside none;
+    width: 206px;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0; }
+    .dropdown-menu.color-style-switcher ul li {
+      display: inline-flex;
+      margin: 2px;
+      padding: 0; }
+      .dropdown-menu.color-style-switcher ul li a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+        transition: box-shadow .3s; }
+        .dropdown-menu.color-style-switcher ul li a:hover {
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24); }
+        .dropdown-menu.color-style-switcher ul li a.active {
+          position: relative; }
+          .dropdown-menu.color-style-switcher ul li a.active:after {
+            color: #000;
+            content: "\f26b";
+            font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+            font-size: 20px;
+            right: 8px;
+            position: absolute;
+            top: 6px; }
+
+.panel {
+  margin-bottom: 25px;
+  border-radius: 0;
+  transition: box-shadow .3s ease;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24); }
+  .panel:hover {
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24); }
+  .panel .panel-heading {
+    padding: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 0 !important;
+    font-size: 14px;
+    font-weight: 300; }
+    .panel .panel-heading + .panel-body {
+      padding: 0 20px 20px; }
+    .panel .panel-heading .panel-title {
+      font-size: 16px;
+      float: left;
+      margin: 0;
+      padding: 0;
+      font-weight: 400; }
+    .panel .panel-heading .panel-control {
+      float: right;
+      height: auto; }
+      .panel .panel-heading .panel-control a {
+        text-decoration: none;
+        color: #212529;
+        margin-left: 5px;
+        font-size: 14px;
+        float: left;
+        transition: color .3s ease; }
+  .panel .panel-body {
+    position: relative;
+    padding: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .panel .sub-panel-title {
+    font-weight: 400;
+    margin-bottom: 15px; }
+
+.panel-white {
+  background: #fff; }
+  .panel-white .panel-heading .panel-control a {
+    color: rgba(33, 37, 41, 0.5); }
+    .panel-white .panel-heading .panel-control a:hover {
+      color: #212529; }

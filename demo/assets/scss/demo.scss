@@ -1,5 +1,11 @@
  // sass --watch demo.scss:../../built/css/demo.min.css
 
+ @mixin box-shadow($shadow...) {
+ 	-webkit-box-shadow: $shadow; 
+ 	-moz-box-shadow: $shadow;
+ 	box-shadow: $shadow;
+ }
+
  .page-header{
  	position: relative;
  	.page-header-image{
@@ -51,18 +57,18 @@
 .section {
 	padding: 70px 0;
 	position: relative;
-	background: #fff;
 	.row{
-		+.category {
+		+.category-title {
 			margin-top: 15px;
 		}
 	}
 	.group-title{
-		font-weight: 100;
+		font-weight: 400;
 		font-size: 1.714em;
 		line-height: 1.45em;
-		margin-top: 30px;
-		margin-bottom: 15px;
+		margin: 30px 0;
+		color: #17a2b8;
+		// margin-bottom: 15px;
 	}
 	.title{
 		font-weight: 700;
@@ -74,10 +80,33 @@
 		margin-bottom: 100px;
 	}
 }
-.category {
+.category-title, .sub-category{
 	text-transform: uppercase;
-	font-weight: 700;
-	color: #9A9A9A;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+
+.category-title{
+	display: flex;
+	justify-content: space-between;
+	color: #777;
+	// border-bottom: 1px solid rgba(#777, .3);	
+}
+
+.category-control{
+	color: #777;
+	transition: color .3s ease;
+	&:hover{
+		color: #212529;
+	}
+}
+.sub-category{
+	font-size: 80%;
+	// color: lighten(#777, 15%);
+}
+
+.category-content{
+	margin-bottom: 30px;
 }
 
 #buttons, #javascriptComponents, #modals, #tooltips-popover {
@@ -109,13 +138,13 @@
 
 .dropdown-menu{
 	&.color-style-switcher{
-		border: none;
-		box-shadow: 0 0 2px rgba(#000, .12), 0 2px 2px rgba(#000, .24);
-		transition: box-shadow .3s;
-		visibility: visible;
-		opacity: 1;
+		border: none!important;
+		box-shadow: 0 0 2px rgba(#000, .12), 0 2px 2px rgba(#000, .24)!important;
+		transition: box-shadow .3s!important;
+		visibility: visible!important;
+		opacity: 1!important;
 		top: 20px;
-		padding: 0;
+		padding: 0!important;
 		&:hover{
 			box-shadow: 0 0 8px rgba(#000, .12), 0 8px 8px rgba(#000, .24);
 		}
@@ -154,6 +183,69 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.panel {
+	// border: 0!important;
+	margin-bottom: 25px;
+	border-radius: 0;
+	transition: box-shadow .3s ease;
+	@include box-shadow(0 0 2px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24));
+	&:hover{
+		@include box-shadow(0 0 8px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.24));
+	}
+	.panel-heading {
+		padding: 20px;
+		margin-bottom: 25px;
+		overflow: hidden;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border: 0!important;
+		font-size: 14px;
+		font-weight: 300;
+		+.panel-body {
+			padding: 0 20px 20px;
+		}
+		.panel-title {
+			font-size: 16px;
+			float: left;
+			margin: 0;
+			padding: 0;
+			font-weight: 400;
+		}
+		.panel-control {
+			float: right;
+			height: auto;
+			a {
+				text-decoration: none;
+				color: #212529;
+				margin-left: 5px;
+				font-size: 14px;
+				float: left;
+				transition: color .3s ease;
+			}
+		}
+	}
+	.panel-body {
+		position: relative;
+		padding: 20px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.sub-panel-title{
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
+}
+
+.panel-white {
+	background: #fff;
+	.panel-heading .panel-control a {
+		color: rgba(#212529, .5);
+		&:hover{
+			color: #212529;
 		}
 	}
 }

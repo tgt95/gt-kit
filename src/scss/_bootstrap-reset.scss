@@ -181,7 +181,7 @@ $bg-style : (cover), (contain);
 .page-link{
 	color: inherit;
 	box-shadow: none;
-	@include transition(#{'b .2s'});
+	@include transition(#{'box-shadow .2s ease'});
 	&:hover{
 		@include box-shadow($shadow-focus);
 	}

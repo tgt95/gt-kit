@@ -1,4 +1,5 @@
-    <!DOCTYPE html>
+<?php ob_start(); ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,9 +10,9 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <!-- App css -->
-    <!-- <link href="../built/css/core.css" rel="stylesheet" type="text/css" /> -->
-    <link href="../built/css/gt-kit.min.css" rel="stylesheet" type="text/css" />
-    <link href="../built/css/demo.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="../dist/css/core.css" rel="stylesheet" type="text/css" /> -->
+    <link href="../dist/css/gt-kit.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/demo.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -36,10 +37,10 @@
                     <h2 class="title">Basic Elements</h2>
                 </div>
                 <!-- Buttons -->
-                <div id="buttons" class="section-m-b-100">
+                <div class="section-m-b-100" id="buttons">
                     <div class="container">
                         <h4 class="group-title">Buttons</h4>
-                        <p class="category">Pick your style</p>
+                        <p class="category-title">Pick your style</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <button class="btn btn-primary" type="button">Default</button>
@@ -50,7 +51,7 @@
                                 <button class="btn btn-outline-primary btn-round" type="button">Outline</button>
                             </div>
                         </div>
-                        <p class="category">Pick your size</p>
+                        <p class="category-title">Pick your size</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <button class="btn btn-primary btn-sm">Small</button>
@@ -63,7 +64,7 @@
                                 <button class="btn btn-just-icon btn-danger btn-round btn-lg"><i class='zmdi zmdi-plus'></i></button>
                             </div>
                         </div>
-                        <p class="category">Button Just Icon</p>
+                        <p class="category-title">Button Just Icon</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- <button class="btn btn-just-icon btn-round btn-white"><i class="zmdi zmdi-plus"></i></button> -->
@@ -77,7 +78,7 @@
                                 ?>
                             </div>
                         </div>
-                        <p class="category">Social Buttons</p>
+                        <p class="category-title">Social Buttons</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <?php foreach ($socialColor as $key => $value) {
@@ -105,7 +106,7 @@
                                 } ?>
                             </div>
                         </div>
-                        <p class="category">Pick your color</p>
+                        <p class="category-title">Pick your color</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <?php
@@ -115,7 +116,7 @@
                                 ?>
                             </div>
                         </div>
-                        <p class="category">Pick your color (Outline)</p>
+                        <p class="category-title">Pick your color (Outline)</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <?php
@@ -126,7 +127,7 @@
                                 ?>
                             </div>
                         </div>
-                        <p class="category">Links</p>
+                        <p class="category-title">Links</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <?php
@@ -137,7 +138,7 @@
                                 ?>
                             </div>
                         </div>
-                        <p class="category">Button Group</p>
+                        <p class="category-title">Button Group</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="btn-group">
@@ -156,188 +157,250 @@
                 </div>
                 
                 <!-- Inputs -->
-                <div id="inputs" class="section-m-b-100">
+                <div class="section-m-b-100" id="inputs">
                     <div class="container">
                         <h4 class="group-title">Inputs</h4>
-                        <p class="category">Form Controls Normal</p>
-                        <div class="row">
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Regular</label>
-                                    <input type="text" placeholder="Regular" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Disabled</label>
-                                    <input type="text" placeholder="Disabled" class="form-control" disabled>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group has-success">
-                                    <label>Success</label>
-                                    <input type="text" placeholder="Is Success" value="Success" class="form-control is-valid">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group has-error">
-                                    <label>Error</label>
-                                    <input type="email" placeholder="Is Error" value="Error" class="form-control is-invalid">
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Left Icon Normal Input</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+
+                        <h5 class="font-weight-light mb-4">Form Controls</h5>
+                        <div class="category-content">
+                            <p class="category-title">Sizing</p>
+                            <div class="row align-items-center mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Small</label>
+                                        <div class="input-group custom">
+                                            <input type="text" class="form-control form-control-sm" placeholder="Small">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Left Icon Normal Input">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Right Icon Normal Input</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Right Icon Normal Input">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Normal</label>
+                                        <div class="input-group custom">
+                                            <input type="text" class="form-control" placeholder="Normal">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Large</label>
+                                        <div class="input-group custom">
+                                            <input type="text" class="form-control form-control-lg" placeholder="Large">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Left Icon Custom Input</label>
-                                    <div class="input-group custom">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Left Icon Custom Input">
+                            
+
+                            <p class="category-title">Normal</p>
+                            <div class="row mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Regular</label>
+                                        <input type="text" placeholder="Regular" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Disabled</label>
+                                        <input type="text" placeholder="Disabled" class="form-control" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group has-success">
+                                        <label>Success</label>
+                                        <input type="text" placeholder="Is Success" value="Success" class="form-control is-valid">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group has-error">
+                                        <label>Error</label>
+                                        <input type="email" placeholder="Is Error" value="Error" class="form-control is-invalid">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Right Icon Custom Input</label>
-                                    <div class="input-group custom">
-                                        <input type="text" class="form-control" placeholder="Right Icon Custom Input">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Input Rounded Small</label>
-                                    <div class="input-group custom">
-                                        <input type="text" class="form-control form-rounded form-control-sm" placeholder="Input Rounded">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Input Rounded</label>
-                                    <div class="input-group custom">
-                                        <input type="text" class="form-control form-rounded" placeholder="Input Rounded">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Input Rounded Large</label>
-                                    <div class="input-group custom">
-                                        <input type="text" class="form-control form-rounded form-control-lg" placeholder="Input Rounded">
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                            
+
+                            <p class="category-title">Rounded</p>
+                            <div class="row align-items-center mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Input Rounded</label>
+                                        <div class="input-group custom">
+                                            <input type="text" class="form-control form-rounded" placeholder="Input Rounded">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="clearfix w-100"></div> -->
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group">
-                                    <label>Input Rounded Large</label>
-                                    <textarea name="" id="" cols="30" rows="2" placeholder="Textarea"  class="form-control"></textarea>
+                            
+
+                            <p class="category-title">With Icon</p>
+                            <div class="row mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Left Icon</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Left Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Right Icon</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Right Icon">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Left Icon</label>
+                                        <div class="input-group custom">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Left Icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Right Icon</label>
+                                        <div class="input-group custom">
+                                            <input type="text" class="form-control" placeholder="Right Icon">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- <div class="clearfix w-100"></div> -->
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Input Rounded Large</label>
+                                        <div class="input-group is-textarea custom">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                            <textarea cols="30" rows="2" placeholder="Textarea" class="form-control form-rounded"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Input Rounded Large</label>
+                                        <div class="input-group is-textarea custom">
+                                            <textarea cols="30" rows="2" placeholder="Textarea" class="form-control form-rounded"></textarea>
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="category">Form Controls ( Float Label)</p>
-                        <div class="row">
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl">
-                                    <input type="text" class="form-control-fl">
-                                    <label>Regular</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl">
-                                    <input type="text" class="form-control-fl" disabled>
-                                    <label>Disabled</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl has-success">
-                                    <input type="text" value="Success" class="form-control-fl is-valid">
-                                    <label>Success</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl has-error">
-                                    <input type="text" value="Error" class="form-control-fl is-invalid">
-                                    <label>Error</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl">
-                                    <textarea class="form-control-fl"></textarea>
-                                    <label>Textarea</label>
-                                </div>
-                            </div>
-                            <div class="clearfix w-100"></div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl">
-                                    <div class="input-group custom">
-                                        <div class="input-group-prepend">
-                                            <button type="submit" class="btn btn-just-icon btn-round"><i class="zmdi zmdi-copy"></i></button>
-                                        </div>
+
+                        <h5 class="font-weight-light mb-4">Form Controls ( Float Label)</h5>
+                        <div class="category-content">
+                            <p class="category-title">Normal</p>
+                            <div class="row mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl">
                                         <input type="text" class="form-control-fl">
-                                        <label class="active">With icon</label>
+                                        <label>Regular</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl">
+                                        <input type="text" class="form-control-fl" disabled>
+                                        <label>Disabled</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl has-success">
+                                        <input type="text" value="Success" class="form-control-fl is-valid">
+                                        <label>Success</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl has-error">
+                                        <input type="text" value="Error" class="form-control-fl is-invalid">
+                                        <label>Error</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl">
+                                        <textarea class="form-control-fl"></textarea>
+                                        <label>Textarea</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl">
-                                    <div class="input-group custom">
-                                        <input type="text" class="form-control-fl">
-                                        <label class="active">With icon</label>
-                                        <div class="input-group-append">
-                                            <button type="submit" class="btn btn-just-icon btn-round"><i class="zmdi zmdi-copy"></i></button>
+
+                            <p class="category-title">With Icon</p>
+                            <div class="row mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl">
+                                        <div class="input-group custom">
+                                            <div class="input-group-prepend">
+                                                <button type="submit" class="btn btn-just-icon btn-round"><i class="zmdi zmdi-copy"></i></button>
+                                            </div>
+                                            <input type="text" class="form-control-fl">
+                                            <label class="active">With icon</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl">
+                                        <div class="input-group custom">
+                                            <input type="text" class="form-control-fl">
+                                            <label class="active">With icon</label>
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-just-icon btn-round"><i class="zmdi zmdi-copy"></i></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="clearfix w-100"></div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl has-error">
-                                    <input type="text" class="form-control-fl is-invalid" required>
-                                    <label>Validate Input</label>
-                                    <div class="invalid-feedback mb-5">Field is required!</div>
+
+                            <!-- <div class="clearfix w-100"></div> -->
+
+                            <p class="category-title">Validate</p>
+                            <div class="row mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl has-error">
+                                        <input type="text" class="form-control-fl is-invalid" required>
+                                        <label>Validate Input</label>
+                                        <div class="invalid-feedback mb-5">Field is required!</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="clearfix w-100"></div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="form-group-fl datepicker-container">
-                                    <input type="text" class="form-control-fl datetimepicker date-picker" value="31/05/2018">
-                                    <label>Datepicker</label>
+
+                            <p class="category-title mb-4">Datetime Picker</p>
+                            <div class="row mb-5">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group-fl datepicker-container">
+                                        <input type="text" class="form-control-fl datetimepicker date-picker" value="31/05/2018">
+                                        <label>Datepicker</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -346,9 +409,9 @@
 
 
                 <!-- Select -->
-                <div id="select">
+                <div class="section-m-b-100" id="select">
                     <div class="container">
-                        <h4 class="group-title">Dropdown</h4>
+                        <h4 class="group-title">Select</h4>
                         <div class="row">
                             <div class="col-sm-6 col-lg-3">
                                 <div class="form-group-fl">
@@ -424,9 +487,9 @@
                 </div>
 
                 <!-- Dropdown -->
-                <div id="dropdown" class="section-m-b-100">
+                <div class="section-m-b-100" id="dropdown">
                     <div class="container">
-                        <h4 class="group-title">Select</h4>
+                        <h4 class="group-title">Dropdown</h4>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="btn-group">
@@ -462,68 +525,79 @@
                 </div>
 
                 <!-- Checkbox -->
-                <div id="checkbox" class="section-m-b-100">
+                <div class="section-m-b-100" id="checkbox">
                     <div class="container">
                         <h4 class="group-title">Checkbox</h4>
-                        <p class="category">Basic</p>
                         <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="checkbox">
-                                    <input id="checkbox-default-0" type="checkbox" checked>
-                                    <label for="checkbox-default-0">
-                                        Default
-                                    </label>
-                                </div>
-                            </div>
-                            <?php foreach ($baseColor as $key => $value) { 
-                                if($value !== "white" && $value !== "light") {
-                            ?>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="checkbox checkbox-<?php echo $value ?>">
-                                        <input id="checkbox-<?php echo $key ?>" type="checkbox" checked>
-                                        <label for="checkbox-<?php echo $key ?>">
-                                            <?php echo ucfirst($value) ?>
-                                        </label>
+                            <div class="col-md-6">
+                                <p class="category-title">Basic</p>
+                                <div class="category-content">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-6">
+                                            <div class="checkbox">
+                                                <input id="checkbox-default-0" type="checkbox" checked>
+                                                <label for="checkbox-default-0">
+                                                    Default
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <?php foreach ($baseColor as $key => $value) { 
+                                            if($value !== "white" && $value !== "light") {
+                                        ?>
+                                            <div class="col-lg-4 col-6">
+                                                <div class="checkbox checkbox-<?php echo $value ?>">
+                                                    <input id="checkbox-<?php echo $key ?>" type="checkbox" checked>
+                                                    <label for="checkbox-<?php echo $key ?>">
+                                                        <?php echo ucfirst($value) ?>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        <?php } }?>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="checkbox">
+                                                <input id="checkbox-disabled-0" type="checkbox" disabled checked>
+                                                <label for="checkbox-disabled-0">
+                                                    Disabled
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            <?php } }?>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="checkbox">
-                                    <input id="checkbox-disabled-0" type="checkbox" disabled checked>
-                                    <label for="checkbox-disabled-0">
-                                        Disabled
-                                    </label>
-                                </div>
                             </div>
-                        </div>
-                        <p class="category">Circled</p>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="checkbox checkbox-circle">
-                                    <input id="checkbox-circle-0" type="checkbox" checked>
-                                    <label for="checkbox-circle-0">
-                                        Default
-                                    </label>
-                                </div>
-                            </div>
-                            <?php foreach ($baseColor as $key => $value) { 
-                                if($value !== "white" && $value !== "light") {
-                            ?>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="checkbox checkbox-<?php echo $value ?> checkbox-circle">
-                                        <input id="checkbox-circle-<?php echo $key.'circled' ?>" type="checkbox" checked>
-                                        <label for="checkbox-circle-<?php echo $key.'circled' ?>">
-                                            <?php echo ucfirst($value) ?>
-                                        </label>
+
+                            <div class="col-md-6">
+                                <p class="category-title">Circled</p>
+                                <div class="category-content">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-6">
+                                            <div class="checkbox checkbox-circle">
+                                                <input id="checkbox-circle-0" type="checkbox" checked>
+                                                <label for="checkbox-circle-0">
+                                                    Default
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <?php foreach ($baseColor as $key => $value) { 
+                                            if($value !== "white" && $value !== "light") {
+                                        ?>
+                                            <div class="col-lg-4 col-6">
+                                                <div class="checkbox checkbox-<?php echo $value ?> checkbox-circle">
+                                                    <input id="checkbox-circle-<?php echo $key.'circled' ?>" type="checkbox" checked>
+                                                    <label for="checkbox-circle-<?php echo $key.'circled' ?>">
+                                                        <?php echo ucfirst($value) ?>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        <?php } }?>
+                                        <div class="col-lg-4 col-6">
+                                            <div class="checkbox checkbox-circle">
+                                                <input id="checkbox-circle-disabled" type="checkbox" disabled checked>
+                                                <label for="checkbox-circle-disabled">
+                                                    Disabled
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php } }?>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="checkbox checkbox-circle">
-                                    <input id="checkbox-circle-disabled" type="checkbox" disabled checked>
-                                    <label for="checkbox-circle-disabled">
-                                        Disabled
-                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -531,12 +605,12 @@
                 </div>
 
                 <!-- Radio -->
-                <div id="radio" class="section-m-b-100">
+                <div class="section-m-b-100" id="radio">
                     <div class="container">
                         <h4 class="group-title">Radio</h4>
-                        <!-- <p class="category">Basic</p> -->
+                        <!-- <p class="category-title">Basic</p> -->
                         <div class="row">
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-lg-2 col-6">
                                 <div class="radio">
                                     <input id="radio-default-0" type="radio" checked>
                                     <label for="radio-default-0">
@@ -547,7 +621,7 @@
                             <?php foreach ($baseColor as $key => $value) { 
                                 if($value !== "white" && $value !== "light") {
                             ?>
-                                <div class="col-md-3 col-sm-6">
+                                <div class="col-lg-2 col-6">
                                     <div class="radio radio-<?php echo $value ?>">
                                         <input id="radio-<?php echo $key ?>" type="radio" checked>
                                         <label for="radio-<?php echo $key ?>">
@@ -556,7 +630,7 @@
                                     </div>
                                 </div>
                             <?php } }?>
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-lg-2 col-6">
                                 <div class="radio">
                                     <input id="radio-disabled-0" type="radio" disabled checked>
                                     <label for="radio-disabled-0">
@@ -569,11 +643,11 @@
                 </div>
 
                 <!-- Toggle -->
-                <div id="toggle" class="section-m-b-100">
+                <div class="section-m-b-100" id="toggle">
                     <div class="container">
                         <h4 class="group-title">Toggle</h4>
                         <div class="row">
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-lg-2 col-6">
                                 <div class="toggle-btn">
                                     <label>
                                         <input type="checkbox" checked><span class="toggle"></span>
@@ -584,7 +658,7 @@
                             <?php foreach ($baseColor as $key => $value) { 
                                 if($value !== "white" && $value !== "light") {
                             ?>
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-lg-2 col-6">
                                 <div class="toggle-btn">
                                     <label>
                                         <input type="checkbox" checked><span class="toggle toggle-<?php echo $value ?>"></span>
@@ -593,7 +667,7 @@
                                 </div>
                             </div>
                             <?php } }?>
-                            <div class="col-md-3 col-sm-6">
+                            <div class="col-lg-2 col-6">
                                 <div class="toggle-btn">
                                     <label>
                                         <input type="checkbox" disabled checked><span class="toggle"></span>
@@ -606,10 +680,10 @@
                 </div>
 
                 <!-- Range -->
-                <div id="range" class="section-m-b-100">
+                <div class="section-m-b-100" id="range">
                     <div class="container">
                         <h4 class="group-title">Range</h4>
-                        <!-- <p class="category">Basic</p> -->
+                        <!-- <p class="category-title">Basic</p> -->
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
                                 <div class="range">
@@ -644,29 +718,31 @@
                 </div>
 
                 <!-- Progress -->
-                <div id="progress" class="section-m-b-100">
+                <div class="section-m-b-100" id="progress">
                     <div class="container">
                         <h4 class="group-title">Progress</h4>
                         <div class="row">
 
                             <div class="col-sm-6">
-                                <p class="category">Progress Bar</p> 
-                                <div class="row" id="progress-bar">
-                                    <div class="col-12">
-                                        <div class="progress-bar progress-<?php echo $value ?>">
-                                            <div class="determinate" style="width: 70%"></div>
-                                        </div>
-                                        <div class="progress-bar progress-<?php echo $value ?>">
-                                            <div class="indeterminate"></div>
-                                        </div>
-                                        <div class="btn-group mb-2 mt-3">
-                                            <button type="button" class="btn btn-danger dropdown-toggle toggle-color-switcher">Choose Color</button>
-                                            <div class="dropdown-menu color-style-switcher" style="display: none;">
-                                                <ul class="colors">
-                                                    <?php foreach ($baseColor as $key => $value) { ?>
-                                                    <li><a href="#" class="bg-<?php echo $value ?>" data-color="<?php echo $value ?>"></a></li>
-                                                    <?php } ?>
-                                                </ul>
+                                <p class="category-title">Progress Bar</p>
+                                <div class="category-content">
+                                    <div class="row" id="progress-bar">
+                                        <div class="col-12">
+                                            <div class="progress-bar progress-<?php echo $value ?>">
+                                                <div class="determinate" style="width: 70%"></div>
+                                            </div>
+                                            <div class="progress-bar progress-<?php echo $value ?>">
+                                                <div class="indeterminate"></div>
+                                            </div>
+                                            <div class="btn-group mb-2 mt-3">
+                                                <button type="button" class="btn btn-danger dropdown-toggle toggle-color-switcher">Choose Color</button>
+                                                <div class="dropdown-menu color-style-switcher" style="display: none;">
+                                                    <ul class="colors">
+                                                        <?php foreach ($baseColor as $key => $value) { ?>
+                                                        <li><a href="#" class="bg-<?php echo $value ?>" data-color="<?php echo $value ?>"></a></li>
+                                                        <?php } ?>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -674,22 +750,24 @@
                             </div>
 
                             <div class="col-sm-6">
-                                <p class="category">Progress Circle</p> 
-                                <div class="row" id="progress-circle">
-                                    <div class="col-12">
-                                        <div class="progress-circle progress-<?php echo $value ?>" data-color="<?php echo $value ?>">
-                                            <svg viewBox="25 25 50 50">
-                                                <circle cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10" />
-                                            </svg>
-                                        </div>
-                                        <div class="btn-group mb-2 mt-3">
-                                            <button type="button" class="btn btn-danger dropdown-toggle toggle-color-switcher">Choose Color</button>
-                                            <div class="dropdown-menu color-style-switcher" style="display: none;">
-                                                <ul class="colors">
-                                                    <?php foreach ($baseColor as $key => $value) { ?>
-                                                    <li><a href="#" class="bg-<?php echo $value ?>" data-color="<?php echo $value ?>"></a></li>
-                                                    <?php } ?>
-                                                </ul>
+                                <p class="category-title">Progress Circle</p>
+                                <div class="category-content">
+                                    <div class="row" id="progress-circle">
+                                        <div class="col-12">
+                                            <div class="progress-circle progress-<?php echo $value ?>" data-color="<?php echo $value ?>">
+                                                <svg viewBox="25 25 50 50">
+                                                    <circle cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn-group mb-2 mt-3">
+                                                <button type="button" class="btn btn-danger dropdown-toggle toggle-color-switcher">Choose Color</button>
+                                                <div class="dropdown-menu color-style-switcher" style="display: none;">
+                                                    <ul class="colors">
+                                                        <?php foreach ($baseColor as $key => $value) { ?>
+                                                        <li><a href="#" class="bg-<?php echo $value ?>" data-color="<?php echo $value ?>"></a></li>
+                                                        <?php } ?>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -702,10 +780,10 @@
                
 
                 <!-- Tabs -->
-                <div id="backgrounds" class="section-m-b-100">
+                <div class="section-m-b-100" id="backgrounds">
                     <div class="container">
                         <h4 class="group-title">Tabs</h4>
-                        <p class="category">Pick your style</p>
+                        <p class="category-title">Pick your style</p>
                         <div class="row justify-content-center">
                             <?php
                             $tabsClass = array("tabs", "pills nav-custom", "purple", "pills nav-fill with-icon");
@@ -747,10 +825,10 @@
                 </div>
 
                 <!-- Pagination -->
-                <div id="pagination" class="section-m-b-100">
+                <div class="section-m-b-100" id="pagination">
                     <div class="container">
                         <h4 class="group-title">Pagination</h4>
-                        <p class="category">Pick your style</p>
+                        <p class="category-title">Pick your style</p>
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
                                 <nav aria-label="...">
@@ -808,25 +886,25 @@
                 </div>
 
                 <!-- Badge -->
-                <div id="badge" class="section-m-b-100">
+                <div class="section-m-b-100" id="badge">
                     <div class="container">
                         <h4 class="group-title">Badge</h4>
-                        <p class="category">Basic</p>
+                        <p class="category-title">Basic</p>
                         <div class="row">
                             <?php foreach ($baseColor as $key => $value) { 
                                 if($value !== "white" && $value !== "light") {
                             ?>
-                            <div class="col-sm-2">
+                            <div class="col-lg-2 col-6">
                                 <span class="badge badge-<?php echo $value ?>"><?php echo ucfirst($value) ?></span>
                             </div>
                             <?php } }?>
                         </div>
-                        <p class="category">Pill</p>
+                        <p class="category-title">Pill</p>
                         <div class="row">
                             <?php foreach ($baseColor as $key => $value) { 
                                 if($value !== "white" && $value !== "light") {
                             ?>
-                            <div class="col-sm-2">
+                            <div class="col-lg-2 col-6">
                                 <span class="badge badge-pill badge-<?php echo $value ?>"><?php echo ucfirst($value) ?></span>
                             </div>
                             <?php } }?>
@@ -835,14 +913,14 @@
                 </div>
 
                 <!-- Backgrounds -->
-                <div id="backgrounds" class="section-m-b-100">
+                <div class="section-m-b-100" id="backgrounds">
                     <div class="container">
                         <h4 class="group-title">Background</h4>
-                        <p class="category">Pick your style</p>
+                        <p class="category-title">Pick your style</p>
                         <div class="row">
                             <?php
                             foreach ($baseColor as $key => $value) {
-                                echo "<div class='col-12 py-2 bg-". $value . "'><code class='bg-white p-1'>bg-". $value ."</code></div>";
+                                echo "<div class='col-sm-6 py-2 bg-". $value . "'><code class='bg-white p-1'>bg-". $value ."</code></div>";
                             } 
                             ?>
                         </div>
@@ -850,18 +928,18 @@
                 </div>
 
                 <!-- Typography -->
-                <div id="typography" class="section-m-b-100">
+                <div class="section-m-b-100" id="typography">
                     <div class="container">
                         <h4 class="group-title">Typography</h4>
-                        <p class="category">Text Color</p>
+                        <p class="category-title">Text Color</p>
                         <div class="row">
                             <?php
                             foreach ($baseColor as $key => $value) {
-                                echo "<div class='col-sm-2 py-2 text-". $value . "'> Text ". ucfirst($value) ."!</div>";
+                                echo "<div class='col-lg-2 col-6 py-2 text-". $value . "'> Text ". ucfirst($value) ."!</div>";
                             } 
                             ?>
                         </div>
-                        <p class="category">Heading</p>
+                        <p class="category-title">Heading</p>
                         <div class="row">
                             <div class="col-md-12">
                             <?php for ($i=1; $i <=6 ; $i++) { ?>
@@ -876,10 +954,10 @@
 
 
                 <!-- Modal -->
-                <div id="modals" class="section-m-b-100">
+                <div class="section-m-b-100" id="modals">
                     <div class="container">
                         <h4 class="group-title">Modal</h4>
-                        <p class="category">Pick your size</p>
+                        <p class="category-title">Pick your size</p>
                         <div class="row">
                             <div class="col-md-12">
                                 <button class="btn btn-custom btn-sm" data-toggle="modal" data-target="#small-modal">Small</button>
@@ -891,7 +969,7 @@
                 </div>
 
                 <!-- Tooltips & Popover -->
-                <div id="tooltips-popover" class="section-m-b-100">
+                <div class="section-m-b-100" id="tooltips-popover">
                     <div class="container">
                         <h4 class="group-title">Tooltips & Popover</h4>
                         <!-- Row -->
@@ -924,7 +1002,7 @@
                 </div>
 
                 <!-- Tables -->
-                <div id="tables" class="section-m-b-100">
+                <div class="section-m-b-100" id="tables">
                     <div class="container">
                         <h4 class="group-title">Tables</h4>
                         <!-- Row -->
@@ -1011,11 +1089,11 @@
                 </div>
 
                 <!-- Card -->
-                <div id="card" class="section-m-b-100">
+                <div class="section-m-b-100" id="card">
                     <div class="container">
                         <h4 class="group-title">Card</h4>
                         <p>In <code>&lt;h5 class="card-title overlay-text"&gt;</code> you can add class <code>overlay-bg-white</code> or <code>overlay-bg-dark</code> to have Overlay Layer (Dark or White)</p>
-                        <p class="category">Cards</p>
+                        <p class="category-title">Cards</p>
                         <!-- Row -->
                         <div class="row mb-2" id="cards">
                             <div class="col-lg-4 col-md-6">
@@ -1188,7 +1266,7 @@
                         </div>
                         <!-- END Row -->
 
-                        <p class="category">Profile Cards</p>
+                        <p class="category-title">Profile Cards</p>
                         <!-- Row -->
                         <div class="row">
                             <div class="col-lg-3 col-sm-6">
@@ -1300,7 +1378,7 @@
                         </div>
                         <!-- END Row -->
 
-                        <p class="category">Loading Cards</p>
+                        <p class="category-title">Loading Cards</p>
                         <!-- Row -->
                         <div class="row">
                             <div class="col-lg-4 col-md-6">
@@ -1331,7 +1409,7 @@
                         </div>
                         <!-- END Row -->
 
-                        <p class="category">Pricing Cards</p>
+                        <p class="category-title">Pricing Cards</p>
                         <!-- Row -->
                         <div class="row" id="pricing-cards">
                             <div class="col-lg-3 col-sm-6">
@@ -1523,7 +1601,7 @@ for ($i=1; $i <=3 ; $i++) {
 <!-- END Modal -->
 
 </body>
-<script src="../built/js/gt-kit.min.js"></script>
+<script src="../dist/js/gt-kit.min.js"></script>
 <script src="../src/js/main.js"></script>
 <script>
     var dataTb = [
@@ -1677,6 +1755,7 @@ for ($i=1; $i <=3 ; $i++) {
                 card.removeClass().addClass(temp + ' bg-' + name);
             }
         });
+
         $('#pricing-cards .color-style-switcher a').on('click', function(event) {
             event.preventDefault();
             var name = $(this).data('color'),
@@ -1693,10 +1772,24 @@ for ($i=1; $i <=3 ; $i++) {
                 card.removeClass().addClass(temp + ' bg-' + name);
             }
         });
+
         $('#loading-card').on('click', function(event) {
             var parent = $(this).closest('.card'),
                 card = new SkeletonLoading(parent);
             $(this).prop('checked') ? card.add() : card.remove();
+        });
+
+        // Toggle
+        $('.category-control').on('click', function(event) {
+            event.preventDefault();
+            var icon = $(this).children('i'),
+                content = $(this).parent().next('.category-content'),
+                plus = 'zmdi zmdi-plus-circle',
+                minus = 'zmdi zmdi-minus-circle';
+            // debugger
+
+            icon.attr('class') == plus ? (icon.removeClass(), icon.addClass(minus)) : (icon.removeClass(), icon.addClass(plus));
+            content.slideToggle();
         });
 
         $(window).resize(function(event) {
@@ -1706,3 +1799,10 @@ for ($i=1; $i <=3 ; $i++) {
 </script>
 
 </html>
+<?php 
+   $string = ob_get_contents(); 
+
+   //do whatever you need to do to the html, save it to a seperate file, email it, etc
+
+   ob_flush();
+?>

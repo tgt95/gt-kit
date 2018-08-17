@@ -14307,7 +14307,7 @@ a.text-dark:hover, a.text-dark:focus {
     font-weight: 300;
     font-size: 1.5em;
     margin: 3px;
-    border-radius: 50%; }
+    border-radius: 2px; }
   .bootstrap-datetimepicker-widget button[data-action] {
     width: 38px;
     background-color: #2196F3;
@@ -14381,7 +14381,7 @@ a.text-dark:hover, a.text-dark:focus {
         width: 27px;
         line-height: 28px;
         font-size: 12px;
-        border-radius: 50%;
+        border-radius: 2px;
         text-align: center;
         color: #2196F3; }
       .bootstrap-datetimepicker-widget table th.prev::after {
@@ -14408,7 +14408,7 @@ a.text-dark:hover, a.text-dark:focus {
       width: 30px;
       text-align: center;
       padding: 0px;
-      border-radius: 50%;
+      border-radius: 2px;
       margin: 0 auto;
       z-index: -1;
       position: relative;
@@ -14453,7 +14453,7 @@ a.text-dark:hover, a.text-dark:focus {
       line-height: 40px;
       margin: 0 3px;
       cursor: pointer;
-      border-radius: 50%;
+      border-radius: 2px;
       text-align: center; }
       .bootstrap-datetimepicker-widget table td span:hover {
         background: #eee; }
@@ -21070,11 +21070,11 @@ i.notif {
 .page-link {
   color: inherit;
   box-shadow: none;
-  -webkit-transition: b .2s;
-  -moz-transition: b .2s;
-  -o-transition: b .2s;
-  -ms-transition: b .2s;
-  transition: b .2s; }
+  -webkit-transition: box-shadow .2s ease;
+  -moz-transition: box-shadow .2s ease;
+  -o-transition: box-shadow .2s ease;
+  -ms-transition: box-shadow .2s ease;
+  transition: box-shadow .2s ease; }
   .page-link:hover {
     -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.24); }
@@ -21683,7 +21683,7 @@ i.notif {
    Form
 ============= */
 .form-group label {
-  font-weight: 600; }
+  color: rgba(0, 0, 0, 0.54); }
 
 .form-group.has-success label {
   color: #6eaf0f; }
@@ -21702,6 +21702,9 @@ i.notif {
     cursor: not-allowed; }
   .form-control.form-rounded {
     border-radius: 30px !important; }
+
+textarea.form-control {
+  resize: none; }
 
 select.form-control, select.form-control-fl {
   -webkit-appearance: none;
@@ -21756,6 +21759,13 @@ select.form-control, select.form-control-fl {
 
 .input-group.custom > .form-control {
   border-radius: .25rem; }
+
+.input-group.is-textarea .input-group-prepend, .input-group.is-textarea .input-group-append {
+  bottom: auto;
+  top: 5px; }
+
+.input-group.is-textarea .form-control.form-rounded {
+  border-radius: 1rem !important; }
 
 /* Float Label */
 .form-select-fl.has-success + label, .form-select-fl.has-success label.active {
@@ -27257,7 +27267,6 @@ body.sidebar-open #wrapper, body.sidebar-open .header {
     transform: translate3d(0, 0, 0); } }
 
 #wrapper {
-  background: #EEEEEE;
   position: relative;
   width: 100%;
   transform: translate3d(0, 0, 0);

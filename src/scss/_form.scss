@@ -6,7 +6,8 @@
 
 .form-group{
     label{
-        font-weight: 600;
+        // font-weight: 600;
+        color: $muted;
     }
     &.has-success{
         label{
@@ -33,6 +34,12 @@
     }
     &.form-rounded{
         border-radius: $rounded!important;
+    }
+}
+
+textarea{
+    &.form-control{
+        resize: none   
     }
 }
 
@@ -128,6 +135,15 @@ select{
         }
         >.form-control{
             border-radius: .25rem;
+        }
+    }
+    &.is-textarea{
+        .input-group-prepend, .input-group-append{
+            bottom: auto;
+            top: 5px;
+        }
+        .form-control.form-rounded{
+            border-radius: 1rem!important;
         }
     }
 }

@@ -2,29 +2,35 @@
   "name": "gt-kit",
   "version": "1.0.0",
   "description": "Bootstrap 4 UI kit",
-  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Welcome to GT Kit\"",
-    "build-dev-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-dev-css",
-    "build-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-style-css",
-    "build-core-scss": "./node_modules/.bin/gulp --gulpfile config/build-scss.js compile-core-css",
-    "build-core-js": "./node_modules/.bin/gulp --gulpfile config/build-scss.js watch-core-js"
+    "prod": "./node_modules/.bin/gulp --gulpfile config/build-scss.js prod",
+    "dev": "./node_modules/.bin/gulp --gulpfile config/build-scss.js dev:watch",
+    "dev-js": "./node_modules/.bin/gulp --gulpfile config/build-scss.js build-js:watch",
+    "dev-css": "./node_modules/.bin/gulp --gulpfile config/build-scss.js build-css:watch"
   },
   "author": "TGT95",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
+    "gulp-php2html": "^0.3.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.9",
     "node-sass": "^4.8.3",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.1",
     "jquery": "^3.3.1",
-    "node-waves": "^0.7.6"
+    "moment": "^2.22.2",
+    "node-waves": "^0.7.6",
+    "slick-carousel": "^1.8.1"
   }
 }
