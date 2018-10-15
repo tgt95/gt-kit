@@ -28,8 +28,11 @@
 }
 
 /* Border colors */
+.badge{
+	font-weight: $font-normal;
+}
 .badge:not([class*="badge-bg-"]){
-	@include box-shadow($shadow);
+	// @include box-shadow($shadow);
 }
 .badge:not(.badge-pill){
 	border-radius: 2px;

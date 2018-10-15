@@ -316,6 +316,42 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Select Rounded</label>
+                                        
+                                        <div class="input-group is-select custom">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                            <div class="form-select">
+                                                <select class="form-control form-rounded">
+                                                    <option>Mustard</option>
+                                                    <option>Ketchup</option>
+                                                    <option>Relish</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="form-group">
+                                        <label>Select Rounded</label>
+                                        
+                                        <div class="input-group is-select custom">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text"><i class="zmdi zmdi-android"></i></div>
+                                            </div>
+                                            <div class="form-select">
+                                                <select class="form-control form-rounded">
+                                                    <option>Mustard</option>
+                                                    <option>Ketchup</option>
+                                                    <option>Relish</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

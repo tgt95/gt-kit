@@ -20337,9 +20337,8 @@ img.-loading {
   border-color: #313a46 !important; }
 
 /* Border colors */
-.badge:not([class*="badge-bg-"]) {
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24); }
+.badge {
+  font-weight: 400; }
 
 .badge:not(.badge-pill) {
   border-radius: 2px; }
@@ -21757,6 +21756,9 @@ select.form-control, select.form-control-fl {
   .input-group.custom .input-group-append + .form-control {
     padding-right: 40px; }
 
+.input-group.custom .form-select {
+  width: 100%; }
+
 .input-group.custom > .form-control {
   border-radius: .25rem; }
 
@@ -21766,6 +21768,14 @@ select.form-control, select.form-control-fl {
 
 .input-group.is-textarea .form-control.form-rounded {
   border-radius: 1rem !important; }
+
+.input-group.is-select .input-group-prepend + .form-select .form-control, .input-group.is-select .input-group-prepend + .form-select .form-control-sm, .input-group.is-select .input-group-prepend + .form-select .form-control-lg {
+  padding-left: 40px; }
+
+.input-group.is-select .input-group-append {
+  right: 20px; }
+  .input-group.is-select .input-group-append + .form-select .form-control, .input-group.is-select .input-group-append + .form-select .form-control-sm, .input-group.is-select .input-group-append + .form-select .form-control-lg {
+    padding-right: 40px; }
 
 /* Float Label */
 .form-select-fl.has-success + label, .form-select-fl.has-success label.active {
