@@ -4,7 +4,7 @@
  * Combine: sass --watch style.scss:../../built/css/gt-kit.min.css --style compressed
  */
  
-@import 'bootstrap';
+@import 'bootstrap/bootstrap';
 
 @import 'variables';
 

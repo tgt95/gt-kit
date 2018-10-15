@@ -31,6 +31,7 @@
 .badge{
 	font-weight: $font-normal;
 }
+
 .badge:not([class*="badge-bg-"]){
 	// @include box-shadow($shadow);
 }
