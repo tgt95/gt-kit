@@ -133,6 +133,9 @@ select{
                 padding-right: 40px;
             }
         }
+        .form-select{
+            width: 100%;
+        }
         >.form-control{
             border-radius: .25rem;
         }
@@ -144,6 +147,23 @@ select{
         }
         .form-control.form-rounded{
             border-radius: 1rem!important;
+        }
+    }
+    &.is-select{
+        .input-group-prepend{
+            +.form-select{
+                .form-control, .form-control-sm, .form-control-lg{
+                    padding-left: 40px;
+                }
+            }
+        }
+        .input-group-append{
+            right: 20px;
+            +.form-select{
+                .form-control, .form-control-sm, .form-control-lg{
+                    padding-right: 60px;
+                }
+            }
         }
     }
 }
