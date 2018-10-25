@@ -1,0 +1,70 @@
+/* Background colors */
+@each $hex,$name in $base-color {
+	.bg-#{$name} {
+		background-color: $hex !important;
+	}
+}
+@for $i from 1 through 3 {
+	.bg-custom-darken-#{$i} {
+		background-color: darken($custom, 2% * $i) !important;
+	}
+	.bg-custom-lighten-#{$i} {
+		background-color: lighten($custom, 2% * $i) !important;
+	}
+}
+
+/* Background layer */
+[layer-bg] {
+	position: relative;
+	&:after {
+		@include position-full;
+		content: '';
+		@include opacity(.3);
+	}
+}
+
+[layer-bg-mix-1]{
+	position: relative;
+	&:after {
+		background: linear-gradient(-45deg, rgba(40, 40, 40, 0.5) 20%, rgba($custom, 1) 100%);
+		@include position-full;
+		content: '';
+		@include opacity(.3);
+	}
+}
+
+@each $hex,$name in $base-color {
+	[layer-bg="#{$name}"] {
+		&:after {
+			background: $hex;
+		}
+	}
+	// @for $i from 1 through 9 {
+	// 	[layer-bg="#{$name}-#{$i}"]{
+	// 		opacity: unquote('0.' + $i);
+	// 	}
+	// }
+}
+
+/* Background size */
+$bg-style : (cover), (contain);
+@each $name in $bg-style {
+	.bg-size-#{$name}{
+		background-size: $name !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		width: 100%;
+		height: 100%;
+		>.container, >.container-fluid{
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
+/* Smooth Shuffle */
+[shuffle-bg] {
+	&:after {
+		@include transition(background 6s);
+	}
+}

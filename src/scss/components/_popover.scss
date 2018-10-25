@@ -1,0 +1,57 @@
+/* Popover */
+.popover {
+	font-size: 14px;
+	border: none;
+	line-height: 1.7;
+	max-width: 240px;
+	@include box-shadow($shadow-focus);
+	&.bs-popover-top .arrow, &.bs-popover-left .arrow, &.bs-popover-right .arrow, &.bs-popover-bottom .arrow {
+		&:before{
+			border-top-color: transparent;
+			border-left-color: transparent;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+		}
+	}
+	.popover-header {
+		color: $text-primary;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin: 0;
+		margin-top: 5px;
+		border: none;
+		background-color: transparent;
+	}
+	&:before {
+		display: none;
+	}
+	&.bs-tether-element-attached-top:after {
+		border-bottom-color: $white;
+		top: -9px;
+	}
+	@each $hex,$name in $base-color {
+		&.popover-#{$name} {
+			background-color: $hex;
+			.popover-body {
+				color: $white;
+			}
+			&.bs-popover-right .arrow:after {
+				border-right-color: $hex;
+			}
+			&.bs-popover-top .arrow:after {
+				border-top-color: $hex;
+			}
+			&.bs-popover-bottom .arrow:after {
+				border-bottom-color: $hex;
+			}
+			&.bs-popover-left .arrow:after {
+				border-left-color: $hex;
+			}
+			.popover-header {
+				color: $white;
+				@include opacity(.6);
+			}
+		}
+	}
+}

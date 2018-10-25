@@ -1,0 +1,26 @@
+/* Breadcrumb */
+.page-title-box{
+    padding: 30px 0;
+    @include flex-center-y;
+    @include n-flex-between;
+    @include media-breakpoint-down(sm) {
+    	display: block;
+    }
+}
+.page-title{
+    font-size: 40px;
+    font-weight: 200;
+}
+.breadcrumb{
+	padding: 0;
+	margin-bottom: 0;
+	background-color: transparent;
+}
+.breadcrumb-item{
+	a{
+		color: $text-secondary;
+	}
+	&.active{
+		color: $text-primary;
+	}
+}

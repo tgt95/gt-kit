@@ -1,0 +1,42 @@
+/* Font */
+.font-inherit{
+	font-size: inherit;
+}
+
+.font-weight-semi {
+    font-weight: $font-weight-semi!important;
+}
+
+.font-weight-light {
+    font-weight: $font-weight-light!important;
+}
+
+.text-underline{
+	text-decoration: underline;
+}
+
+.tooltip{
+	font-family: inherit;
+}
+
+/* Text colors */
+@each $hex,$name in $base-color {
+	.text-#{$name} {
+		color: $hex !important;
+	}
+}
+.text-muted{
+	color: $text-secondary!important;
+}
+
+.text-blur{
+	filter: blur(5px);
+}
+
+a{
+	color: $blue;
+	transition: color .3s;
+	&:hover{
+		color: $blue;
+	}
+}

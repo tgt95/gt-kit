@@ -1,3 +1,14 @@
 /node_modules
 .DS_Store
 .sass-cache
+/src/scss/_animate.scss
+/src/scss/_bootstrap-reset.scss
+/src/scss/_main.scss
+/src/scss/_form.scss
+/src/scss/_button.scss
+/src/scss/_checkbox-radio.scss
+/src/scss/_range.scss
+/src/scss/_progress.scss
+/src/scss/_tabs.scss
+/src/scss/_card.scss
+/src/scss/_table.scss

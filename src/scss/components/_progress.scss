@@ -1,0 +1,173 @@
+/* Progress */
+.progress-circle{
+	height: 32px;
+	width: 32px;
+	animation: rotate 2s linear infinite;
+	svg{
+		circle {
+			stroke-dasharray: 1,200;
+			stroke-dashoffset: 0;
+			stroke: $light;
+			animation: dash 1.5s ease-in-out infinite;
+			stroke-linecap: round;
+		}
+	}
+	@each $hex,$name in $base-color {
+		&.progress-#{$name}{
+			svg{
+				circle {
+					stroke: $hex;
+				}
+			}
+		}
+	}
+}
+.progress-bar{
+	position: relative;
+	height: 4px;
+	display: block;
+	width: 100%;
+	background-color: rgba($light7, .2);
+	border-radius: 2px;
+	margin: 0.5rem 0 1rem 0;
+	overflow: hidden;
+	background-color: #f3f3f3;
+	.indeterminate{
+		background-color: $light7;
+		&:before{
+			content: '';
+			position: absolute;
+			background-color: inherit;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			will-change: left, right;
+			-webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+			animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			background-color: inherit;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			will-change: left, right;
+			-webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+			animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+			-webkit-animation-delay: 1.15s;
+			animation-delay: 1.15s;
+		}
+	}
+	.determinate{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background-color: $light7;
+		transition: width .3s linear;
+		.progress-icon, .progress-total{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			text-align: right;
+		}
+		.progress-icon{
+		    top: -24px;
+		    font-size: 24px;
+		}
+		.progress-total{
+			top: 4px;
+			font-weight: $font-weight-bold;
+		}
+	}
+	@each $hex,$name in $base-color {
+		&.progress-#{$name}{
+			// background-color: rgba($hex, .2);
+			.indeterminate, .determinate{
+				background-color: $hex;
+			}
+			.determinate{
+				.progress-icon, .progress-total{
+					color: $hex;
+				}
+			}
+		}
+	}
+}
+
+@include keyframes(indeterminate) {
+	0% {
+		left: -35%;
+		right: 100%;
+	}
+
+	60% {
+		left: 100%;
+		right: -90%;
+	}
+
+	100% {
+		left: 100%;
+		right: -90%;
+	}
+}
+
+@include keyframes(indeterminate-short)  {
+	0% {
+		left: -200%;
+		right: 100%;
+	}
+
+	60% {
+		left: 107%;
+		right: -8%;
+	}
+
+	100% {
+		left: 107%;
+		right: -8%;
+	}
+}
+
+@include keyframes(rotate)  {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@include keyframes(dash) {
+	0% {
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+	}
+
+	50% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35px;
+	}
+
+	100% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -124px;
+	}
+}
+
+@include keyframes(color) {
+	0%,100% {
+		stroke: #dc3545;
+	}
+
+	40% {
+		stroke: #007bff;
+	}
+
+	66% {
+		stroke: #28a745;
+	}
+
+	80%,90% {
+		stroke: #ffc107;
+	}
+}
+

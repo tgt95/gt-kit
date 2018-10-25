@@ -1,0 +1,17 @@
+.notification{
+	position: relative;
+	width: 100%; 
+	text-align: center;
+	color: $white;
+	padding: 30px 50px 30px 30px;
+	&.notification-custom-overlay{
+		background: rgba($custom, .8); 
+	}
+	.close-notification{
+		position: absolute;
+		right: 25px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $white;
+	}
+}

@@ -722,31 +722,31 @@
                         <!-- <p class="category-title">Basic</p> -->
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
+                                <label for="range-default-0">
+                                    Default
+                                </label>
                                 <div class="range">
                                     <input id="range-default-0" type="range">
-                                    <label for="range-default-0">
-                                        Default
-                                    </label>
                                 </div>
                             </div>
                             <?php foreach ($baseColor as $key => $value) { 
                                 if($value !== "white" && $value !== "light") {
                             ?>
                                 <div class="col-md-3 col-sm-6">
+                                    <label for="range-<?php echo $key ?>">
+                                        <?php echo ucfirst($value) ?>
+                                    </label>
                                     <div class="range range-<?php echo $value ?>">
                                         <input id="range-<?php echo $key ?>" type="range" value="70">
-                                        <label for="range-<?php echo $key ?>">
-                                            <?php echo ucfirst($value) ?>
-                                        </label>
                                     </div>
                                 </div>
                             <?php } }?>
                             <div class="col-md-3 col-sm-6">
+                                <label for="range-disabled-0">
+                                    Disabled
+                                </label>
                                 <div class="range">
                                     <input id="range-disabled-0" type="range" disabled>
-                                    <label for="range-disabled-0">
-                                        Disabled
-                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -1125,7 +1125,7 @@
                 </div>
 
                 <!-- Card -->
-                <div class="section-m-b-100" id="card">
+                <div id="card">
                     <div class="container">
                         <h4 class="group-title">Card</h4>
                         <p>In <code>&lt;h5 class="card-title overlay-text"&gt;</code> you can add class <code>overlay-bg-white</code> or <code>overlay-bg-dark</code> to have Overlay Layer (Dark or White)</p>
@@ -1530,7 +1530,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <!-- Row -->
-                            <div class="col-md-6 px-0">
+                            <div class="col-md-5 px-0">
                                 <div class="card card-fashion card-background" style="background-image: url('assets/img/bg/bg-2.jpg')" layer-bg="black">
                                     <div class="card-body">
                                         <div class="card-title text-left overlay-text">
@@ -1549,7 +1549,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <div class="row card-container">
                                     <div class="col-lg-6 px-0 card card-fashion bg-light">
                                         <h4 class="card-title">

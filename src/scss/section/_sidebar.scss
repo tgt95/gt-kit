@@ -1,0 +1,148 @@
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+
+.sidebar {
+	position: fixed;
+	display: block;
+	min-height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	border: none;
+	width: 0;
+	@include transform(translate3d(-$leftbar-width--desktop, 0, 0));
+	@include transition(transform .5s cubic-bezier(0.55, 0, 0.1, 1), width .5s cubic-bezier(0.55, 0, 0.1, 1));
+	// @include box-shadow(0 9px 18px rgba($black, .18), 0 5.5px 5px rgba($black, .24));
+	@include box-shadow(0 0 18px rgba($black, .18), 0 0 5px rgba($black, .24));
+	@include clearfix;
+	&.open {
+		min-width: $leftbar-width--desktop;
+		width: $leftbar-width--desktop;
+		@include transform(translate3d(0, 0, 0));
+	}
+	.sidebar-header {
+		background-color: $leftbar-bg--white;
+		position: relative;
+		height: 157.5px;
+		// margin-bottom: 8px;
+		@include transition(background-color .2s ease-in-out);
+	}
+	.sidebar-brand {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		height: 48px;
+		line-height: 48px;
+		padding: 0;
+		padding-left: 16px;
+		padding-right: 56px;
+		text-decoration: none;
+		clear: both;
+		font-weight: 500;
+		overflow: hidden;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		@include transition(background-color .2s ease-in-out);
+		.caret {
+			position: absolute;
+			right: 24px;
+			top: 24px;
+		}
+	}
+	.sidebar-nav {
+		margin: 0;
+		padding: 0;
+		li {
+			position: relative;
+			list-style-type: none;
+			> a {
+				color: $text-secondary;
+				background-color: transparent;
+			}
+			a{
+				position: relative;
+				cursor: pointer;
+				user-select: none;
+				display: block;
+				height: 48px;
+				line-height: 48px;
+				padding: 0;
+				padding-left: 16px;
+				padding-right: 56px;
+				text-decoration: none;
+				clear: both;
+				font-weight: 500;
+				overflow: hidden;
+				-o-text-overflow: ellipsis;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				font-size: 14px;
+				@include transition(all .2s ease-in-out);
+				&:hover{
+					background: transparent;
+				}
+				&:hover, &:focus{
+					@include box-shadow(none);
+					outline: none;
+				}
+			}
+		}
+		.dropdown-menu{
+			position: relative;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: none;
+			border-radius: 0;
+			@include box-shadow(none);
+			@include transform(none!important);
+			margin-top: 0!important;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+.sidebar-default {
+	background-color: $white;
+	.sidebar-brand {
+		color: #757575;
+		background-color: transparent;
+	}
+	.sidebar-nav{
+		> .dropdown {
+			> .dropdown-menu {
+				background-color: #e0e0e0;
+				>li{
+					>a{
+						&:hover{
+							background-color: #cecece;
+							color: $text-secondary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.user-thumbnail {
+	img {
+		@include img-cover;
+		width: 54px;
+		height: 54px;
+		margin: 16px;
+		@include transition(all .2s ease-in-out);
+		border-radius: 50%;
+	}
+}

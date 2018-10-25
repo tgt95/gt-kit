@@ -12,8 +12,17 @@
   align-items: center;
 }
 
+@mixin n-flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin flex-center-x {
   @include d-flex;
+  justify-content: center;
+}
+
+@mixin n-flex-center-x {
   justify-content: center;
 }
 
@@ -22,7 +31,33 @@
   align-items: center;
 }
 
+@mixin n-flex-center-y {
+  align-items: center;
+}
+
 @mixin flex-between {
   @include d-flex;
   justify-content: space-between;
+}
+
+@mixin n-flex-between {
+  justify-content: space-between;
+}
+
+@mixin flex-left {
+  @include d-flex;
+  justify-content: flex-start;
+}
+
+@mixin n-flex-left {
+  justify-content: flex-start;
+}
+
+@mixin flex-right {
+  @include d-flex;
+  justify-content: flex-end;
+}
+
+@mixin n-flex-right {
+  justify-content: flex-end;
 }

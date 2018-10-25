@@ -128,6 +128,15 @@
   transform: scale($horiz, $vert);
 }
 
+@mixin keyframes($param){
+  @keyframes #{$param} {
+    @content;
+  }
+  @-webkit-keyframes #{$param} {
+    @content;
+  }
+}
+
 
 /* Ratio */ 
 @mixin position-full{

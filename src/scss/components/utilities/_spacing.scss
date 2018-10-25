@@ -1,0 +1,93 @@
+$direction : (top, t), (left, l), (bottom, b), (right, r);
+// $direction-name : top left bottom right;
+$directionXY : x y;
+$size : 10px;
+
+@for $i from 1 through 8 {
+	@each $name, $s-name in $direction {
+		.p-#{$s-name}-#{$i} {
+			padding-#{$name}: $size * $i!important;
+		}
+		.m-#{$s-name}-#{$i} {
+			margin-#{$name}: $size * $i!important;
+		}
+	}
+	@each $name in $directionXY {
+		.p-#{$name}-#{$i}{
+			@if $name == x{
+				padding-left: $size * $i!important;
+				padding-right: $size * $i!important;
+			}
+			@else{
+				padding-top: $size * $i!important;
+				padding-bottom: $size * $i!important;
+			}
+		}
+		.m-#{$name}-#{$i}{
+			@if $name == x{
+				margin-left: $size * $i!important;
+				margin-right: $size * $i!important;
+			}
+			@else{
+				margin-top: $size * $i!important;
+				margin-bottom: $size * $i!important;
+			}
+		}
+	}
+}
+
+@each $base-size in $base-size-name {
+	@include media-breakpoint-down($base-size) {
+		@for $i from 1 through 8 {
+			@each $name, $s-name in $direction {
+				.p-#{$s-name}-#{$base-size}-#{$i} {
+					padding-#{$name}: $size * $i!important;
+				}
+				.m-#{$s-name}-#{$base-size}-#{$i} {
+					margin-#{$name}: $size * $i!important;
+				}
+			}
+			@each $name in $directionXY {
+				.p-#{$name}-#{$base-size}-#{$i}{
+					@if $name == x{
+						padding-left: $size * $i!important;
+						padding-right: $size * $i!important;
+					}
+					@else{
+						padding-top: $size * $i!important;
+						padding-bottom: $size * $i!important;
+					}
+				}
+				.m-#{$name}-#{$base-size}-#{$i}{
+					@if $name == x{
+						margin-left: $size * $i!important;
+						margin-right: $size * $i!important;
+					}
+					@else{
+						margin-top: $size * $i!important;
+						margin-bottom: $size * $i!important;
+					}
+				}
+			}
+		}
+	}
+	/* Custom Column */
+	$col-1 : 8.33333333;
+	@include media-breakpoint-up($base-size) {
+		@for $i from 1 through 11 {
+			.col-#{$base-size}-#{$i+1}-dot-5 {
+				-ms-flex: 0 0 #{ (($col-1 * $i) + $col-1 * 1.5) + '%'} ;
+					flex: 0 0 #{ (($col-1 * $i) + $col-1 * 1.5) + '%'} ;
+				   max-width: #{ (($col-1 * $i) + $col-1 * 1.5) + '%'} ;
+			}
+		}
+	}
+}
+
+[class*="col-"][class*="-dot-"]{
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}

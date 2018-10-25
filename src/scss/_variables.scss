@@ -64,9 +64,9 @@ $github-alt: #333333;
 $reddit: #ff4500;
 
 // Typography
-$font-normal: 400; //normal
-$font-medium: 500; //medium
-$font-bold: 700; //bold
+// $font-normal: 400; //normal
+// $font-medium: 500; //medium
+// $font-bold: 700; //bold
 
 // Body Background
 $bg-body: #f3f6f8;
@@ -78,19 +78,22 @@ $border-radius-extra-small:     0.125rem    !default;
 $border-radius-small:           0.1875rem   !default;
 $border-radius-large:           0.25rem     !default;
 $border-radius-extreme:         0.875rem    !default;
-
+$border-theme:                  2px         !default;
 
 //Background left-sidebar
 $bg-leftbar: #ffffff;
 
 
 //Background left-sidebar Dark
-$bg-leftbar-dark: #616161;
-$bg-leftbar-menu-color: #7c8e9a;
+$leftbar-bg--dark: #616161;
+$leftbar-bg--white: #eceff1;
+$leftbar-menu-color: #7c8e9a;
 
 
 // Leftbar width
-$leftbar-width: 256px;
+// $leftbar-width: 256px;
+$leftbar-width--desktop: 256px;
+$leftbar-width--tablet: 256px;
 
 
 // Small Leftbar width

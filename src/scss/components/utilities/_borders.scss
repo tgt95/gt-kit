@@ -1,0 +1,21 @@
+/* Border colors */
+@each $hex,$name in $base-color {
+	.border-#{$name} {
+		border-color: $hex !important;
+	}
+}
+
+/* Border Radius */
+.rounded{
+	border-radius: 30px !important;
+}
+
+.rounded-l{
+	border-top-left-radius: 30px !important;
+	border-bottom-left-radius: 30px !important;
+}
+
+.rounded-r{
+	border-top-right-radius: 30px !important;
+	border-bottom-right-radius: 30px !important;
+}

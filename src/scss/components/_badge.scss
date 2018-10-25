@@ -1,0 +1,35 @@
+/* Badge colors */
+.badge{
+	font-weight: $font-weight-normal;
+}
+.badge:not([class*="badge-bg-"]){
+	// @include box-shadow($shadow);
+}
+.badge:not(.badge-pill){
+	border-radius: $border-theme;
+}
+@each $hex,$name in $base-color {
+	.badge-#{$name} {
+		color: $white;
+		background-color: $hex;
+	}
+
+	.badge-outline-#{$name} {
+		color: $hex;
+		border: 1px solid $hex;
+	}
+
+	.badge-bg-#{$name} {
+		color: $hex;
+		background: rgba($hex, .1);
+	}
+}
+i.notif{
+	position: relative;
+	+.badge{
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 2px 4px;
+	}
+}

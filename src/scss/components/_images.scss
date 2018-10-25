@@ -1,0 +1,11 @@
+/* Image */
+.img-raised {
+	@include box-shadow-hover;
+	@include transition(box-shadow .3s);
+}
+.img-cover{
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,32 @@
+/* Clear Flex*/
+@each $size in $base-size-name {
+	@include media-breakpoint-down($size) {
+		/* Clear Flex */
+		.clearflex-#{$size} {
+			display: block!important;
+		}
+		
+		/* Float */
+		.float-#{$size}-right-i {
+			float: right!important;
+		}
+
+		/* Text Align */
+		.text-center-#{$size}-i {
+			text-align: center!important;
+		}
+
+		/* Display */
+		.d-#{$size}-none-i {
+			display: none!important;
+		}
+
+		/* Order */
+		@for $i from 1 through 11 {
+			.order-#{$size}-#{$i}-i {
+				-ms-flex-order: $i;
+				order: $i;
+			}
+		}
+	}
+}

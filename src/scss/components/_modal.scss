@@ -1,0 +1,46 @@
+/* Modal */
+.modal-header{
+	border-bottom: none;
+}
+.modal-footer{
+	border-top: none;
+	justify-content: flex-start;
+}
+.modal-content{
+	background-color: #fafafa;
+	border-radius: $border-theme;
+	@include box-shadow(0 15px 12px rgba(0, 0, 0, 0.12), 0 19px 38px rgba(0, 0, 0, 0.38));
+	@each $hex,$name in $base-color {
+		@if $name != 'white' and $name != 'light'{
+			&.bg-#{$name} {
+				@if $name == 'warning' and $name != 'yellow'{
+					color: $text-primary;
+				}
+				@else{
+					color: $white;
+				}
+			}
+		}
+	}
+}
+.modal-open{
+	.modal{
+		&.modal-center{
+			.modal-dialog {
+				min-height: calc(100vh - 60px);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				// overflow: auto;
+				@media(max-width: 768px) {
+					min-height: calc(100vh - 20px);
+				}
+			}
+		}
+	}
+}
+.modal-header .close{
+	&:focus{
+		outline: 0;
+	}
+}

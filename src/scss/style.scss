@@ -9,37 +9,31 @@
 @import 'variables';
 
 // Mixins
-@import 'mixins';
+@import 'mixins/main';
 
 // Plugins
-@import 'plugins/plugin-metismenu';
-@import 'plugins/plugin-waves';
-@import 'plugins/plugin-nouislider';
-@import 'plugins/plugin-slick';
-@import 'plugins/plugin-slick-theme';
-@import 'plugins/plugin-datepicker';
+@import 'plugins/main';
 
 // Icons
-@import 'icons/material-design-iconic-font';
+@import 'icons/main';
+
+// Components
+@import 'components/main';
 
 // Layout
 @import 'breakpoints';
-@import 'animate';
 @import 'common';
-@import 'bootstrap-reset';
-@import 'main';
-@import 'form';
-@import 'button';
-@import 'checkbox-radio';
-@import 'range';
-@import 'progress';
-@import 'tabs';
-@import 'card';
-@import 'table';
+// @import 'animate';
+// @import 'bootstrap-reset';
+// @import 'main';
+// @import 'form';
+// @import 'button';
+// @import 'checkbox-radio';
+// @import 'range';
+// @import 'progress';
+// @import 'tabs';
+// @import 'card';
+// @import 'table';
 
 // Section
-@import 'modules/header';
-@import 'modules/sidebar';
-@import 'modules/footer';
-@import 'modules/common';
-@import 'modules/wizard';
+@import 'section/main';

@@ -1,0 +1,53 @@
+/* Pagination */
+.pagination{
+	@each $hex,$name in $base-color {
+		&.pagination-#{$name} {
+			.page-item{
+				.page-link{
+					text-transform: uppercase;
+					font-weight: 400;
+					border-radius: $border-theme;
+				}
+				&.active{
+					.page-link{
+						background-color: $hex;
+						border-color: $hex;
+					}
+				}
+				&.disabled{
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+	&.no-border{
+		.page-item{
+			margin: 0 5px;
+			.page-link{
+				border: none;
+			}
+		}
+	}
+	&.rounded{
+		.page-item{
+			margin: 0 5px;
+			.page-link{
+				min-width: 33px;
+				text-align: center;
+				border-radius: $rounded;
+			}
+		}
+	}
+}
+.page-link{
+	color: inherit;
+	box-shadow: none;
+	@include transition(box-shadow .2s #{','} background-color .3s);
+	&:hover{
+		background-color: $white;
+		@include box-shadow($shadow-focus);
+	}
+	&:focus{
+		@include box-shadow($shadow-focus);
+	}
+}
