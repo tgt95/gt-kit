@@ -80,8 +80,8 @@ $border-radius-large:           0.25rem     !default;
 $border-radius-extreme:         0.875rem    !default;
 $border-theme:                  2px         !default;
 
-//Background left-sidebar
-$bg-leftbar: #ffffff;
+//Navbar
+$navbar-top--height: 60px;
 
 
 //Background left-sidebar Dark
@@ -102,9 +102,11 @@ $leftbar-width-sm: 170px;
 
 //Font variables
 $font-primary: 'Roboto', sans-serif;
+$font-md: 'Material-Design-Iconic-Font';
 
 $font-weight-light:             300         !default;
 $font-weight-normal:            400         !default;
+$font-weight-medium:            500         !default;
 $font-weight-semi:              600         !default;
 $font-weight-bold:              700         !default;
 

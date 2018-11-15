@@ -1,0 +1,47 @@
+.navbar-top{
+	background-color: $white;
+	box-shadow: 0 2px 5px 0 rgba($black,.16), 0 2px 10px 0 rgba($black,.12);
+	position: relative;
+	z-index: 999;
+	.navbar-wrapper{
+		height: $navbar-top--height;
+		padding: 0 16px;
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		@include flex-center-y;
+		@include n-flex-between;
+		.btn-nav{
+			padding: 7px;
+			border-radius: 50%;
+			text-transform: uppercase;
+			font-weight: $font-weight-normal;
+			color: $text-secondary;
+			text-align: center;
+			text-decoration: none;
+			font-size: 20px;
+			padding: 11px;
+			line-height: 1em;
+			outline: none;
+			@include box-shadow(none);
+			@include transition(background .3s ease);
+			&:hover, &:focus, &:active{
+				background-color: #eeeeee;
+			}
+			>i{
+				width: 20px;
+				height: 20px;
+				position: relative;
+				margin: 0;
+			}
+		}
+		.nav-menu{
+			@include d-flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			padding-left: 0;
+			margin-bottom: 0;
+			list-style: none;
+			line-height: 0;
+		}
+	}
+}

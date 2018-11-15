@@ -1,109 +1,150 @@
 'use strict';
-/* FLoat Label */
-function validateInput(value, el){
-    var selector;
-
-    el.nodeName == 'SELECT' ? selector = el.parentNode : selector = el;
-
-    if(!selector.hasAttribute('required')) return;
-    if(value == undefined || value == null || value.length == 0  || value.length == ''){
-        selector.classList.add('is-invalid');
-        selector.parentNode.classList.add('has-error');
-        selector.parentNode.querySelector('.invalid-feedback') != null && (selector.parentNode.querySelector('.invalid-feedback').style.display = 'block');
-    }
-    else{
-        selector.classList.remove('is-invalid');
-        selector.parentNode.classList.remove('has-error');
-        selector.parentNode.querySelector('.invalid-feedback') != null && (selector.parentNode.querySelector('.invalid-feedback').style.display = 'none');
-    }
+/* Float Labels*/
+var FloatLabels = function(el){
+    this.selector = el;
+    this.init(el);
 }
 
-function addClass(value, el){
-    var selector;
+FloatLabels.prototype.destroy = function(){
+    var self = this, classEl = [document.querySelectorAll('.form-group-fl'), document.querySelectorAll('.form-control-fl')];
+    classEl.forEach(function(el, index){
+        self.removeClass(el);
+    });
+}
 
-    el.nodeName == 'SELECT' ? selector = el.parentNode : selector = el;
+FloatLabels.prototype.init = function(els){
+    var self = this;
+    els.forEach(function(el, index){
+        self.bindClass(el, el.value);
+        self.onFocus(el);
+    });
+}
 
-    // Wrong <label> position
-    if (selector.previousElementSibling != null && selector.previousElementSibling.nodeName == 'LABEL'){
-        console.warn("You must move <label> tag in <input> next element");
-        return
-    };
+FloatLabels.prototype.onFocus = function(el){
+    var self = this, eventListener;
+    // Event Listener is Change then Select can Bind Class
+    el.tagName == 'SELECT' ? eventListener = 'change' : eventListener = 'keyup';
+    el.addEventListener(eventListener, function(event){ 
+        self.bindClass(el, event.target.value);
+    });
+}
 
+FloatLabels.prototype.bindClass = function(el, value){
+    var label = el.closest('.form-group-fl').querySelector('label');
+    value == undefined || value == null || value.length == 0  || value.length == '' ? label.classList.remove('active') : label.classList.add('active');
     if (el.nodeName == 'SELECT'){
         var placeholder = el.options[0].getAttribute('placeholder');
-        el.options[el.selectedIndex].getAttribute('value') != null && el.options[el.selectedIndex].selected ? ( el.options[0].innerHTML = placeholder, selector.children[1].classList.add('active') ) : ( el.options[0].innerHTML = '', selector.children[1].classList.remove('active') );
-    }
-    else{
-        if(value == undefined || value == null || value.length == 0  || value.length == ''){
-
-            selector.nextElementSibling.classList.contains('bootstrap-datetimepicker-widget') ?
-            selector.nextElementSibling.nextElementSibling.classList.remove('active')
-            :
-            selector.nextElementSibling.classList.remove('active');
-
-        }
-        else{
-            selector.nextElementSibling.classList.add('active');
-            validateInput(selector.value, selector);
-        }
+        el.options[el.selectedIndex].getAttribute('value') != null && el.options[el.selectedIndex].selected ? ( el.options[0].innerHTML = placeholder, label.classList.add('active') ) : ( el.options[0].innerHTML = '', label.classList.remove('active') );
     }
 }
 
-function FloatLabels(selector){
-
-    selector.forEach(function(el, index){
-        var value = el.value, sl_value;
-
-
-        switch(el.nodeName){
-
-            case 'INPUT':
-            case 'TEXTAREA':
-                addClass(value, el);
-                el.addEventListener("keyup", function(){ addClass(event.target.value, el), validateInput(event.target.value, el) });
-                el.addEventListener("change", function(){ addClass(event.target.value, el), validateInput(event.target.value, el) });
-                break;
-
-            case 'SELECT':
-                addClass(value, el);
-                el.addEventListener("change", function(){ addClass(event.target.value, el) });
-                break;
-        }
-
+FloatLabels.prototype.removeClass = function(el){
+    el.forEach(function(el, index){
+        el.classList.forEach(function(item, index){
+            if(item.includes('-fl')){
+                var result = item.replace('-fl', '');
+                el.classList.remove(item);
+                el.classList.add(result);
+            }
+        });
     });
-
 }
-var fl_input = new FloatLabels(document.querySelectorAll('.form-control-fl')); 
 
 
-/* Waves Effect */
-Waves.attach('.btn:not(.btn-link), .page-link', ['waves-float', 'waves-light']);
-Waves.attach('.btn.btn-link', ['waves-float', 'waves-effect']);
-Waves.init();
+/* Core Init */
+var body = $('body'),
+    sidebar = $('.sidebar'),
+    pageInner = $('.page-inner'),
+    navTop = $('.navbar-top');
 
-/* Data Toggle */
-$('[data-toggle="tooltip"]').tooltip();
+var Core = {
+    Basic : {
+        wavesEffect: function() {
+            Waves.attach('.btn:not(.btn-link), .page-link', ['waves-float', 'waves-light']);
+            Waves.attach('.btn.btn-link, .navbar-top .btn-nav, .side-nav a', ['waves-float', 'waves-effect']);
+            Waves.init();
+        },
+        sidebar : function(){
+            $('.sidebar .user-info').on('click', function() {
+                sidebar.toggleClass('user-info-open');  
+            }); 
 
-$('[data-toggle="popover"]').popover();
-$('[data-toggle="popover"]').on('shown.bs.popover', function(){
-    var id = $(this).attr('aria-describedby');
-    $(this).data('color') != undefined && ($('#' + id).addClass('popover-' + $(this).data('color') ));
-});
+            $('.sidebar-menu > ul > li.has-children a').on('click', function(event) {
+                event.preventDefault();
+                var parent = $(this).parent(),
+                    child = $('.sidebar-menu > ul > li.expand .submenu'),
+                    childFirst = parent.find('.submenu').first();
 
-/* Datetime Picker */
-$('.datetimepicker').datetimepicker({
-    format: 'DD/MM/YYYY',
-    icons: {
-        time: "zmdi zmdi-time",
-        date: "zmdi zmdi-calendar",
-        up: "zmdi zmdi-chevron-up",
-        down: "zmdi zmdi-chevron-down",
-        previous: 'zmdi zmdi-chevron-left',
-        next: 'zmdi zmdi-chevron-right',
-        // today: 'fa fa-screenshot',
-        clear: 'zmdi zmdi-delete',
-        close: 'zmdi zmdi-close'
+                // Collapse all submenu
+                !parent.hasClass('expand') && (child.slideToggle(), $('.sidebar-menu > ul > li').removeClass('expand'));
+
+                // Toggle submenu
+                parent.toggleClass('expand');
+                childFirst.slideToggle();
+            });
+
+            $('.sidebar-toggle').on('click', function(event) {
+                event.preventDefault();
+                body.toggleClass('sidebar-open'); 
+            });
+        },
+        pageInner : function(){
+            pageInner.css('min-height', window.innerHeight - 60);
+        },
+        init : function(){
+            this.wavesEffect();
+            this.sidebar();
+            this.pageInner();
+        }
+    },
+    Component : {
+        floatLabels: function() {
+            var fl_input = new FloatLabels(document.querySelectorAll('.form-control-fl'));
+        },
+        tooltip: function() {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="popover"]').on('shown.bs.popover', function(){
+                var id = $(this).attr('aria-describedby');
+                $(this).data('color') != undefined && ($('#' + id).addClass('popover-' + $(this).data('color') ));
+            });
+        },
+        dateTimePicker: function() {
+            /* Datetime Picker */
+            $('.datetimepicker').datetimepicker({
+                format: 'DD/MM/YYYY',
+                icons: {
+                    time: "zmdi zmdi-time",
+                    date: "zmdi zmdi-calendar",
+                    up: "zmdi zmdi-chevron-up",
+                    down: "zmdi zmdi-chevron-down",
+                    previous: 'zmdi zmdi-chevron-left',
+                    next: 'zmdi zmdi-chevron-right',
+                    // today: 'fa fa-screenshot',
+                    clear: 'zmdi zmdi-delete',
+                    close: 'zmdi zmdi-close'
+                }
+            }).on('dp.change', function(event) {
+                // debugger
+                // addClass(event.target.value, this);
+            });
+        },
+        init : function(){
+            this.floatLabels();
+            this.tooltip();
+            this.dateTimePicker();
+        }
+    },
+    init : function() {
+        this.Basic.init();
+        this.Component.init();
     }
-}).on('dp.change', function(event) {
-    addClass(event.target.value, this);
+}
+
+Core.init();
+
+$(window).resize(function(event) {
+    Core.Basic.pageInner();
 });
+
