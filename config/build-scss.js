@@ -6,6 +6,7 @@ var gulp        = require('gulp'),
 	gutil       = require('gulp-util'),
 	concat      = require('gulp-concat'),
 	sourcemaps  = require('gulp-sourcemaps'),
+	cleanCss    = require('gulp-clean-css'),
 	runSequence = require('run-sequence');
 
 
@@ -50,15 +51,24 @@ gulp.task('scss', function() {
 		'../node_modules/node-waves/dist/waves.min.css',
 		'../src/scss/style.scss'
 		])
-	.pipe(sass().on('error', sass.logError))
-	.pipe(sourcemaps.init())
-	.pipe(concat('gt-kit.css'))
-	.pipe(gulp.dest(paths.dist.css))
+	// .pipe(sass().on('error', sass.logError))
+	// .pipe(sourcemaps.init())
+	// .pipe(concat('gt-kit.css'))
+	// .pipe(gulp.dest(paths.dist.css))
 
-	.pipe(rename('gt-kit.min.css'))
-	.pipe(uglifycss())
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest(paths.dist.css));
+	// .pipe(rename('gt-kit.min.css'))
+	// .pipe(uglifycss())
+	// .pipe(sourcemaps.write('./'))
+	// .pipe(gulp.dest(paths.dist.css));
+
+	.pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('gt-kit.css'))
+    .pipe(gulp.dest(paths.dist.css))
+    .pipe(cleanCss({level: {1: {specialComments: 0}}}))
+    .pipe(rename('gt-kit.min.css'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(paths.dist.css));
 });
 
 // Clean

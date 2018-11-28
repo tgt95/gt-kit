@@ -6,4 +6,20 @@ body{
 	font-family: $font-primary;
 	font-size: $font-size-base;
 	font-weight: normal;
+	position: relative;
+	&.navbar-top-fixed{
+		.navbar-top {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		.page-inner{
+			margin-top: $navbar-top--height;
+		}
+	}
+	&.sidebar-fixed{
+		.sidebar {
+			position: fixed;
+		}
+	}
 }

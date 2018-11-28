@@ -69,15 +69,24 @@ var Core = {
                 sidebar.toggleClass('user-info-open');  
             }); 
 
-            $('.sidebar-menu > ul > li.has-children a').on('click', function(event) {
-                event.preventDefault();
+            $('.sidebar-menu > ul li.has-children > a').on('click', function(event) {
                 var parent = $(this).parent(),
                     child = $('.sidebar-menu > ul > li.expand .submenu'),
-                    childFirst = parent.find('.submenu').first();
+                    childFirst = parent.find('.submenu').first(),
+                    isSubmenu = $(this).closest('.submenu').length;
+
+                isSubmenu > 0 ? isSubmenu = true : isSubmenu = false;
+
+                // Not submenu then go to URL
+                !parent.hasClass('submenu') && (event.preventDefault());
 
                 // Collapse all submenu
-                !parent.hasClass('expand') && (child.slideToggle(), $('.sidebar-menu > ul > li').removeClass('expand'));
-
+                !parent.hasClass('expand')&& !$(this).closest('ul').hasClass('submenu') && !isSubmenu && (
+                    child.slideToggle(),
+                    $('.sidebar-menu > ul li.has-children').removeClass('expand'),
+                    $('.sidebar-menu > ul li.has-children .submenu').hide(400)
+                );
+                
                 // Toggle submenu
                 parent.toggleClass('expand');
                 childFirst.slideToggle();
@@ -89,7 +98,7 @@ var Core = {
             });
         },
         pageInner : function(){
-            pageInner.css('min-height', window.innerHeight - 60);
+            pageInner.css('min-height', window.innerHeight - navTop.height());
         },
         init : function(){
             this.wavesEffect();

@@ -24483,7 +24483,16 @@ td, th {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  font-weight: normal; }
+  font-weight: normal;
+  position: relative; }
+  body.navbar-top-fixed .navbar-top {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+  body.navbar-top-fixed .page-inner {
+    margin-top: 60px; }
+  body.sidebar-fixed .sidebar {
+    position: fixed; }
 
 .header {
   position: fixed;
@@ -24494,7 +24503,6 @@ body {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999;
-  min-height: 64px;
   background: #fff;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24); }
@@ -24541,10 +24549,10 @@ body {
 
 /* Sidebar */
 .sidebar {
-  position: fixed;
+  position: absolute;
   z-index: 997;
   display: block;
-  min-height: 100%;
+  min-height: calc(100% - 60px);
   height: calc(100% - 60px) !important;
   overflow-y: auto;
   overflow-x: hidden;
@@ -24644,7 +24652,7 @@ body {
         font-weight: 500;
         height: auto;
         color: rgba(0, 0, 0, 0.87);
-        padding: 15px 0 15px 24px;
+        padding: 15px 32px 15px 24px;
         line-height: 1em;
         text-decoration: none;
         -webkit-transition: background-color 0.3s ease-in-out;
@@ -24662,10 +24670,15 @@ body {
           vertical-align: sub;
           margin: 0 20px 0 0;
           width: 24px; }
-      .sidebar .side-nav ul li .menu-arrow {
+      .sidebar .side-nav ul li .submenu {
+        display: none; }
+        .sidebar .side-nav ul li .submenu li a {
+          padding-left: 72px; }
+      .sidebar .side-nav ul li.has-children > a:after {
         position: absolute;
         right: 20px;
         display: inline-block;
+        content: '\f2fb';
         font-family: "Material-Design-Iconic-Font";
         text-rendering: auto;
         font-size: 18px;
@@ -24677,18 +24690,16 @@ body {
         -o-transition: transform 0.15s;
         -ms-transition: transform 0.15s;
         transition: transform 0.15s; }
-        .sidebar .side-nav ul li .menu-arrow:before {
-          content: '\f2fb'; }
-      .sidebar .side-nav ul li.expand .menu-arrow {
+      .sidebar .side-nav ul li.has-children.expand > a:after {
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         -o-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         transform: rotate(90deg); }
-      .sidebar .side-nav ul li .submenu {
-        display: none; }
-        .sidebar .side-nav ul li .submenu li a {
-          padding-left: 72px; }
+      .sidebar .side-nav ul li.has-children .submenu > li > a {
+        padding-left: 93.6px; }
+      .sidebar .side-nav ul li.has-children .submenu .submenu > li > a {
+        padding-left: 115.2px; }
 
 .sidebar-default {
   background-color: #fff; }
@@ -24797,9 +24808,3 @@ footer {
   left: 0;
   padding: 20px;
   border-top: 1px solid #e0e0e0; }
-
-[is-modeview] label {
-  color: #2196F3; }
-
-[is-modeview] .form-group-fl .form-control-fl {
-  border-bottom: none; }

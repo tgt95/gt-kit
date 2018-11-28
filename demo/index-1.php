@@ -20,6 +20,19 @@
         <div class="navbar-wrapper">
             <a class="sidebar-toggle btn-nav"><i class="zmdi zmdi-menu"></i></a>
             <ul class="nav-menu">
+                <li>
+                    <a href="#" class="btn-nav" data-toggle="dropdown"><i class="zmdi zmdi-settings"></i></a>
+                    <div class="dropdown-menu mb-2" style="max-width: 200px; width: 100%;">
+                        <a class="dropdown-item" href="#">
+                            <div class="d-flex justify-content-between align-items-center">
+                                Fixed Header 
+                                <div class="toggle-btn">
+                                    <label class="mb-0"><input type="checkbox" id="toggle-fixed-header" /><span class="toggle"></span></label>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
                 <li><a href="#" class="btn-nav"><i class="zmdi zmdi-apps"></i></a></li>
                 <li>
                     <a href="#" class="btn-nav" data-toggle="dropdown"><i class="zmdi zmdi-notifications"></i></a>
@@ -64,7 +77,7 @@
                 </div>
                 <div class="sidebar-menu">
                     <ul>
-                        <?php 
+                       <!--  <?php 
                     $sidebarMenu = array('Dashboard'); 
                     $sidebarMenuIcon = array('compass'); 
                     foreach ($sidebarMenu as $key => $value) { ?>
@@ -73,11 +86,38 @@
                             <i class="zmdi zmdi-<?php echo $sidebarMenuIcon[$key]; ?>"></i> <?php echo $value; ?>
                         </a>
                         </li>
-                        <?php } ?>
+                        <?php } ?> -->
+                        <li class="has-children">
+                            <a href="#">
+                                <i class="zmdi zmdi-compass"></i> Dashboard 
+                            </a>
+                            <ul class="submenu">
+                                <li class="has-children">
+                                    <a href="#">Level 1 </a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="#">Level 2 </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Level 2.1 </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Level 2.2 </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Level 1.1 </a>
+                                </li>
+                                <li>
+                                    <a href="#">Level 1.2 </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="has-children">
                             <a href="#">
                             <i class="zmdi zmdi-code"></i> Components
-                            <span class="menu-arrow"></span>
+                            
                         </a>
                             <ul class="submenu">
                                 <?php 
@@ -96,7 +136,7 @@
                         <li class="has-children">
                             <a href="#">
                             <i class="zmdi zmdi-code"></i> Components
-                            <span class="menu-arrow"></span>
+                            
                         </a>
                             <ul class="submenu">
                                 <?php foreach ($componentsName as $key => $value) { ?>
@@ -113,7 +153,7 @@
                         <li class="has-children">
                             <a href="#">
                             <i class="zmdi zmdi-code"></i> Components
-                            <span class="menu-arrow"></span>
+                            
                         </a>
                             <ul class="submenu">
                                 <?php foreach ($componentsName as $key => $value) { ?>
@@ -156,7 +196,10 @@
 <script src="../src/js/main.js"></script>
 <script>
     $(document).ready(function() {
-
+        $('#toggle-fixed-header').on('click', function() {
+            var prop = $(this).prop('checked');
+            prop == true ? body.addClass('sidebar-fixed navbar-top-fixed') : body.removeClass('sidebar-fixed navbar-top-fixed')
+        });
     });
 </script>
 </html>
