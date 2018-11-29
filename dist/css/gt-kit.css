@@ -18360,7 +18360,7 @@ i.notif {
 .btn-outline-twitter {
   color: #55acee;
   border-color: #55acee;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-twitter:hover {
     color: #fff;
     background-color: #55acee;
@@ -18398,7 +18398,7 @@ i.notif {
 .btn-outline-youtube {
   color: #e52d27;
   border-color: #e52d27;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-youtube:hover {
     color: #fff;
     background-color: #e52d27;
@@ -18436,7 +18436,7 @@ i.notif {
 .btn-outline-facebook {
   color: #4466ae;
   border-color: #4466ae;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-facebook:hover {
     color: #fff;
     background-color: #4466ae;
@@ -18474,7 +18474,7 @@ i.notif {
 .btn-outline-google {
   color: #dd4b39;
   border-color: #dd4b39;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-google:hover {
     color: #fff;
     background-color: #dd4b39;
@@ -18512,7 +18512,7 @@ i.notif {
 .btn-outline-linkedin {
   color: #0077B5;
   border-color: #0077B5;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-linkedin:hover {
     color: #fff;
     background-color: #0077B5;
@@ -18550,7 +18550,7 @@ i.notif {
 .btn-outline-pinterest {
   color: #cc2127;
   border-color: #cc2127;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-pinterest:hover {
     color: #fff;
     background-color: #cc2127;
@@ -18588,7 +18588,7 @@ i.notif {
 .btn-outline-dribbble {
   color: #ea4c89;
   border-color: #ea4c89;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-dribbble:hover {
     color: #fff;
     background-color: #ea4c89;
@@ -18626,7 +18626,7 @@ i.notif {
 .btn-outline-behance {
   color: #1769ff;
   border-color: #1769ff;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-behance:hover {
     color: #fff;
     background-color: #1769ff;
@@ -18664,7 +18664,7 @@ i.notif {
 .btn-outline-tumblr {
   color: #35465c;
   border-color: #35465c;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-tumblr:hover {
     color: #fff;
     background-color: #35465c;
@@ -18702,7 +18702,7 @@ i.notif {
 .btn-outline-github-alt {
   color: #333333;
   border-color: #333333;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-github-alt:hover {
     color: #fff;
     background-color: #333333;
@@ -18740,7 +18740,7 @@ i.notif {
 .btn-outline-reddit {
   color: #ff4500;
   border-color: #ff4500;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-reddit:hover {
     color: #fff;
     background-color: #ff4500;
@@ -18778,7 +18778,7 @@ i.notif {
 .btn-outline-custom {
   color: #00BBD3;
   border-color: #00BBD3;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-custom:hover {
     color: #fff;
     background-color: #00BBD3;
@@ -18816,7 +18816,7 @@ i.notif {
 .btn-outline-primary {
   color: #007bff;
   border-color: #007bff;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-primary:hover {
     color: #fff;
     background-color: #007bff;
@@ -18854,7 +18854,7 @@ i.notif {
 .btn-outline-secondary {
   color: #868e96;
   border-color: #868e96;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-secondary:hover {
     color: #fff;
     background-color: #868e96;
@@ -18892,7 +18892,7 @@ i.notif {
 .btn-outline-blue {
   color: #2196F3;
   border-color: #2196F3;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-blue:hover {
     color: #fff;
     background-color: #2196F3;
@@ -18930,7 +18930,7 @@ i.notif {
 .btn-outline-indigo {
   color: #3f51b5;
   border-color: #3f51b5;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-indigo:hover {
     color: #fff;
     background-color: #3f51b5;
@@ -18968,7 +18968,7 @@ i.notif {
 .btn-outline-purple {
   color: #9c27b0;
   border-color: #9c27b0;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-purple:hover {
     color: #fff;
     background-color: #9c27b0;
@@ -19006,7 +19006,7 @@ i.notif {
 .btn-outline-pink {
   color: #e91e63;
   border-color: #e91e63;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-pink:hover {
     color: #fff;
     background-color: #e91e63;
@@ -19044,7 +19044,7 @@ i.notif {
 .btn-outline-red {
   color: #F44336;
   border-color: #F44336;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-red:hover {
     color: #fff;
     background-color: #F44336;
@@ -19082,7 +19082,7 @@ i.notif {
 .btn-outline-orange {
   color: #ff9800;
   border-color: #ff9800;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-orange:hover {
     color: #fff;
     background-color: #ff9800;
@@ -19120,7 +19120,7 @@ i.notif {
 .btn-outline-yellow {
   color: #ffc107;
   border-color: #ffc107;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-yellow:hover {
     color: #fff;
     background-color: #ffc107;
@@ -19158,7 +19158,7 @@ i.notif {
 .btn-outline-green {
   color: #4CAF50;
   border-color: #4CAF50;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-green:hover {
     color: #fff;
     background-color: #4CAF50;
@@ -19196,7 +19196,7 @@ i.notif {
 .btn-outline-teal {
   color: #20c997;
   border-color: #20c997;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-teal:hover {
     color: #fff;
     background-color: #20c997;
@@ -19234,7 +19234,7 @@ i.notif {
 .btn-outline-cyan {
   color: #17a2b8;
   border-color: #17a2b8;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-cyan:hover {
     color: #fff;
     background-color: #17a2b8;
@@ -19273,9 +19273,9 @@ i.notif {
 .btn-outline-white {
   color: #fff;
   border-color: #fff;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-white:hover {
-    color: #fff;
+    color: rgba(0, 0, 0, 0.87);
     background-color: #fff;
     border-color: #fff; }
 
@@ -19311,7 +19311,7 @@ i.notif {
 .btn-outline-black {
   color: #000;
   border-color: #000;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-black:hover {
     color: #fff;
     background-color: #000;
@@ -19349,7 +19349,7 @@ i.notif {
 .btn-outline-gray {
   color: #868e96;
   border-color: #868e96;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-gray:hover {
     color: #fff;
     background-color: #868e96;
@@ -19387,7 +19387,7 @@ i.notif {
 .btn-outline-gray-dark {
   color: #343a40;
   border-color: #343a40;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-gray-dark:hover {
     color: #fff;
     background-color: #343a40;
@@ -19425,7 +19425,7 @@ i.notif {
 .btn-outline-success {
   color: #6eaf0f;
   border-color: #6eaf0f;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-success:hover {
     color: #fff;
     background-color: #6eaf0f;
@@ -19463,7 +19463,7 @@ i.notif {
 .btn-outline-info {
   color: #00bbd3;
   border-color: #00bbd3;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-info:hover {
     color: #fff;
     background-color: #00bbd3;
@@ -19501,7 +19501,7 @@ i.notif {
 .btn-outline-warning {
   color: #ffc107;
   border-color: #ffc107;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-warning:hover {
     color: #fff;
     background-color: #ffc107;
@@ -19539,7 +19539,7 @@ i.notif {
 .btn-outline-danger {
   color: #dc3545;
   border-color: #dc3545;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-danger:hover {
     color: #fff;
     background-color: #dc3545;
@@ -19578,9 +19578,9 @@ i.notif {
 .btn-outline-light {
   color: #f8f9fa;
   border-color: #f8f9fa;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-light:hover {
-    color: #fff;
+    color: rgba(0, 0, 0, 0.87);
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
 
@@ -19616,7 +19616,7 @@ i.notif {
 .btn-outline-dark {
   color: #313a46;
   border-color: #313a46;
-  background-color: #fff; }
+  background-color: transparent; }
   .btn-outline-dark:hover {
     color: #fff;
     background-color: #313a46;

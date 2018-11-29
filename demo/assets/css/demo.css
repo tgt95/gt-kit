@@ -1,3 +1,17 @@
+@keyframes btn-glow {
+  50% {
+    border: 1px solid rgba(0, 0, 0, 0.54);
+    top: -22px;
+    left: -22px;
+    right: -22px;
+    bottom: -22px; }
+  0%, 100% {
+    border: 1px solid rgba(0, 0, 0, 0.54);
+    top: -11px;
+    left: -11px;
+    right: -11px;
+    bottom: -11px; } }
+
 .page-header {
   position: relative; }
   .page-header .page-header-image {
@@ -31,7 +45,8 @@
       line-height: 88px;
       color: #fff;
       text-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.24); }
-    .page-header .content-center .descripton, .page-header .content-center .sub-descripton {
+    .page-header .content-center .descripton,
+    .page-header .content-center .sub-descripton {
       color: rgba(255, 255, 255, 0.95);
       text-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.24); }
     .page-header .content-center .sub-descripton {
@@ -57,7 +72,8 @@
   .section .section-m-b-100 {
     margin-bottom: 100px; }
 
-.category-title, .sub-category {
+.category-title,
+.sub-category {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 25px; }
@@ -79,7 +95,10 @@
 .category-content {
   margin-bottom: 30px; }
 
-#buttons .btn, #javascriptComponents .btn, #modals .btn, #tooltips-popover .btn {
+#buttons .btn,
+#javascriptComponents .btn,
+#modals .btn,
+#tooltips-popover .btn {
   margin: 0 0px 10px; }
 
 .typography-line {
@@ -103,7 +122,7 @@
 .dropdown-menu.color-style-switcher {
   border: none !important;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24) !important;
-  transition: box-shadow 0.3s !important;
+  transition: box-shadow .3s !important;
   visibility: visible !important;
   opacity: 1 !important;
   top: 20px;

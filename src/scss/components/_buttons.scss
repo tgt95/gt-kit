@@ -95,9 +95,15 @@
 		.btn-outline-#{$name} {
 			color: $hex;
 			border-color: $hex;
-			background-color: $white;
+			// background-color: $white;
+			background-color: transparent;
 			&:hover{
-				color: $white;
+				@if $name == 'white' or $name == 'light' {
+					color: $text-primary;
+				}
+				@else {
+					color: $white;
+				}
 				background-color: $hex;
 				border-color: $hex;
 			}

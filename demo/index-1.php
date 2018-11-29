@@ -14,181 +14,77 @@
     <link href="assets/css/demo.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="sidebar-open">
+<!-- <body class="sidebar-open"> -->
+<body class="sidebar-fixed navbar-top-fixed">
     <!-- Header -->
-    <header class="navbar-top">
-        <div class="navbar-wrapper">
-            <a class="sidebar-toggle btn-nav"><i class="zmdi zmdi-menu"></i></a>
-            <ul class="nav-menu">
-                <li>
-                    <a href="#" class="btn-nav" data-toggle="dropdown"><i class="zmdi zmdi-settings"></i></a>
-                    <div class="dropdown-menu mb-2" style="max-width: 200px; width: 100%;">
-                        <a class="dropdown-item" href="#">
-                            <div class="d-flex justify-content-between align-items-center">
-                                Fixed Header 
-                                <div class="toggle-btn">
-                                    <label class="mb-0"><input type="checkbox" id="toggle-fixed-header" /><span class="toggle"></span></label>
+    <?php include 'includes/common/_header.php'; ?>
+    <!-- Sidebar -->
+    <?php include 'includes/common/_sidebar.php'; ?>
+    <!-- Content -->
+    <main class="page-inner p-0">
+        <div class="content-page">
+            <div class="page-header" style="height: 680px;">
+                <div class="page-header-image bg-size-cover" layer-bg="gray" shuffle-bg style="background: url(assets/img/bg/bg-4.jpg);">
+                    <div class="content-center">
+                        <img class="logo" src="assets/img/logo.svg" height="150">
+                        <h1 class="title">GT UI KIT</h1>
+                        <h3 class="descripton">A beautiful Bootstrap 4 UI kit.</h3>
+                        <h6 class="sub-descripton">Base on Material Design</h6>
+                        <a href="https://github.com/tgt95/gt-kit" class="btn btn-outline-white btn-round m-t-1"><i class="zmdi zmdi-github-alt"></i> Github</a>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #f8fcff;">
+                <div class="container">
+                    <div class="row justify-content-center p-y-4">
+                        <div class="col-12 text-center m-b-2">
+                            <div class="h3 text-muted">The UI Kit You Need <br> To Build Incredible User Interfaces</div>
+                        </div>
+                        <?php 
+                        $widgetColor = array('purple', 'red', 'yellow'); 
+                        $widgetIcon = array('fire', 'check', 'ruler'); 
+                        $widgetTitle = array('Easy to Use', 'Clean Code', 'Perfect Pixel'); 
+                        $widgetDescription = array(
+                            'Ease to maintain in project, easy to develop with modern HTML5/CSS3.', 
+                            'We bring the best quality code to you project.', 
+                            'Material Guidelines and Font Icon will bring the best experience to end user.'
+                        );
+                        foreach ($widgetTitle as $key => $value) {
+                        ?>
+                        <div class="col-xl-4 col-lg-6">
+                            <div class="card card-pricing shadow-none rounded px-5" style="min-height: 257px;">
+                                <div class="card-body">
+                                    <!-- <h6 class="category">Easy to Use</h6> -->
+                                    <div class="icon icon-<?php echo $widgetColor[$key]; ?>">
+                                        <i class="zmdi zmdi-<?php echo $widgetIcon[$key]; ?>" style="box-shadow: none; border: 1px solid;"></i>
+                                    </div>
+                                    <h5 class="card-title"><?php echo $value; ?></h5>
+                                    <p class="card-description"><?php echo $widgetDescription[$key]; ?></p>
+                                    <!-- <a href="#" class="btn btn-green btn-round">Add to Cart</a> -->
                                 </div>
                             </div>
-                        </a>
+                        </div>
+                        <?php } ?>
                     </div>
-                </li>
-                <li><a href="#" class="btn-nav"><i class="zmdi zmdi-apps"></i></a></li>
-                <li>
-                    <a href="#" class="btn-nav" data-toggle="dropdown"><i class="zmdi zmdi-notifications"></i></a>
-                    <div class="dropdown-menu mb-2">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <!-- Sidebar -->
-    <aside class="sidebar sidebar-default">
-        <div class="sidebar-header" style="background-image: url(https://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
-            <div class="user-thumbnail">
-                <img src="https://scontent.fsgn5-4.fna.fbcdn.net/v/t1.0-1/p320x320/44725791_2217125071685760_7187074006837624832_n.jpg?_nc_cat=102&_nc_ht=scontent.fsgn5-4.fna&oh=77f584b1e393f02a1e310a48af05965a&oe=5C4378B3">
+                </div>
             </div>
-                <div class="user-profile">
-                    <div class="user-name">Johnny Trinh</div>
-                        <a href="javascript:void(0);" class="user-info">
-                        giatuantrinh@gmail.com <b class="caret"></b>
+        </div>
+        <div class="page-footer">
+            <div class="footer-grid container">
+                <div class="footer-l white">&nbsp;</div>
+                <div class="footer-grid-l white">
+                </div>
+                <div class="footer-r white">&nbsp;</div>
+                <div class="footer-grid-r white">
+                    <a class="footer-text" href="mailbox.html">
+                        <i class="material-icons arrow-r">arrow_forward</i>
+                        <span class="direction">Next</span>
+                        <div>
+                            Mailbox app
+                        </div>
                     </a>
                 </div>
             </div>
-            <div class="side-nav">
-                <div class="sidebar-user-info">
-                    <ul>
-                        <?php 
-                    $userSettings = array('Profile', 'Settings', 'Help', 'Exit'); 
-                    $userSettingsIcon = array('account-circle', 'settings', 'help', 'power'); 
-                    foreach ($userSettings as $key => $value) { ?>
-                        <li>
-                            <a href="#">
-                            <i class="zmdi zmdi-<?php echo $userSettingsIcon[$key]; ?>"></i> <?php echo $value; ?>
-                        </a>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-                <div class="sidebar-menu">
-                    <ul>
-                       <!--  <?php 
-                    $sidebarMenu = array('Dashboard'); 
-                    $sidebarMenuIcon = array('compass'); 
-                    foreach ($sidebarMenu as $key => $value) { ?>
-                        <li>
-                            <a href="#">
-                            <i class="zmdi zmdi-<?php echo $sidebarMenuIcon[$key]; ?>"></i> <?php echo $value; ?>
-                        </a>
-                        </li>
-                        <?php } ?> -->
-                        <li class="has-children">
-                            <a href="#">
-                                <i class="zmdi zmdi-compass"></i> Dashboard 
-                            </a>
-                            <ul class="submenu">
-                                <li class="has-children">
-                                    <a href="#">Level 1 </a>
-                                    <ul class="submenu">
-                                        <li>
-                                            <a href="#">Level 2 </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Level 2.1 </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Level 2.2 </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Level 1.1 </a>
-                                </li>
-                                <li>
-                                    <a href="#">Level 1.2 </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#">
-                            <i class="zmdi zmdi-code"></i> Components
-                            
-                        </a>
-                            <ul class="submenu">
-                                <?php 
-                            $componentsName = array('Accordion', 'Badges', 'Buttons', 'Typography', 'Cards', 'Carousel', 'Chips', 'Color', 'Collections', 'Dropdown', 'Dialogs', 'Grid', 'Helpers', 'Modals', 'Media', 'Icons', 'Parallax', 'Preloader', 'Shadow', 'Tabs', 'Waves');
-                            foreach ($componentsName as $key => $value) { ?>
-                                <li>
-                                    <a href="#">
-                                    <?php echo $value; ?>
-                                </a>
-                                </li>
-                                <?php } ?>
-                                <ul>
-                                </ul>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#">
-                            <i class="zmdi zmdi-code"></i> Components
-                            
-                        </a>
-                            <ul class="submenu">
-                                <?php foreach ($componentsName as $key => $value) { ?>
-                                <li>
-                                    <a href="#">
-                                    <?php echo $value; ?>
-                                </a>
-                                </li>
-                                <?php } ?>
-                                <ul>
-                                </ul>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="#">
-                            <i class="zmdi zmdi-code"></i> Components
-                            
-                        </a>
-                            <ul class="submenu">
-                                <?php foreach ($componentsName as $key => $value) { ?>
-                                <li>
-                                    <a href="#">
-                                    <?php echo $value; ?>
-                                </a>
-                                </li>
-                                <?php } ?>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </aside>
-    <!-- Content -->
-    <main class="page-inner">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="content-page">
-                    <div class="page-header" style="height: 450px;">
-                        <div class="page-header-image bg-size-cover" layer-bg="black" style="background: url(assets/img/bg/bg-1.jpg);">
-                            <div class="content-center">
-                                <img class="logo" src="assets/img/logo.svg" height="150">
-                                <h1 class="title">GT UI KIT</h1>
-                                <h3 class="descripton">A beautiful Bootstrap 4 UI kit.</h3>
-                                <h6 class="sub-descripton">Base on Material Design</h6>
-                                <!-- Base on Material Design -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">as</div>
         </div>
     </main>
 </body>
@@ -196,6 +92,17 @@
 <script src="../src/js/main.js"></script>
 <script>
     $(document).ready(function() {
+        var baseColor = ['custom', 'indigo','green', 'teal', 'cyan', 'black', 'info', 'dark'];
+
+        setInterval(function(){
+            var random = Math.floor(Math.random() * baseColor.length),
+                bg = $('[shuffle-bg]');
+
+                bg.attr('layer-bg', baseColor[random]);
+        }, 5000);
+
+        setTimeout(function(){ !body.hasClass('.sidebar-open') && ($('.sidebar-toggle').trigger('click')); }, 3000);
+
         $('#toggle-fixed-header').on('click', function() {
             var prop = $(this).prop('checked');
             prop == true ? body.addClass('sidebar-fixed navbar-top-fixed') : body.removeClass('sidebar-fixed navbar-top-fixed')
