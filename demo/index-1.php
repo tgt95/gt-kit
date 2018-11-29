@@ -34,56 +34,48 @@
                     </div>
                 </div>
             </div>
-            <div style="background: #f8fcff;">
-                <div class="container">
-                    <div class="row justify-content-center p-y-4">
-                        <div class="col-12 text-center m-b-2">
-                            <div class="h3 text-muted">The UI Kit You Need <br> To Build Incredible User Interfaces</div>
-                        </div>
-                        <?php 
-                        $widgetColor = array('purple', 'red', 'yellow'); 
-                        $widgetIcon = array('fire', 'check', 'ruler'); 
-                        $widgetTitle = array('Easy to Use', 'Clean Code', 'Perfect Pixel'); 
-                        $widgetDescription = array(
-                            'Ease to maintain in project, easy to develop with modern HTML5/CSS3.', 
-                            'We bring the best quality code to you project.', 
-                            'Material Guidelines and Font Icon will bring the best experience to end user.'
-                        );
-                        foreach ($widgetTitle as $key => $value) {
-                        ?>
-                        <div class="col-xl-4 col-lg-6">
-                            <div class="card card-pricing shadow-none rounded px-5" style="min-height: 257px;">
-                                <div class="card-body">
-                                    <!-- <h6 class="category">Easy to Use</h6> -->
-                                    <div class="icon icon-<?php echo $widgetColor[$key]; ?>">
-                                        <i class="zmdi zmdi-<?php echo $widgetIcon[$key]; ?>" style="box-shadow: none; border: 1px solid;"></i>
-                                    </div>
-                                    <h5 class="card-title"><?php echo $value; ?></h5>
-                                    <p class="card-description"><?php echo $widgetDescription[$key]; ?></p>
-                                    <!-- <a href="#" class="btn btn-green btn-round">Add to Cart</a> -->
+            <div class="container">
+                <div class="row justify-content-center p-y-4">
+                    <div class="col-12 text-center m-b-2">
+                        <div class="h3 text-muted">The UI Kit You Need <br> To Build Incredible User Interfaces</div>
+                    </div>
+                    <?php 
+                    $widgetColor = array('purple', 'red', 'yellow'); 
+                    $widgetIcon = array('fire', 'check', 'ruler'); 
+                    $widgetTitle = array('Easy to Use', 'Clean Code', 'Perfect Pixel'); 
+                    $widgetDescription = array(
+                        'Ease to maintain in project, easy to develop with modern HTML5/CSS3.', 
+                        'We bring the best quality code to you project.', 
+                        'Material Guidelines and Font Icon will bring the best experience to end user.'
+                    );
+                    foreach ($widgetTitle as $key => $value) {
+                    ?>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card card-pricing shadow-none rounded px-5" style="min-height: 257px;">
+                            <div class="card-body">
+                                <!-- <h6 class="category">Easy to Use</h6> -->
+                                <div class="icon icon-<?php echo $widgetColor[$key]; ?>">
+                                    <i class="zmdi zmdi-<?php echo $widgetIcon[$key]; ?>" style="box-shadow: none; border: 1px solid;"></i>
                                 </div>
+                                <h5 class="card-title"><?php echo $value; ?></h5>
+                                <p class="card-description"><?php echo $widgetDescription[$key]; ?></p>
+                                <!-- <a href="#" class="btn btn-green btn-round">Add to Cart</a> -->
                             </div>
                         </div>
-                        <?php } ?>
+                    </div>
+                    <?php } ?>
+                </div>
+                <hr>
+                <div class="row align-items-center p-y-4">
+                    <div class="col-md-8">
+                        <img src="assets/img/bg/widget-prod.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="h3 m-b-3">Completed with examples</div>
+                        <p class="text-muted">The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful Bootstrap 4 ui kit.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="page-footer">
-            <div class="footer-grid container">
-                <div class="footer-l white">&nbsp;</div>
-                <div class="footer-grid-l white">
-                </div>
-                <div class="footer-r white">&nbsp;</div>
-                <div class="footer-grid-r white">
-                    <a class="footer-text" href="mailbox.html">
-                        <i class="material-icons arrow-r">arrow_forward</i>
-                        <span class="direction">Next</span>
-                        <div>
-                            Mailbox app
-                        </div>
-                    </a>
-                </div>
+                <hr>
             </div>
         </div>
     </main>

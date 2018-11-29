@@ -61,7 +61,7 @@ var Core = {
     Basic : {
         wavesEffect: function() {
             Waves.attach('.btn:not(.btn-link), .page-link', ['waves-float', 'waves-light']);
-            Waves.attach('.btn.btn-link, .navbar-top .btn-nav, .side-nav a', ['waves-float', 'waves-effect']);
+            Waves.attach('.btn.btn-link, .navbar-top .btn-nav, .side-nav .sidebar-menu a', ['waves-float', 'waves-effect']);
             Waves.init();
         },
         sidebar : function(){

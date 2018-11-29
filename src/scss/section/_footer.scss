@@ -1,8 +1,12 @@
-footer{
-	position: absolute;
-	bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 20px;
-    border-top: 1px solid $hr;
+.page-footer {
+	border-top: 1px solid $hr;
+	background: $white;
+	width: 100%;
+	display: block;
+    // position: absolute;
+    bottom: 0;
+    padding: 19px 25px;
+    >p{
+    	margin-bottom: 0;
+    }
 }
