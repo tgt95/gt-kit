@@ -2,11 +2,22 @@
    Common
 ============= */
 
+/* Sidebar & Navigation Top */
 body{
 	font-family: $font-primary;
 	font-size: $font-size-base;
 	font-weight: normal;
 	position: relative;
+	&.sidebar-open {
+		.sidebar{
+			min-width: $leftbar-width--desktop;
+			width: $leftbar-width--desktop;
+			@include transform(translate3d(0, 0, 0));
+		}
+		.page-inner{
+			margin-left: $leftbar-width--desktop;
+		}
+	}
 	&.navbar-top-fixed{
 		.navbar-top {
 			position: fixed;

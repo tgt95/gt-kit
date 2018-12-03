@@ -1,5 +1,6 @@
 <aside class="sidebar sidebar-default">
     <div class="side-nav">
+        <!-- Header -->
         <!-- <div class="sidebar-header" style="background-image: url(https://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);"> -->
         <div class="sidebar-header">
             <div class="user-thumbnail">
@@ -12,10 +13,14 @@
                 </a>
             </div>
         </div>
+
+        <!-- Footer  -->
         <div class="sidebar-footer">
             <p class="copyright">GT UI KIT © </p>
             <p class="mb-0"><script>document.write(new Date().getFullYear())</script></p>
         </div>
+
+        <!-- User Info -->
         <div class="sidebar-user-info">
             <ul>
                 <?php 
@@ -30,6 +35,8 @@
                 <?php } ?>
             </ul>
         </div>
+
+        <!-- Menu -->
         <div class="sidebar-menu">
             <ul>
                 <li>
@@ -53,32 +60,33 @@
                             <ul>
                             </ul>
                         </ul>
-                    </li>
-                    <li class="has-children">
-                        <a href="#">
-                            <i class="zmdi zmdi-sort-amount-desc"></i> Levels 
-                        </a>
-                        <ul class="submenu">
-                            <li class="has-children">
-                                <a href="#">Level 1.1 </a>
-                                <ul class="submenu">
-                                    <?php for ($i=1; $i < 3; $i++) { ?>
-                                        <li>
-                                            <a href="#">Level 2.<?php echo $i; ?> </a>
-                                        </li>
-                                    <?php } ?>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Level 1.2 </a>
-                            </li>
-                            <li>
-                                <a href="#">Level 1.3 </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+                <li class="has-children">
+                    <a href="#">
+                        <i class="zmdi zmdi-sort-amount-desc"></i> Levels 
+                    </a>
+                    <ul class="submenu">
+                        <li class="has-children">
+                            <a href="#">Level 1.1 </a>
+                            <ul class="submenu">
+                                <?php for ($i=1; $i < 3; $i++) { ?>
+                                    <li>
+                                        <a href="#">Level 2.<?php echo $i; ?> </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Level 1.2 </a>
+                        </li>
+                        <li>
+                            <a href="#">Level 1.3 </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
 </aside>

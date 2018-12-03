@@ -22,6 +22,7 @@
     <?php include 'includes/common/_sidebar.php'; ?>
     <!-- Content -->
     <main class="page-inner p-0">
+        <!-- Page Container -->
         <div class="content-page">
             <div class="page-header" style="height: 680px;">
                 <div class="page-header-image bg-size-cover" layer-bg="gray" shuffle-bg style="background: url(assets/img/bg/bg-4.jpg);">
@@ -92,8 +93,8 @@
 
                 bg.attr('layer-bg', baseColor[random]);
         }, 5000);
-
-        setTimeout(function(){ !body.hasClass('.sidebar-open') && ($('.sidebar-toggle').trigger('click')); }, 3000);
+        
+        setTimeout(function(){ !body.hasClass('sidebar-open') && ($('.sidebar-toggle').trigger('click')); }, 3000);
 
         $('#toggle-fixed-header').on('click', function() {
             var prop = $(this).prop('checked');
