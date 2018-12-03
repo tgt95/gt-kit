@@ -24480,11 +24480,22 @@ td, th {
 /* =============
    Common
 ============= */
+/* Sidebar & Navigation Top */
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: normal;
   position: relative; }
+  body.sidebar-open .sidebar {
+    min-width: 256px;
+    width: 256px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  body.sidebar-open .page-inner {
+    margin-left: 256px; }
   body.navbar-top-fixed .navbar-top {
     position: fixed;
     top: 0;
@@ -24665,7 +24676,7 @@ body {
         transition: background-color 0.3s ease-in-out;
         -webkit-box-shadow: none;
         box-shadow: none; }
-        .sidebar .side-nav ul li a:hover {
+        .sidebar .side-nav ul li a:hover, .sidebar .side-nav ul li a:focus, .sidebar .side-nav ul li a:active {
           background-color: #f0f3f4; }
         .sidebar .side-nav ul li a > i {
           color: rgba(0, 0, 0, 0.54);
@@ -24673,6 +24684,8 @@ body {
           vertical-align: sub;
           margin: 0 20px 0 0;
           width: 24px; }
+      .sidebar .side-nav ul li.active a {
+        background-color: #f0f3f4; }
       .sidebar .side-nav ul li .submenu {
         display: none; }
         .sidebar .side-nav ul li .submenu li a {
@@ -24713,7 +24726,7 @@ body {
     width: 100%; }
     .sidebar .sidebar-footer .copyright {
       margin: 0; }
-    .sidebar .sidebar-footer + .sidebar-user-info, .sidebar .sidebar-footer + .sidebar-user-info + .sidebar-menu {
+    .sidebar .sidebar-footer + .sidebar-user-info, .sidebar .sidebar-footer + .sidebar-user-info + .sidebar-menu, .sidebar .sidebar-footer + .sidebar-menu, .sidebar .sidebar-footer + .sidebar-menu + .sidebar-user-info {
       min-height: calc(100% - 96px);
       padding-bottom: 96px; }
 
@@ -24749,19 +24762,6 @@ body {
   -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   -ms-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); }
-
-/* Sidebar Open */
-body.sidebar-open .sidebar {
-  min-width: 256px;
-  width: 256px;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-body.sidebar-open .page-inner {
-  margin-left: 256px; }
 
 .navbar-top {
   background-color: #fff;
