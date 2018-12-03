@@ -1,6 +1,7 @@
 <aside class="sidebar sidebar-default">
     <div class="side-nav">
-        <div class="sidebar-header" style="background-image: url(https://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);">
+        <!-- <div class="sidebar-header" style="background-image: url(https://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);"> -->
+        <div class="sidebar-header">
             <div class="user-thumbnail">
                 <img src="https://scontent.fsgn5-4.fna.fbcdn.net/v/t1.0-1/p320x320/44725791_2217125071685760_7187074006837624832_n.jpg?_nc_cat=102&_nc_ht=scontent.fsgn5-4.fna&oh=77f584b1e393f02a1e310a48af05965a&oe=5C4378B3">
             </div>
