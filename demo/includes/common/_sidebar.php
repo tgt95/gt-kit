@@ -40,7 +40,7 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="index-1.php">
                         <i class="zmdi zmdi-compass"></i> Dashboard 
                     </a>
                 </li>
@@ -49,10 +49,9 @@
                         <i class="zmdi zmdi-code"></i> Components</a>
                         <ul class="submenu">
                             <?php 
-                            $componentsName = array('Accordion', 'Badges', 'Buttons', 'Typography', 'Cards', 'Carousel', 'Chips', 'Color', 'Collections', 'Dropdown', 'Dialogs', 'Grid', 'Helpers', 'Modals', 'Media', 'Icons', 'Parallax', 'Preloader', 'Shadow', 'Tabs', 'Waves');
                             foreach ($componentsName as $key => $value) { ?>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php echo strtolower($value). '.php'; ?>">
                                         <?php echo $value; ?>
                                     </a>
                                 </li>
