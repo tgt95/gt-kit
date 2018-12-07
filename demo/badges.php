@@ -26,9 +26,9 @@
         <!-- Page Container -->
         <div class="content-page">
             <div class="section">
-                <div class="section-m-b-100 m-t-6" id="badge">
+                <div class="section-m-b-100" id="badge">
                     <div class="container">
-                        <div class="group-title h3">Badge</div>
+                        <div class="group-title h1">Badge</div>
                         <p class="category-title">Basic</p>
                         <div class="row m-b-4">
                             <?php foreach ($baseColor as $key => $value) { 
